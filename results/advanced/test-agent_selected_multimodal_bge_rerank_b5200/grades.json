@@ -1,0 +1,429 @@
+[
+  {
+    "query_id": "adv_test_tab01",
+    "primary_group": "table",
+    "passed": true,
+    "status": "answered",
+    "citations": [
+      "rl-compendium-108p::p008::table::001",
+      "rl-compendium-108p::p008::text::000",
+      "rl-compendium-108p::p007::text::002"
+    ],
+    "all_gold_supported": true,
+    "missing_facts": [],
+    "evidence_verification": "Page 8, AWR Table 1, row 'Walker2d-v2': SAC = 5805 ± 587, RWR = 406 ± 64, AWR (Ours) = 5813 ± 483; calculation: 5813 - 406 = 5407.",
+    "reason": "Đạt (Pass): Trả lời đúng và đủ mọi số liệu/đơn vị/điều kiện; trích dẫn đúng ['rl-compendium-108p::p008::table::001', 'rl-compendium-108p::p008::text::000', 'rl-compendium-108p::p007::text::002'] khớp bản gốc (Page 8, AWR Table 1, row 'Walker2d-v2': SAC = 5805 ± 587, RWR = 406 ± 64, AWR (Ours) = 5813 ± 483; calculation: 5813 - 406 = 5407.)."
+  },
+  {
+    "query_id": "adv_test_tab02",
+    "primary_group": "table",
+    "passed": true,
+    "status": "answered",
+    "citations": [
+      "rl-compendium-108p::p010::text::000",
+      "rl-compendium-108p::p010::table::001",
+      "rl-compendium-108p::p009::text::001"
+    ],
+    "all_gold_supported": true,
+    "missing_facts": [],
+    "evidence_verification": "Page 10, AWR Table 2, rows 'Humanoid: Spinkick' (PPO 0.70±0.02, RWR 0.05±0.03, AWR 0.77±0.04; diff = 0.72) and 'Dog: Canter' (PPO 0.76±0.03, RWR 0.78±0.04, AWR 0.86±0.01).",
+    "reason": "Đạt (Pass): Trả lời đúng và đủ mọi số liệu/đơn vị/điều kiện; trích dẫn đúng ['rl-compendium-108p::p010::text::000', 'rl-compendium-108p::p010::table::001', 'rl-compendium-108p::p009::text::001'] khớp bản gốc (Page 10, AWR Table 2, rows 'Humanoid: Spinkick' (PPO 0.70±0.02, RWR 0.05±0.03, AWR 0.77±0.04; diff = 0.72) and 'Dog: Canter' (PPO 0.76±0.03, RWR 0.78±0.04, AWR 0.86±0.01).)."
+  },
+  {
+    "query_id": "adv_test_tab03",
+    "primary_group": "table",
+    "passed": true,
+    "status": "answered",
+    "citations": [
+      "rl-compendium-108p::p027::table::001",
+      "rl-compendium-108p::p027::table::001",
+      "rl-compendium-108p::p027::text::000",
+      "rl-compendium-108p::p029::table::001"
+    ],
+    "all_gold_supported": true,
+    "missing_facts": [],
+    "evidence_verification": "Page 27, Harness VLA Table 3, column 'Overall': RATS = 43.8%, pi_RLinf = 50.0%, Harness VLA (Codex) = 72.1%, Harness VLA (CC) = 82.4%; differences: 82.4 - 43.8 = 38.6 percentage points, 82.4 - 50.0 = 32.4 percentage points.",
+    "reason": "Đạt (Pass): Trả lời đúng và đủ mọi số liệu/đơn vị/điều kiện; trích dẫn đúng ['rl-compendium-108p::p027::table::001', 'rl-compendium-108p::p027::table::001', 'rl-compendium-108p::p027::text::000', 'rl-compendium-108p::p029::table::001'] khớp bản gốc (Page 27, Harness VLA Table 3, column 'Overall': RATS = 43.8%, pi_RLinf = 50.0%, Harness VLA (Codex) = 72.1%, Harness VLA (CC) = 82.4%; differences: 82.4 - 43.8 = 38.6 percentage points, 82.4 - 50.0 = 32.4 percentage points.)."
+  },
+  {
+    "query_id": "adv_test_tab04",
+    "primary_group": "table",
+    "passed": true,
+    "status": "answered",
+    "citations": [
+      "rl-compendium-108p::p053::table::001",
+      "rl-compendium-108p::p053::text::000",
+      "rl-compendium-108p::p052::text::002"
+    ],
+    "all_gold_supported": true,
+    "missing_facts": [],
+    "evidence_verification": "Page 53, Table 15 ('Post-training configuration of LingBot-VLA on RoboTwin'): AdamW, LR 1x10^-4, Vision encoder LR 1x10^-6, L1 Flow Matching (L1 FM), Chunk size 50, Flow steps 10, Global batch size 256, Image resolution 224x224.",
+    "reason": "Đạt (Pass): Trả lời đúng và đủ mọi số liệu/đơn vị/điều kiện; trích dẫn đúng ['rl-compendium-108p::p053::table::001', 'rl-compendium-108p::p053::text::000', 'rl-compendium-108p::p052::text::002'] khớp bản gốc (Page 53, Table 15 ('Post-training configuration of LingBot-VLA on RoboTwin'): AdamW, LR 1x10^-4, Vision encoder LR 1x10^-6, L1 Flow Matching (L1 FM), Chunk size 50, Flow steps 10, Global batch size 256, Image resolution 224x224.)."
+  },
+  {
+    "query_id": "adv_test_tab05",
+    "primary_group": "table",
+    "passed": false,
+    "status": "answered",
+    "citations": [
+      "rl-compendium-108p::p059::table::001",
+      "rl-compendium-108p::p059::text::002",
+      "rl-compendium-108p::p059::text::000"
+    ],
+    "all_gold_supported": true,
+    "missing_facts": [
+      "10134",
+      "1675",
+      "7772"
+    ],
+    "evidence_verification": "Page 59, Table 19, rows 'MOVE_TO', 'VLA_ACT', and 'Total' across columns LIBERO, RoboTwin C2R, and RoboCasa365.",
+    "reason": "Không đạt (Fail): gold_supported=True, missing_facts=['10134', '1675', '7772'], citations=['rl-compendium-108p::p059::table::001', 'rl-compendium-108p::p059::text::002', 'rl-compendium-108p::p059::text::000']."
+  },
+  {
+    "query_id": "adv_test_tab06",
+    "primary_group": "table",
+    "passed": true,
+    "status": "answered",
+    "citations": [
+      "rl-compendium-108p::p073::table::001",
+      "rl-compendium-108p::p073::text::000",
+      "rl-compendium-108p::p072::text::000"
+    ],
+    "all_gold_supported": true,
+    "missing_facts": [],
+    "evidence_verification": "Page 73, AMP Table 3 caption (units: meters) and rows 'Humanoid | Spin' (1.00s, 0.063±0.022 vs 0.047±0.002) and 'Humanoid | Side-Flip' (2.44s, 0.191±0.043 vs 0.124±0.012).",
+    "reason": "Đạt (Pass): Trả lời đúng và đủ mọi số liệu/đơn vị/điều kiện; trích dẫn đúng ['rl-compendium-108p::p073::table::001', 'rl-compendium-108p::p073::text::000', 'rl-compendium-108p::p072::text::000'] khớp bản gốc (Page 73, AMP Table 3 caption (units: meters) and rows 'Humanoid | Spin' (1.00s, 0.063±0.022 vs 0.047±0.002) and 'Humanoid | Side-Flip' (2.44s, 0.191±0.043 vs 0.124±0.012).)."
+  },
+  {
+    "query_id": "adv_test_fig01",
+    "primary_group": "figure_diagram",
+    "passed": true,
+    "status": "answered",
+    "citations": [
+      "rl-compendium-108p::p020::figure::001",
+      "rl-compendium-108p::p020::text::000",
+      "rl-compendium-108p::p024::text::002"
+    ],
+    "all_gold_supported": true,
+    "missing_facts": [],
+    "evidence_verification": "Page 20, Figure 1 diagram crop p020_img02_Im2.png: 'Robot State' box (eef_pos [x,y,z], eef_quat [x,y,z,w], gripper_qpos [q1,q2]) and horizontal command strip (Initial State -> VLA_ACT -> MOVE_TO -> SET_GRIPPER -> VLA_ACT -> MOVE_TO -> MOVE_TO).",
+    "reason": "Đạt (Pass): Trả lời đúng và đủ mọi số liệu/đơn vị/điều kiện; trích dẫn đúng ['rl-compendium-108p::p020::figure::001', 'rl-compendium-108p::p020::text::000', 'rl-compendium-108p::p024::text::002'] khớp bản gốc (Page 20, Figure 1 diagram crop p020_img02_Im2.png: 'Robot State' box (eef_pos [x,y,z], eef_quat [x,y,z,w], gripper_qpos [q1,q2]) and horizontal command strip (Initial State -> VLA_ACT -> MOVE_TO -> SET_GRIPPER -> VLA_ACT -> MOVE_TO -> MOVE_TO).)."
+  },
+  {
+    "query_id": "adv_test_fig02",
+    "primary_group": "figure_diagram",
+    "passed": true,
+    "status": "answered",
+    "citations": [
+      "rl-compendium-108p::p029::figure::001",
+      "rl-compendium-108p::p029::text::001",
+      "rl-compendium-108p::p030::text::000"
+    ],
+    "all_gold_supported": true,
+    "missing_facts": [],
+    "evidence_verification": "Page 29, Figure 3 caption and visual frames p029_img01_Im4.jpg..p029_img06_Im9.jpg comparing Obj-T and Goal-S rollouts.",
+    "reason": "Đạt (Pass): Trả lời đúng và đủ mọi số liệu/đơn vị/điều kiện; trích dẫn đúng ['rl-compendium-108p::p029::figure::001', 'rl-compendium-108p::p029::text::001', 'rl-compendium-108p::p030::text::000'] khớp bản gốc (Page 29, Figure 3 caption and visual frames p029_img01_Im4.jpg..p029_img06_Im9.jpg comparing Obj-T and Goal-S rollouts.)."
+  },
+  {
+    "query_id": "adv_test_fig03",
+    "primary_group": "figure_diagram",
+    "passed": true,
+    "status": "answered",
+    "citations": [
+      "rl-compendium-108p::p035::figure::001",
+      "rl-compendium-108p::p035::text::001",
+      "rl-compendium-108p::p035::text::000"
+    ],
+    "all_gold_supported": true,
+    "missing_facts": [],
+    "evidence_verification": "Page 35, Figure 9 caption and rollout frame strips p035_img01_Im53.jpg..p035_img09_Im61.jpg.",
+    "reason": "Đạt (Pass): Trả lời đúng và đủ mọi số liệu/đơn vị/điều kiện; trích dẫn đúng ['rl-compendium-108p::p035::figure::001', 'rl-compendium-108p::p035::text::001', 'rl-compendium-108p::p035::text::000'] khớp bản gốc (Page 35, Figure 9 caption and rollout frame strips p035_img01_Im53.jpg..p035_img09_Im61.jpg.)."
+  },
+  {
+    "query_id": "adv_test_fig04",
+    "primary_group": "figure_diagram",
+    "passed": false,
+    "status": "answered",
+    "citations": [
+      "rl-compendium-108p::p065::figure::001",
+      "rl-compendium-108p::p065::text::000",
+      "rl-compendium-108p::p085::figure::001"
+    ],
+    "all_gold_supported": true,
+    "missing_facts": [
+      "a_t"
+    ],
+    "evidence_verification": "Page 65, Fig. 2 schematic diagram crop p065_img01_Im3.png and caption.",
+    "reason": "Không đạt (Fail): gold_supported=True, missing_facts=['a_t'], citations=['rl-compendium-108p::p065::figure::001', 'rl-compendium-108p::p065::text::000', 'rl-compendium-108p::p085::figure::001']."
+  },
+  {
+    "query_id": "adv_test_fig05",
+    "primary_group": "figure_diagram",
+    "passed": true,
+    "status": "answered",
+    "citations": [
+      "rl-compendium-108p::p085::figure::001",
+      "rl-compendium-108p::p086::text::000",
+      "rl-compendium-108p::p085::text::002"
+    ],
+    "all_gold_supported": true,
+    "missing_facts": [],
+    "evidence_verification": "Page 85 Figure 1 crops p085_img01_Im1.png (bottom-left robot, top-right 'Goal') & p085_img02_Im2.png, plus Page 85 Section 5.1 and Page 86 Section 5.2 text (reward 1, step cost -0.01, bit-string [1, 0, 0, 1, 0, 0]).",
+    "reason": "Đạt (Pass): Trả lời đúng và đủ mọi số liệu/đơn vị/điều kiện; trích dẫn đúng ['rl-compendium-108p::p085::figure::001', 'rl-compendium-108p::p086::text::000', 'rl-compendium-108p::p085::text::002'] khớp bản gốc (Page 85 Figure 1 crops p085_img01_Im1.png (bottom-left robot, top-right 'Goal') & p085_img02_Im2.png, plus Page 85 Section 5.1 and Page 86 Section 5.2 text (reward 1, step cost -0.01, bit-string [1, 0, 0, 1, 0, 0]).)."
+  },
+  {
+    "query_id": "adv_test_cht01",
+    "primary_group": "chart",
+    "passed": true,
+    "status": "answered",
+    "citations": [
+      "rl-compendium-108p::p009::chart::001",
+      "rl-compendium-108p::p008::chart::001",
+      "rl-compendium-108p::p009::text::000"
+    ],
+    "all_gold_supported": true,
+    "missing_facts": [],
+    "evidence_verification": "Page 9, Figure 4 right crop p009_img03_Im13.png and Page 8 text: legend 5k, 20k, 50k (Default), 100k, 500k; 50k (Default) highest at ~9,100; 5k lowest at ~4,200-4,500.",
+    "reason": "Đạt (Pass): Trả lời đúng và đủ mọi số liệu/đơn vị/điều kiện; trích dẫn đúng ['rl-compendium-108p::p009::chart::001', 'rl-compendium-108p::p008::chart::001', 'rl-compendium-108p::p009::text::000'] khớp bản gốc (Page 9, Figure 4 right crop p009_img03_Im13.png and Page 8 text: legend 5k, 20k, 50k (Default), 100k, 500k; 50k (Default) highest at ~9,100; 5k lowest at ~4,200-4,500.)."
+  },
+  {
+    "query_id": "adv_test_cht02",
+    "primary_group": "chart",
+    "passed": true,
+    "status": "answered",
+    "citations": [
+      "rl-compendium-108p::p010::chart::001",
+      "rl-compendium-108p::p010::text::000",
+      "rl-compendium-108p::p010::text::002"
+    ],
+    "all_gold_supported": true,
+    "missing_facts": [],
+    "evidence_verification": "Page 10, Figure 7 bar chart crops p010_img03_Im21.png (Ant-v2) and p010_img06_Im24.png (Walker2d-v2).",
+    "reason": "Đạt (Pass): Trả lời đúng và đủ mọi số liệu/đơn vị/điều kiện; trích dẫn đúng ['rl-compendium-108p::p010::chart::001', 'rl-compendium-108p::p010::text::000', 'rl-compendium-108p::p010::text::002'] khớp bản gốc (Page 10, Figure 7 bar chart crops p010_img03_Im21.png (Ant-v2) and p010_img06_Im24.png (Walker2d-v2).)."
+  },
+  {
+    "query_id": "adv_test_cht03",
+    "primary_group": "chart",
+    "passed": true,
+    "status": "answered",
+    "citations": [
+      "rl-compendium-108p::p030::chart::001",
+      "rl-compendium-108p::p030::chart::001",
+      "rl-compendium-108p::p032::chart::001",
+      "rl-compendium-108p::p030::text::002"
+    ],
+    "all_gold_supported": true,
+    "missing_facts": [],
+    "evidence_verification": "Page 30, Figure 4(a) crop p030_img01_Im10.png (3, 52, 68, 73, 77, 79, 80; k=1 > 50%) and Figure 4(b) crop p030_img02_Im11.png (k=5 is 29%, k=6 is 31% > 30%).",
+    "reason": "Đạt (Pass): Trả lời đúng và đủ mọi số liệu/đơn vị/điều kiện; trích dẫn đúng ['rl-compendium-108p::p030::chart::001', 'rl-compendium-108p::p030::chart::001', 'rl-compendium-108p::p032::chart::001', 'rl-compendium-108p::p030::text::002'] khớp bản gốc (Page 30, Figure 4(a) crop p030_img01_Im10.png (3, 52, 68, 73, 77, 79, 80; k=1 > 50%) and Figure 4(b) crop p030_img02_Im11.png (k=5 is 29%, k=6 is 31% > 30%).)."
+  },
+  {
+    "query_id": "adv_test_cht04",
+    "primary_group": "chart",
+    "passed": true,
+    "status": "answered",
+    "citations": [
+      "rl-compendium-108p::p032::chart::001",
+      "rl-compendium-108p::p032::text::001",
+      "rl-compendium-108p::p032::text::002"
+    ],
+    "all_gold_supported": true,
+    "missing_facts": [],
+    "evidence_verification": "Page 32, Figure 6 bar chart crop p032_img01_Im25.png: exact bar labels above each blue/orange bar.",
+    "reason": "Đạt (Pass): Trả lời đúng và đủ mọi số liệu/đơn vị/điều kiện; trích dẫn đúng ['rl-compendium-108p::p032::chart::001', 'rl-compendium-108p::p032::text::001', 'rl-compendium-108p::p032::text::002'] khớp bản gốc (Page 32, Figure 6 bar chart crop p032_img01_Im25.png: exact bar labels above each blue/orange bar.)."
+  },
+  {
+    "query_id": "adv_test_cht05",
+    "primary_group": "chart",
+    "passed": true,
+    "status": "answered",
+    "citations": [
+      "rl-compendium-108p::p070::chart::001",
+      "rl-compendium-108p::p070::text::003",
+      "rl-compendium-108p::p070::text::001"
+    ],
+    "all_gold_supported": true,
+    "missing_facts": [],
+    "evidence_verification": "Page 70, Fig. 4 right crop p070_img02_Im13.png and Page 69-70 Section 8.2 text.",
+    "reason": "Đạt (Pass): Trả lời đúng và đủ mọi số liệu/đơn vị/điều kiện; trích dẫn đúng ['rl-compendium-108p::p070::chart::001', 'rl-compendium-108p::p070::text::003', 'rl-compendium-108p::p070::text::001'] khớp bản gốc (Page 70, Fig. 4 right crop p070_img02_Im13.png and Page 69-70 Section 8.2 text.)."
+  },
+  {
+    "query_id": "adv_test_mhp01",
+    "primary_group": "multi_hop",
+    "passed": false,
+    "status": "answered",
+    "citations": [
+      "rl-compendium-108p::p035::table::001",
+      "rl-compendium-108p::p035::text::000",
+      "rl-compendium-108p::p061::text::000"
+    ],
+    "all_gold_supported": false,
+    "missing_facts": [
+      "78",
+      "72.63"
+    ],
+    "evidence_verification": "Multi-hop combining Page 35 Table 7 (Codex high = 78.50%, 529.23s; Codex no reasoning = 62.50%, 344.17s; Flash Mode max = 72.63%, 56.17s) and Pages 60-61 Appendix G (78 of 80 tasks have cards; goal_swap_t0 and 10_swap_t9 missing; 581/800 successes).",
+    "reason": "Không đạt (Fail): gold_supported=False, missing_facts=['78', '72.63'], citations=['rl-compendium-108p::p035::table::001', 'rl-compendium-108p::p035::text::000', 'rl-compendium-108p::p061::text::000']."
+  },
+  {
+    "query_id": "adv_test_mhp02",
+    "primary_group": "multi_hop",
+    "passed": true,
+    "status": "answered",
+    "citations": [
+      "rl-compendium-108p::p061::table::001",
+      "rl-compendium-108p::p061::table::001",
+      "rl-compendium-108p::p061::text::001",
+      "rl-compendium-108p::p050::text::000"
+    ],
+    "all_gold_supported": true,
+    "missing_facts": [],
+    "evidence_verification": "Multi-hop combining Page 50 Table 14 (LIBERO-Pro = 800, RoboCasa365 = 250) and Page 61 Tables 21-22 (GPT-6 Astra LIBERO-Pro = 741/800 [92.63%], RoboCasa365 = 148/250 [59.20%], Composite-Unseen = 42.50% vs 13.8%).",
+    "reason": "Đạt (Pass): Trả lời đúng và đủ mọi số liệu/đơn vị/điều kiện; trích dẫn đúng ['rl-compendium-108p::p061::table::001', 'rl-compendium-108p::p061::table::001', 'rl-compendium-108p::p061::text::001', 'rl-compendium-108p::p050::text::000'] khớp bản gốc (Multi-hop combining Page 50 Table 14 (LIBERO-Pro = 800, RoboCasa365 = 250) and Page 61 Tables 21-22 (GPT-6 Astra LIBERO-Pro = 741/800 [92.63%], RoboCasa365 = 148/250 [59.20%], Composite-Unseen = 42.50% vs 13.8%).)."
+  },
+  {
+    "query_id": "adv_test_mhp03",
+    "primary_group": "multi_hop",
+    "passed": true,
+    "status": "answered",
+    "citations": [
+      "rl-compendium-108p::p032::chart::001",
+      "rl-compendium-108p::p059::table::001",
+      "rl-compendium-108p::p032::text::001"
+    ],
+    "all_gold_supported": true,
+    "missing_facts": [],
+    "evidence_verification": "Multi-hop combining Page 32 Figure 6 (RoboTwin VLA finish = 66%, Analytic = 34%; RoboCasa365 Atomic VLA finish = 86%) and Page 59-60 Table 20 (VLA_ACT call share: RoboTwin C2R = 794 [47.4%], RoboCasa365 = 2746 [35.3%]).",
+    "reason": "Đạt (Pass): Trả lời đúng và đủ mọi số liệu/đơn vị/điều kiện; trích dẫn đúng ['rl-compendium-108p::p032::chart::001', 'rl-compendium-108p::p059::table::001', 'rl-compendium-108p::p032::text::001'] khớp bản gốc (Multi-hop combining Page 32 Figure 6 (RoboTwin VLA finish = 66%, Analytic = 34%; RoboCasa365 Atomic VLA finish = 86%) and Page 59-60 Table 20 (VLA_ACT call share: RoboTwin C2R = 794 [47.4%], RoboCasa365 = 2746 [35.3%]).)."
+  },
+  {
+    "query_id": "adv_test_mhp04",
+    "primary_group": "multi_hop",
+    "passed": true,
+    "status": "answered",
+    "citations": [
+      "rl-compendium-108p::p078::table::001",
+      "rl-compendium-108p::p016::table::001",
+      "rl-compendium-108p::p078::text::000",
+      "rl-compendium-108p::p077::text::004"
+    ],
+    "all_gold_supported": true,
+    "missing_facts": [],
+    "evidence_verification": "Multi-hop combining Page 16 (AWR hyperparameters: gamma=0.99, lambda=0.95, |D|=50,000, batch size=256) and Page 78 AMP Table 4 (B=10^5, gamma=0.95 single-clip / 0.99 tasks, TD(lambda)=GAE(lambda)=0.95, batch size=256).",
+    "reason": "Đạt (Pass): Trả lời đúng và đủ mọi số liệu/đơn vị/điều kiện; trích dẫn đúng ['rl-compendium-108p::p078::table::001', 'rl-compendium-108p::p016::table::001', 'rl-compendium-108p::p078::text::000', 'rl-compendium-108p::p077::text::004'] khớp bản gốc (Multi-hop combining Page 16 (AWR hyperparameters: gamma=0.99, lambda=0.95, |D|=50,000, batch size=256) and Page 78 AMP Table 4 (B=10^5, gamma=0.95 single-clip / 0.99 tasks, TD(lambda)=GAE(lambda)=0.95, batch size=256).)."
+  },
+  {
+    "query_id": "adv_test_txt01",
+    "primary_group": "text",
+    "passed": true,
+    "status": "answered",
+    "citations": [
+      "rl-compendium-108p::p006::text::003",
+      "rl-compendium-108p::p006::text::004",
+      "rl-compendium-108p::p006::text::002"
+    ],
+    "all_gold_supported": true,
+    "missing_facts": [],
+    "evidence_verification": "Page 6, Section 4 paragraph 2: comparison of AWR with REPS (expected return, dual function of Bellman error, latest policy only without replay buffer) and MPO (partial EM, bootstrapped Q-function with Retrace(lambda)).",
+    "reason": "Đạt (Pass): Trả lời đúng và đủ mọi số liệu/đơn vị/điều kiện; trích dẫn đúng ['rl-compendium-108p::p006::text::003', 'rl-compendium-108p::p006::text::004', 'rl-compendium-108p::p006::text::002'] khớp bản gốc (Page 6, Section 4 paragraph 2: comparison of AWR with REPS (expected return, dual function of Bellman error, latest policy only without replay buffer) and MPO (partial EM, bootstrapped Q-function with Retrace(lambda)).)."
+  },
+  {
+    "query_id": "adv_test_txt02",
+    "primary_group": "text",
+    "passed": true,
+    "status": "answered",
+    "citations": [
+      "rl-compendium-108p::p044::text::000",
+      "rl-compendium-108p::p054::text::001",
+      "rl-compendium-108p::p054::text::000"
+    ],
+    "all_gold_supported": true,
+    "missing_facts": [],
+    "evidence_verification": "Page 44 Appendix A (command.json, state_NN.json, log_NN.json, done_NN.flag) and Page 54 Appendix E.2 (6 numbered localization steps using RGB pixels, precomputed world map, and median).",
+    "reason": "Đạt (Pass): Trả lời đúng và đủ mọi số liệu/đơn vị/điều kiện; trích dẫn đúng ['rl-compendium-108p::p044::text::000', 'rl-compendium-108p::p054::text::001', 'rl-compendium-108p::p054::text::000'] khớp bản gốc (Page 44 Appendix A (command.json, state_NN.json, log_NN.json, done_NN.flag) and Page 54 Appendix E.2 (6 numbered localization steps using RGB pixels, precomputed world map, and median).)."
+  },
+  {
+    "query_id": "adv_test_txt03",
+    "primary_group": "text",
+    "passed": true,
+    "status": "answered",
+    "citations": [
+      "rl-compendium-108p::p078::text::001",
+      "rl-compendium-108p::p078::text::002",
+      "rl-compendium-108p::p078::text::000"
+    ],
+    "all_gold_supported": true,
+    "missing_facts": [],
+    "evidence_verification": "Page 78, Appendix C text and Table 5: encoder two hidden layers of 512 and 256 units, 16D latent encoding, KL-regularizer lambda = 10^-4, prior N(0, I), frozen pi with new high-level controller u(z_t | s_t, g_t).",
+    "reason": "Đạt (Pass): Trả lời đúng và đủ mọi số liệu/đơn vị/điều kiện; trích dẫn đúng ['rl-compendium-108p::p078::text::001', 'rl-compendium-108p::p078::text::002', 'rl-compendium-108p::p078::text::000'] khớp bản gốc (Page 78, Appendix C text and Table 5: encoder two hidden layers of 512 and 256 units, 16D latent encoding, KL-regularizer lambda = 10^-4, prior N(0, I), frozen pi with new high-level controller u(z_t | s_t, g_t).)."
+  },
+  {
+    "query_id": "adv_test_txt04",
+    "primary_group": "text",
+    "passed": true,
+    "status": "answered",
+    "citations": [
+      "rl-compendium-108p::p085::text::003",
+      "rl-compendium-108p::p086::text::001",
+      "rl-compendium-108p::p085::text::002"
+    ],
+    "all_gold_supported": true,
+    "missing_facts": [],
+    "evidence_verification": "Page 85 Section 5.1 (Gridworld: inputs x,y -> Delta x, Delta y; 100 ReLU -> 2 outputs; 10 imagination steps, 1 stream) and Page 86 Section 5.2 (Towers of Hanoi: bit-strings -> P(Delta=-1,0,1); 100 ReLU -> 9n outputs; 5 imagination steps, 3 streams).",
+    "reason": "Đạt (Pass): Trả lời đúng và đủ mọi số liệu/đơn vị/điều kiện; trích dẫn đúng ['rl-compendium-108p::p085::text::003', 'rl-compendium-108p::p086::text::001', 'rl-compendium-108p::p085::text::002'] khớp bản gốc (Page 85 Section 5.1 (Gridworld: inputs x,y -> Delta x, Delta y; 100 ReLU -> 2 outputs; 10 imagination steps, 1 stream) and Page 86 Section 5.2 (Towers of Hanoi: bit-strings -> P(Delta=-1,0,1); 100 ReLU -> 9n outputs; 5 imagination steps, 3 streams).)."
+  },
+  {
+    "query_id": "adv_test_una01",
+    "primary_group": "unanswerable",
+    "passed": true,
+    "status": "abstain",
+    "citations": [],
+    "evidence_verification": "Verified by searching all 108 pages of RL.pdf for 'StarCraft', 'SMAC', and '3s5z': 0 matches.",
+    "reason": "Đạt (Pass): Từ chối đúng câu hỏi không có bằng chứng trong RL.pdf, không suy đoán."
+  },
+  {
+    "query_id": "adv_test_una02",
+    "primary_group": "unanswerable",
+    "passed": true,
+    "status": "abstain",
+    "citations": [],
+    "evidence_verification": "Verified by checking Table 14 (page 50) and searching RL.pdf for 'CALVIN' and 'ABC': no evaluation on CALVIN is reported.",
+    "reason": "Đạt (Pass): Từ chối đúng câu hỏi không có bằng chứng trong RL.pdf, không suy đoán."
+  },
+  {
+    "query_id": "adv_test_una03",
+    "primary_group": "unanswerable",
+    "passed": true,
+    "status": "abstain",
+    "citations": [],
+    "evidence_verification": "Verified by inspecting Page 52-53 (Appendix D.3 and Table 15) and searching RL.pdf for 'H100', 'A100', and GPU counts: not reported.",
+    "reason": "Đạt (Pass): Từ chối đúng câu hỏi không có bằng chứng trong RL.pdf, không suy đoán."
+  },
+  {
+    "query_id": "adv_test_una04",
+    "primary_group": "unanswerable",
+    "passed": true,
+    "status": "abstain",
+    "citations": [],
+    "evidence_verification": "Verified by inspecting Page 72-73 (AMP Section 8.4 and Table 3) and searching RL.pdf for 'Joule', 'J/m', and 'energy consumption': 0 matches.",
+    "reason": "Đạt (Pass): Từ chối đúng câu hỏi không có bằng chứng trong RL.pdf, không suy đoán."
+  },
+  {
+    "query_id": "adv_test_una05",
+    "primary_group": "unanswerable",
+    "passed": true,
+    "status": "abstain",
+    "citations": [],
+    "evidence_verification": "Verified by inspecting Page 86 Section 5.2 and Page 87 Figure 3: only n=2 and n=3 discs are evaluated.",
+    "reason": "Đạt (Pass): Từ chối đúng câu hỏi không có bằng chứng trong RL.pdf, không suy đoán."
+  },
+  {
+    "query_id": "adv_test_una06",
+    "primary_group": "unanswerable",
+    "passed": true,
+    "status": "abstain",
+    "citations": [],
+    "evidence_verification": "Verified by inspecting AMP Sections 8-9 (pages 68-73) and searching RL.pdf for 'Unitree', 'sim-to-real', and 'quadruped hardware': 0 matches.",
+    "reason": "Đạt (Pass): Từ chối đúng câu hỏi không có bằng chứng trong RL.pdf, không suy đoán."
+  }
+]

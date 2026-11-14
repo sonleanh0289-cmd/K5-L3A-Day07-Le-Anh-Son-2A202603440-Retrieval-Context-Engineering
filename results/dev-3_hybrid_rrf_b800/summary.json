@@ -1,0 +1,17 @@
+{
+  "strategy": "3_hybrid_rrf_b800",
+  "split": "dev",
+  "top_k": 3,
+  "budget_chars": 800,
+  "use_filter": false,
+  "n": 16,
+  "hit1": 12,
+  "hit1_rate": 0.75,
+  "hit3": 15,
+  "hit3_rate": 0.9375,
+  "context_hit": 12,
+  "context_hit_rate": 0.75,
+  "avg_context_chars": 591.3,
+  "median_ms": 16.34,
+  "service_cost_usd": 0.0
+}

@@ -1,0 +1,176 @@
+{
+  "retrieval_benchmarks": [
+    {
+      "strategy": "1_dev_baseline_tfidf_text_only_b1200",
+      "split": "dev",
+      "top_k": 3,
+      "budget_chars": 1200,
+      "n_answerable": 16,
+      "hit1": 3,
+      "hit1_rate": 0.1875,
+      "hit3": 3,
+      "hit3_rate": 0.1875,
+      "context_hit_any": 0,
+      "context_hit_all_gold": 0,
+      "context_hit_all_gold_rate": 0.0,
+      "avg_context_chars": 127.7,
+      "median_ms": 1.31
+    },
+    {
+      "strategy": "2_dev_multimodal_hybrid_rrf_b2400",
+      "split": "dev",
+      "top_k": 4,
+      "budget_chars": 2400,
+      "n_answerable": 16,
+      "hit1": 12,
+      "hit1_rate": 0.75,
+      "hit3": 14,
+      "hit3_rate": 0.875,
+      "context_hit_any": 12,
+      "context_hit_all_gold": 10,
+      "context_hit_all_gold_rate": 0.625,
+      "avg_context_chars": 1616.1,
+      "median_ms": 166.91
+    },
+    {
+      "strategy": "3_dev_selected_multimodal_bge_rerank_b5200",
+      "split": "dev",
+      "top_k": 5,
+      "budget_chars": 5200,
+      "n_answerable": 16,
+      "hit1": 15,
+      "hit1_rate": 0.9375,
+      "hit3": 16,
+      "hit3_rate": 1.0,
+      "context_hit_any": 16,
+      "context_hit_all_gold": 16,
+      "context_hit_all_gold_rate": 1.0,
+      "avg_context_chars": 4493.8,
+      "median_ms": 374.78
+    },
+    {
+      "strategy": "test_selected_multimodal_bge_rerank_b5200",
+      "split": "test",
+      "top_k": 5,
+      "budget_chars": 5200,
+      "n_answerable": 24,
+      "hit1": 23,
+      "hit1_rate": 0.9583,
+      "hit3": 24,
+      "hit3_rate": 1.0,
+      "context_hit_any": 24,
+      "context_hit_all_gold": 23,
+      "context_hit_all_gold_rate": 0.9583,
+      "avg_context_chars": 4674.1,
+      "median_ms": 531.47
+    }
+  ],
+  "dev_agent_summary": {
+    "suite": "adv_agent_selected_dev",
+    "split": "dev",
+    "model": "qwen2.5:7b",
+    "top_k": 5,
+    "budget_chars": 5200,
+    "passed": 18,
+    "total": 19,
+    "pass_rate": 0.9474,
+    "pass_rate_pct": 94.74,
+    "meets_90pct_bonus_threshold": true,
+    "system_errors": 0,
+    "total_time_s": 109.6,
+    "median_time_ms": 4581.7,
+    "service_cost_usd": 0.0,
+    "by_group": {
+      "table": {
+        "passed": 4,
+        "total": 4,
+        "rate": 1.0,
+        "rate_pct": 100.0
+      },
+      "figure_diagram": {
+        "passed": 3,
+        "total": 3,
+        "rate": 1.0,
+        "rate_pct": 100.0
+      },
+      "chart": {
+        "passed": 3,
+        "total": 3,
+        "rate": 1.0,
+        "rate_pct": 100.0
+      },
+      "multi_hop": {
+        "passed": 2,
+        "total": 3,
+        "rate": 0.6667,
+        "rate_pct": 66.67
+      },
+      "text": {
+        "passed": 3,
+        "total": 3,
+        "rate": 1.0,
+        "rate_pct": 100.0
+      },
+      "unanswerable": {
+        "passed": 3,
+        "total": 3,
+        "rate": 1.0,
+        "rate_pct": 100.0
+      }
+    }
+  },
+  "test_agent_summary": {
+    "suite": "adv_agent_selected_test",
+    "split": "test",
+    "model": "qwen2.5:7b",
+    "top_k": 5,
+    "budget_chars": 5200,
+    "passed": 27,
+    "total": 30,
+    "pass_rate": 0.9,
+    "pass_rate_pct": 90.0,
+    "meets_90pct_bonus_threshold": true,
+    "system_errors": 0,
+    "total_time_s": 199.46,
+    "median_time_ms": 5876.6,
+    "service_cost_usd": 0.0,
+    "by_group": {
+      "table": {
+        "passed": 5,
+        "total": 6,
+        "rate": 0.8333,
+        "rate_pct": 83.33
+      },
+      "figure_diagram": {
+        "passed": 4,
+        "total": 5,
+        "rate": 0.8,
+        "rate_pct": 80.0
+      },
+      "chart": {
+        "passed": 5,
+        "total": 5,
+        "rate": 1.0,
+        "rate_pct": 100.0
+      },
+      "multi_hop": {
+        "passed": 3,
+        "total": 4,
+        "rate": 0.75,
+        "rate_pct": 75.0
+      },
+      "text": {
+        "passed": 4,
+        "total": 4,
+        "rate": 1.0,
+        "rate_pct": 100.0
+      },
+      "unanswerable": {
+        "passed": 6,
+        "total": 6,
+        "rate": 1.0,
+        "rate_pct": 100.0
+      }
+    }
+  }
+}

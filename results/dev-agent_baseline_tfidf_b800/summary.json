@@ -1,0 +1,34 @@
+{
+  "strategy": "agent_baseline_tfidf_b800",
+  "split": "dev",
+  "model": "qwen2.5:7b",
+  "cases": 18,
+  "provider_errors": 0,
+  "tool_use": {
+    "n": 18,
+    "N": 18
+  },
+  "grounded_answer": {
+    "0": 6,
+    "1": 0,
+    "2": 10,
+    "N": 16,
+    "mean": 1.25
+  },
+  "citation_validity": {
+    "n": 10,
+    "N": 11
+  },
+  "answer_citation_coverage": {
+    "n": 11,
+    "N": 11
+  },
+  "abstention": {
+    "n": 2,
+    "N": 2
+  },
+  "false_abstention": {
+    "n": 5,
+    "N": 16
+  }
+}

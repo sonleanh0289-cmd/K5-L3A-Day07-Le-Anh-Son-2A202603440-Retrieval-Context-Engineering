@@ -1,0 +1,982 @@
+[
+  {
+    "query_id": "adv_dev_tab01",
+    "primary_group": "table",
+    "question": "In AWR Table 1 (page 8), what is the final average return and standard deviation of AWR (Ours) vs SAC on the Hopper-v2 task, and how many points higher is AWR's mean return than SAC's?",
+    "top_k": 3,
+    "budget_chars": 1200,
+    "results": [
+      {
+        "id": "rl-compendium-108p::p007::text::002",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 7,
+        "text": "[Paper 1: AWR (Peng et al., 2019) | Page 7] DDPG, TD3, and SAC uses the implementations from RLkit (Pong, 2019). RWR is a custom implementation following the algorithm described by Peters & Schaal (2007). Snapshots of the AWR policies are shown in Figure 2. Learning curves comparing the different algorithms on the OpenAI Gym benchmarks are shown in Figure 3, and Table 1 summarizes the average returns of the ﬁnal policies across 5 training runs initialized with different random seeds. Overall, AWR shows competitive performance with the state-of-the-art deep RL algorithms. It signiﬁcantly outperforms on-policy methods such as PPO and TRPO in both sample efﬁciency and asymptotic performance. While it is not yet as sample efﬁcient as current state-of-the-art off-policy methods, such SAC and TD3, it is generally able to achieve a similar asymptotic performance, despite using only simple supervised regression for both policy and value function updates. The complex Humanoid-V2 task proved to be the most challenging case for AWR, and its performance still lags well behind SAC. Note that RWR generally does not perform well on any of these tasks. This suggests that, although AWR is simple and easy to implement, the particular modiﬁcations it makes compared to standard RWR are critical for effective performance. To illustrate AWR’s generality on tasks with discrete actions, we compare AWR to TRPO, PPO, and RWR on LunarLander-v2. DDPG, TD3, and SAC are not easily applicable to discrete action spaces due to their need to backpropagate from the Q-function to the policy. On this discrete control task, AWR also shows strong performance compared to the other algorithms.",
+        "metadata": {
+          "paper": "Paper 1: AWR (Peng et al., 2019)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.3108265779528814,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "rl-compendium-108p::p008::text::000",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 8,
+        "text": "[Paper 1: AWR (Peng et al., 2019) | Page 8] Figure 3: Learning curves of the various algorithms when applied to OpenAI Gym tasks. Results are averaged across 5 random seeds. AWR is generally competitive with the best current methods. Task TRPO PPO DDPG TD3 SAC RWR A WR (Ours) Ant-v2 2901± 85 1161± 389 72± 1550 4285± 671 5909 ± 371 181± 19 5067± 256 HalfCheetah-v2 3302± 428 4920± 429 10563 ± 382 4309± 1238 9297± 1206 1400± 370 9136± 184 Hopper-v2 1880± 337 1391± 304 855± 282 935± 489 2769± 552 605± 114 3405 ± 121 Humanoid-v2 552± 9 695± 59 4382± 423 81± 17 8048 ± 700 509± 18 4996± 697 LunarLander-v2 104± 94 121± 49 − − − 185± 23 229 ± 2 Walker2d-v2 2765± 168 2617± 362 401± 470 4212± 427 5805 ± 587 406± 64 5813 ± 483 Table 1: Final returns for different algorithms on the OpenAI Gym tasks, with ± corresponding to one standard deviation of the average return across 5 random seeds. In terms of ﬁnal performance, AWR generally performs comparably or better than prior methods. also compare with a version of AWR without the baseline V (s) (No Baseline), which corresponds to using the standard RWR weightsωs,a = exp( 1βRs,a), and another version that uses Monte Carlo return estimates instead of TD(λ) (No TD(λ)). The effects of these components are illustrated in Figure 4. Overall, these design decisions appear to be vital for an effective algorithm, with the most crucial components being the use of experience replay and a baseline. Updates using only on-policy data can lead to instabilities and result in noticeable degradation in performance, which may be due to overﬁtting on a smaller dataset. This issue might be mitigated by collecting a larger batch of",
+        "metadata": {
+          "paper": "Paper 1: AWR (Peng et al., 2019)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.2975240156524416,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "rl-compendium-108p::p007::text::000",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 7,
+        "text": "[Paper 1: AWR (Peng et al., 2019) | Page 7] (a) HalfCheetah-v2 (b) Hopper-v2 (c) LunarLander-v2 (d) Walker2d-v2 Figure 2: Snapshots of AWR policies trained on OpenAI Gym tasks. Our simple algorithm learns effective policies for a diverse set of discrete and continuous control tasks. demo policies. Behaviors learned by the policies are best seen in the supplementary video 1. Code for our implementation of AWR is available at xbpeng.github.io/projects/AWR/. At each iteration, the agent collects a batch of approximately 2000 samples, which are stored in the replay buffer D along with samples from previous iterations. The replay buffer stores 50k of the most recent samples. Updates to the value function and policy are performed by uniformly sampling minibatches of 256 samples fromD. The value function is updated with 200 gradient steps per iteration, and the policy is updated with 1000 steps. Detailed hyperparameter settings are provided in Appendix C. 5.1 B ENCHMARKS We compare AWR to a number of state-of-the-art RL algorithms, including on-policy algorithms, such as TRPO (Schulman et al., 2015) and PPO (Schulman et al., 2017), off-policy algorithms, such as DDPG (Lillicrap et al., 2016), TD3 (Fujimoto et al., 2018), and SAC (Haarnoja et al., 2018a), as well as RWR (Peters & Schaal, 2007), which we include for comparison due to its similarity to AWR.2 TRPO and PPO use the implementations from OpenAI baselines (Dhariwal et al., 2017). DDPG, TD3, and SAC uses the implementations from RLkit (Pong, 2019). RWR is a custom implementation following the algorithm described by Peters & Schaal (2007).",
+        "metadata": {
+          "paper": "Paper 1: AWR (Peng et al., 2019)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.2592495924152702,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "context_ids": [],
+    "context_chars": 0,
+    "elapsed_ms": 1.8,
+    "hit1": false,
+    "hit3": false,
+    "context_hit_any": false,
+    "context_hit_all_gold": false
+  },
+  {
+    "query_id": "adv_dev_tab02",
+    "primary_group": "table",
+    "question": "According to Harness VLA Table 2 (page 27), what is the success rate (%) of Harness VLA (CC) on the Object suite and Overall on standard LIBERO, and how does its Overall score compare to AtomVLA?",
+    "top_k": 3,
+    "budget_chars": 1200,
+    "results": [
+      {
+        "id": "rl-compendium-108p::p026::text::004",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 26,
+        "text": "[Paper 2: Harness VLA (Zhang et al., 2026) | Page 26] 3.2 Overall Benchmark Performance Few-shot evaluation with Task Specific Memory.We first evaluate Harness VLA after task-level bootstrapping has populated Task Specific Memory. This setting tests whether the harness can reuse the primitive organization discovered on a reference seed while grounding all spatial arguments from the current observations. We evaluate whether this memory-backed execution preserves strong in-distribution manipulation performance on standard LIBERO, remains robust under LIBERO-Pro instruction-redirection (T) and position-swap (S) perturbations, and extends the same primitive interface to household kitchen manipulation in RoboCasa365. Standard LIBERO.Table 2 reports results on the four standard LIBERO suites. Harness VLA (CC) achieves an aggregate success rate of96.0%(384/400), including100.0%on OBJECTand93.0%on LIBERO-10. Compared with the frozenπ RLinf checkpoint used insideVLA ACT, which obtains95.3% overall, Harness VLA preserves competitive standard-suite performance while exposing the same policy through a controllable primitive interface for the perturbed evaluations below. 7",
+        "metadata": {
+          "paper": "Paper 2: Harness VLA (Zhang et al., 2026)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.3263584066856207,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "rl-compendium-108p::p028::text::000",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 28,
+        "text": "[Paper 2: Harness VLA (Zhang et al., 2026) | Page 28] LIBERO-Pro.Table 3 reports aggregate results on LIBERO-Pro, spanning SPATIAL, OBJECT, GOAL, and LIBERO-10 under instruction-redirection (T) and position-swap (S) perturbations. Existing end-toend VLA models degrade sharply under these distribution shifts, and RATS is the strongest reported prior baseline with43.8%overall on its reported cells. Harness VLA reaches72.1%with Codex and82.4%with CC, improving over RATS by38.6percentage points in the headline comparison. The directπ RLinf baseline reaches50.0%overall under our protocol, showing that the gain does not simply come from the frozen VLA backbone. The gains across both instruction-redirection and position-swap settings show that the few-shot harness has learned a reusable division of labor over the fixed primitive library: the planner can re-bind targets, use analytic primitives to re-stage the scene and handle non-contact execution, and invoke the VLA only for local contact-rich manipulation. RoboCasa365.RoboCasa365 extends the evaluation from tabletop manipulation to household kitchen tasks with mobile staging, articulated fixtures, and longer composite routines. Table 4 compares Harness VLA against results reported in prior RoboCasa365 papers and the RLDX-1 baseline used for the headline comparison. RLDX-1 reaches an overall success rate of30.0%, while Harness VLA reaches57.1%with Codex and48.6%with CC; the Codex instantiation therefore improves over RLDX-1 by27.1percentage points. These gains are consistent with the intended decomposition: the planner handles navigation, staging,",
+        "metadata": {
+          "paper": "Paper 2: Harness VLA (Zhang et al., 2026)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.2826879692994099,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "rl-compendium-108p::p026::text::003",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 26,
+        "text": "[Paper 2: Harness VLA (Zhang et al., 2026) | Page 26] is instantiated with benchmark-specific frozen policies while preserving a unifiedVLA ACTinterface: the RLinf-releasedpi05 libero130 fullshotπ 0.5-SFT checkpoint, denotedπ RLinf [23], for LIBERO and LIBERO-Pro, the frozen RLDX-1 RoboCasa checkpoint [24] for RoboCasa365, and our post-trained LingBot-VLA checkpoint [25] for RoboTwin C2R. In the tables below,Harness VLA (Codex)andHarness VLA (CC)denote the same harness instantiated with Codex and Claude Code planners, respectively; CCabbreviates Claude Code. Theπ RLinf, RLDX-1, and LingBot-VLA rows serve as direct frozen-VLA baselines for their corresponding benchmarks. Appendix D details the VLA instantiations. 3.2 Overall Benchmark Performance Few-shot evaluation with Task Specific Memory.We first evaluate Harness VLA after task-level bootstrapping has populated Task Specific Memory. This setting tests whether the harness can reuse the primitive organization discovered on a reference seed while grounding all spatial arguments from the current observations. We evaluate whether this memory-backed execution preserves strong in-distribution manipulation performance on standard LIBERO, remains robust under LIBERO-Pro instruction-redirection (T) and position-swap (S) perturbations, and extends the same primitive interface to household kitchen manipulation in RoboCasa365. Standard LIBERO.Table 2 reports results on the four standard LIBERO suites. Harness VLA (CC) achieves an aggregate success rate of96.0%(384/400), including100.0%on OBJECTand93.0%on LIBERO-10. Compared with the frozenπ RLinf checkpoint used insideVLA ACT, which obtains95.3%",
+        "metadata": {
+          "paper": "Paper 2: Harness VLA (Zhang et al., 2026)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.27190202206137065,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "context_ids": [],
+    "context_chars": 0,
+    "elapsed_ms": 1.5,
+    "hit1": false,
+    "hit3": false,
+    "context_hit_any": false,
+    "context_hit_all_gold": false
+  },
+  {
+    "query_id": "adv_dev_tab03",
+    "primary_group": "table",
+    "question": "In AMP Table 2 (page 70), what are the dataset size (in seconds), number of clips, and number of subjects for the Humanoid 'Walk + Punch' dataset?",
+    "top_k": 3,
+    "budget_chars": 1200,
+    "results": [
+      {
+        "id": "rl-compendium-108p::p070::text::002",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 70,
+        "text": "[Paper 3: AMP (Peng et al., 2021) | Page 70] optimal policies that are able to achieve a wider range of target speeds. This indicates that the diversity of behaviors exhibited by our policies can in large part be attributed to the motion prior, and is not solely a result of the task objective. To further illustrate AMP’s ability to compose disparate skills, we introduce additional reference motions into the dataset for getting up from the ground in various configurations. These additional motion clips then enable our character to recover from a fall and continue to perform a given task (Figure 3(c)). The policy also discovers novel recovery behaviors that are not present in the dataset. When the character falls forward, it tucks its body into a roll during the fall in order to more quickly transition into a getup behavior. While this particular behavior is not present in the motion clips, the policy is able to generalize behaviors observed in the dataset to produce novel and naturalistic strategies for new scenarios. Table 2. Summary statistics of the different datasets used to train the motion priors. We record the total length of motion clips in each dataset, along with the number of clips, and the number of subjects (e.g. human actors) that the clips were recorded from. Character Dataset Size (s) Clips Subjects Humanoid Cartwheel 13.6 3 1 Jump 28.6 10 4 Locomotion 434.1 56 8 Run 204.4 47 3 Run + Leap + Roll 22.1 10 7 Stealthy 136.5 3 1 Walk 229.6 9 5 Walk + Punch 247.8 15 9 Zombie 18.3 1 1 T-Rex Locomotion 10.5 5 1 Fig. 4. Performance of Target Heading policies trained with different datasets. Left: Learning curves comparing the normalized task returns",
+        "metadata": {
+          "paper": "Paper 3: AMP (Peng et al., 2021)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.40830669729236385,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "rl-compendium-108p::p070::text::003",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 70,
+        "text": "[Paper 3: AMP (Peng et al., 2021) | Page 70] Run + Leap + Roll 22.1 10 7 Stealthy 136.5 3 1 Walk 229.6 9 5 Walk + Punch 247.8 15 9 Zombie 18.3 1 1 T-Rex Locomotion 10.5 5 1 Fig. 4. Performance of Target Heading policies trained with different datasets. Left: Learning curves comparing the normalized task returns of policies trained with a large dataset of diverse locomotion clips to policies trained with only walking or running reference motions. Three models are trained using each dataset. Right: Comparison of the target speed with the average speed achieved by the different policies. Policies trained using the larger Locomotion dataset is able to more closely follow the various target speeds by imitating different gaits. For the Strike task (Figure 1), the motion prior is trained using a collection of walking motion clips and punching motion clips. The resulting policy learns to walk to the target when it is far away, and then transition to a punching motion once it is within range to hit the target. Note that the motion clips in the dataset contain strictly walking-only motions or punching-only motion, and none of the clips show an actor walking to and punching a target. Instead, the policy learns to temporally sequence these different behaviors in order to fulfill the high-level task objectives. Again, this composition of different skills emerges automatically from the motion prior, without requiring a motion planner or other mechanisms for motion selection. Finally, our system can also train visuomotor policies for traversing obstacle-filled environments. By providing the motion prior with a collection of locomotion clips and rolling clips, the character learns",
+        "metadata": {
+          "paper": "Paper 3: AMP (Peng et al., 2021)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.262103809507644,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "rl-compendium-108p::p069::text::000",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 69,
+        "text": "[Paper 3: AMP (Peng et al., 2021) | Page 69] 1:8 • Xue Bin Peng†, Ze Ma†, Pieter Abbeel, Sergey Levine, and Angjoo Kanazawa (a) Humanoid: Target Location (Locomotion) (b) Humanoid: Target Location (Zombie) (c) Humanoid: Target Heading (Locomotion + Getup) (d) Humanoid: Dribble (Locomotion) (e) Humanoid: Strike (Walk + Punch) (f) Humanoid: Obstacles (Run + Leap + Roll) (g) Humanoid: Stepping Stones (Cartwheel) (h) Humanoid: Stepping Stones (Jump) Fig. 3. The motion prior can be trained with large datasets of diverse motions, enabling simulated characters to perform complex tasks by composing a wider range of skills. Each environment is denoted by \"Character: Task (Dataset)\". [CMU [n.d.]; SFU [n.d.]; Zhang et al. 2018]. Depending on the task and character, each policy is trained with 100-300 million samples, requiring approximately 30-140 hours on 16 CPU cores. Code for our system will be released upon publication of this paper. 8.2 Tasks In this section, we demonstrate AMP’s effectiveness for controlling the style of a character’s motions as it performs other high-level tasks. The weights for the task-reward and style-reward are set to 𝑤𝐺 = 0.5 and𝑤𝑆 = 0.5 for all tasks. The character can be trained to perform tasks in a variety of distinct styles by providing the motion prior with different datasets. Figure 3 illustrates behaviors learned by the Humanoid on various tasks. Table 1 records the performance of the policies with respect to the normalized task return, and summary statistics of the different datasets used to train the motion priors are available in Table 2. AMP can accommodate large unstructured datasets, with the largest dataset containing 56",
+        "metadata": {
+          "paper": "Paper 3: AMP (Peng et al., 2021)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.2585382862404128,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "context_ids": [],
+    "context_chars": 0,
+    "elapsed_ms": 1.01,
+    "hit1": false,
+    "hit3": false,
+    "context_hit_any": false,
+    "context_hit_all_gold": false
+  },
+  {
+    "query_id": "adv_dev_tab04",
+    "primary_group": "table",
+    "question": "In AMP Table 6 (page 79), what are the Heading Return and Waving Return for the policy trained on the combined 'Wave + Walk (281.4s)' dataset compared to training on 'Walk (229.7s)' alone?",
+    "top_k": 3,
+    "budget_chars": 1200,
+    "results": [
+      {
+        "id": "rl-compendium-108p::p079::text::001",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 79,
+        "text": "[Paper 3: AMP (Peng et al., 2021) | Page 79] walking behaviors. Policies trained with only the waving motion are able to fulfill the waving objective, but learns a clumsy shuffling gait in order to follow the target heading direction. These results suggest that AMP does exhibit some capability for spatial composition different skills. However, the policies trained with both datasets can still exhibit some unnatural behaviors, particularly when the target height for the hand is high. Table 6. Performance of policies trained using different dataset on a spatial compositional task that combines following a target heading and waving the character’s hand at a target height. The normalized task returns for each objective is averaged across 100 episodes for each model. The model trained with both walking and waving motions achieves relatively high rewards on both objectives, while the models trained with only one type of motions perform well only on one of the objectives. Dataset (Size) Heading Return Waving Return Wave (51.7s) 0.683± 0.195 0.949± 0.144 Walk (229.7s) 0.945± 0.192 0.306± 0.378 Wave + Walk (281.4s) 0.885± 0.184 0.891± 0.202 ACM Trans. Graph., Vol. 40, No. 4, Article 1. Publication date: August 2021.",
+        "metadata": {
+          "paper": "Paper 3: AMP (Peng et al., 2021)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.4529839798064893,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "rl-compendium-108p::p079::text::000",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 79,
+        "text": "[Paper 3: AMP (Peng et al., 2021) | Page 79] 1:18 • Xue Bin Peng†, Ze Ma†, Pieter Abbeel, Sergey Levine, and Angjoo Kanazawa where𝑟heading𝑡 the same as the reward used for the Target Heading task equation 11, and𝑟wave𝑡 is specified according to: 𝑟wave𝑡 = exp \u0012 −16 \u0010 𝑦hand𝑡 −𝑦∗ \u00112\u0013 , (23) where𝑦hand𝑡 is the height of character’s right hand. To evaluate AMP’s ability to compose disparate skills spatially, we compare policies trained using both walking and waving motions, with policies trained with only walking motions or only waving motions. Table 6 compares the performance of the different policies with respect to the target heading and waving objectives. Although the motion prior was not trained with any reference motions that show both walking and waving at the same time, the policy was able to discover behaviors that combine these different skills, enabling the character to walk along different directions while also waving its hand at various heights. The policies trained with only walking motions tend to ignore the waving objective, and exhibit solely walking behaviors. Policies trained with only the waving motion are able to fulfill the waving objective, but learns a clumsy shuffling gait in order to follow the target heading direction. These results suggest that AMP does exhibit some capability for spatial composition different skills. However, the policies trained with both datasets can still exhibit some unnatural behaviors, particularly when the target height for the hand is high. Table 6. Performance of policies trained using different dataset on a spatial compositional task that combines following a target heading and waving",
+        "metadata": {
+          "paper": "Paper 3: AMP (Peng et al., 2021)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.29170482043018525,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "rl-compendium-108p::p070::text::003",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 70,
+        "text": "[Paper 3: AMP (Peng et al., 2021) | Page 70] Run + Leap + Roll 22.1 10 7 Stealthy 136.5 3 1 Walk 229.6 9 5 Walk + Punch 247.8 15 9 Zombie 18.3 1 1 T-Rex Locomotion 10.5 5 1 Fig. 4. Performance of Target Heading policies trained with different datasets. Left: Learning curves comparing the normalized task returns of policies trained with a large dataset of diverse locomotion clips to policies trained with only walking or running reference motions. Three models are trained using each dataset. Right: Comparison of the target speed with the average speed achieved by the different policies. Policies trained using the larger Locomotion dataset is able to more closely follow the various target speeds by imitating different gaits. For the Strike task (Figure 1), the motion prior is trained using a collection of walking motion clips and punching motion clips. The resulting policy learns to walk to the target when it is far away, and then transition to a punching motion once it is within range to hit the target. Note that the motion clips in the dataset contain strictly walking-only motions or punching-only motion, and none of the clips show an actor walking to and punching a target. Instead, the policy learns to temporally sequence these different behaviors in order to fulfill the high-level task objectives. Again, this composition of different skills emerges automatically from the motion prior, without requiring a motion planner or other mechanisms for motion selection. Finally, our system can also train visuomotor policies for traversing obstacle-filled environments. By providing the motion prior with a collection of locomotion clips and rolling clips, the character learns",
+        "metadata": {
+          "paper": "Paper 3: AMP (Peng et al., 2021)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.19363976697307164,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "context_ids": [],
+    "context_chars": 0,
+    "elapsed_ms": 1.22,
+    "hit1": false,
+    "hit3": false,
+    "context_hit_any": false,
+    "context_hit_all_gold": false
+  },
+  {
+    "query_id": "adv_dev_fig01",
+    "primary_group": "figure_diagram",
+    "question": "In AWR Figure 5 (page 9), what are the degrees of freedom (DoF) of the simulated humanoid and dog characters, and which four motion imitation skills are shown in subfigures (a)–(d)?",
+    "top_k": 3,
+    "budget_chars": 1200,
+    "results": [
+      {
+        "id": "rl-compendium-108p::p009::text::000",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 9,
+        "text": "[Paper 1: AWR (Peng et al., 2019) | Page 9] Figure 4: Left: Learning curves comparing AWR with various components removed. Each component appears to contribute to improvements in performance, with the best performance achieved when all components are combined. Right: Learning curves comparing AWR with different capacity replay buffers. AWR remains stable with large replay buffers containing primarily off-policy data from previous iterations of the algorithm. (a) Humanoid: Cartwheel (b) Humanoid: Spinkick (c) Dog: Trot (d) Dog: Turn Figure 5: Snapshots of 34 DoF humanoid and 82 DoF dog trained with AWR to imitate reference motion recorded from real world subjects. AWR is able to learn sophisticated skills with characters with large numbers of degrees of freedom. available in Figure 5. Table 2 compares the performance of AWR to RWR and the highly-tuned PPO implementation from Peng et al. (2018). Learning curves for the different algorithms are shown in Figure 6. AWR performs well across the set of challenging skills, consistently achieving comparable or better performance than PPO. RWR struggles with controlling the humanoid, but exhibits stronger performance on the dog. This performance difference may be due to the more dynamic and acrobatic skills of the humanoid, compared to the more standard locomotion skills of the dog. 5.4 O FF-POLICY LEARNING WITH STATIC DATASETS Since AWR is an off-policy RL algorithm, it has the advantage of being able to leverage data from other sources. This not only accelerates the learning process on standard tasks, as discussed above, but also allows us to apply AWR in a fully off-policy setting, where the algorithm",
+        "metadata": {
+          "paper": "Paper 1: AWR (Peng et al., 2019)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.432712633230903,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "rl-compendium-108p::p072::text::000",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 72,
+        "text": "[Paper 3: AMP (Peng et al., 2021) | Page 72] AMP: Adversarial Motion Priors for Stylized Physics-Based Character Control • 1:11 (a) T-Rex (Walk) (b) Dog (Trot) (c) Dog (Canter) Fig. 7. AMP can be used to train complex non-humanoid characters, such as a 59 DoF T-Rex and a 64 DoF dog. By providing the motion prior with different reference motion clips, the characters can be trained to perform various locomotion gaits, such as trotting and cantering. policy is trained solely to maximize the style-reward𝑟𝑆𝑡 from the motion prior. Unlike previous motion tracking methods, our approach does not require a manually designed tracking objective or a phase-based synchronization of the reference motion and the policy Peng et al. [2018a]. Table 3 summarizes the performance of policies trained using AMP to imitate a diverse corpus of motions. Figure 6 and 7 illustrate examples of motions learned by the characters. Performance is evaluated using the average pose error, where the pose error𝑒pose𝑡 at each time step 𝑡 is computed between the pose of the simulated character and the reference motion using the relative positions of each joint with respect to the root (in units of meters), 𝑒pose𝑡 = 1𝑁 joint ∑︁𝑗∈joints (x𝑗𝑡− xroot𝑡 )−( ^ x𝑗𝑡− ^ xroot𝑡 ) 2. (10) x𝑗𝑡 and ^ x𝑗𝑡 denote the 3D Cartesian position of joint 𝑗 from the simulated character and the reference motion, and𝑁 joint is the total number of joints in the character’s body. This method of evaluating motion similarity has previously been reported to better conform to human perception of motion similarity [Harada et al. 2004; Tang et al. 2008]. Since AMP does not use a phase variable to synchronize",
+        "metadata": {
+          "paper": "Paper 3: AMP (Peng et al., 2021)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.2621611569669639,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "rl-compendium-108p::p009::text::001",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 9,
+        "text": "[Paper 1: AWR (Peng et al., 2019) | Page 9] available in Figure 5. Table 2 compares the performance of AWR to RWR and the highly-tuned PPO implementation from Peng et al. (2018). Learning curves for the different algorithms are shown in Figure 6. AWR performs well across the set of challenging skills, consistently achieving comparable or better performance than PPO. RWR struggles with controlling the humanoid, but exhibits stronger performance on the dog. This performance difference may be due to the more dynamic and acrobatic skills of the humanoid, compared to the more standard locomotion skills of the dog. 5.4 O FF-POLICY LEARNING WITH STATIC DATASETS Since AWR is an off-policy RL algorithm, it has the advantage of being able to leverage data from other sources. This not only accelerates the learning process on standard tasks, as discussed above, but also allows us to apply AWR in a fully off-policy setting, where the algorithm is provided with a static dataset of transitions, and then tasked with learning the best possible policy. To evaluate our method in this setting, we use the off-policy tasks proposed by Kumar et al. (2019). The objective of these tasks is to learn policies solely from static datasets, without collecting any additional data from the policy that is being trained. The dataset consists of trajectories τ ={(s0, a0,r 0), (s1, a1,r 1),...} from rollouts of a demo policy. Unlike standard imitation learning tasks, which only observes the states and actions from the demo policy, the dataset also provides the reward received by the demo policy at each step. The demo policies are trained using SAC on",
+        "metadata": {
+          "paper": "Paper 1: AWR (Peng et al., 2019)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.25855807502911665,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "context_ids": [],
+    "context_chars": 0,
+    "elapsed_ms": 1.61,
+    "hit1": false,
+    "hit3": false,
+    "context_hit_any": false,
+    "context_hit_all_gold": false
+  },
+  {
+    "query_id": "adv_dev_fig02",
+    "primary_group": "figure_diagram",
+    "question": "In Harness VLA Figure 2 (page 22), what is the exact task description shown in the left box, and what do the green circles and orange circles represent in the rollout diagram?",
+    "top_k": 3,
+    "budget_chars": 1200,
+    "results": [
+      {
+        "id": "rl-compendium-108p::p030::text::001",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 30,
+        "text": "[Paper 2: Harness VLA (Zhang et al., 2026) | Page 30] is weakly conditioned on the task description and current scene binding. In the task-perturbed OBJECTPROcase, the visual scene remains similar while the instruction redirects the target, yetπ RLinf repeats the standard behavior instead of following the new task description. In the swap-perturbed GOAL-PROcase, the object layout changes, yetπ RLinf still moves the object toward the training-time region. Harness VLA makes semantic grounding explicit at the planner level: the plannerΠparses the task description, resolves the current contact target from the live RGB-D observation, uses analytic primitives for staging and repositioning, and invokes or re-invokesVLA ACTonly for the local contact-rich phase (Key Finding 2). Thus, semantic and scene-level reasoning is handled by the planner, while the frozen VLA remains responsible only for executing the contact-rich operation under the planner-provided binding. Key Finding 2: Planner-staged VLA invocation improves frozen-policy reliability.In Harness VLA, the planner does not call the VLA as a one-shot black box. Although the VLA is invoked sparsely rather than as a continuous controller, each call is a planner-chosen local contact-rich attempt whose staging can determine whether the frozen policy succeeds. The plannerΠtherefore treatsVLA ACTas a local contactrich primitive whose invocation can be re-staged and retried. Given a desired contact target (the object, fixture, or local interaction region to be acted on), the planner uses analytic primitives to place the robot in a feasible pre-contact configuration, invokes the VLA, observes the resulting contact state, and decides",
+        "metadata": {
+          "paper": "Paper 2: Harness VLA (Zhang et al., 2026)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.2284645960724349,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "rl-compendium-108p::p034::text::000",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 34,
+        "text": "[Paper 2: Harness VLA (Zhang et al., 2026) | Page 34] VLA fullshot Harness VLA (online planning) Figure 8:From the learned routine to online adaptation.Each row progresses from left to right. Top row (VLA fullshot): grasp a bowl, hand it off, and place it in the basket. The four Harness VLA rows show: stage a bowl above the box, invoke placement, and place the second bowl; stage the green plate, continue with the blue plate, and place it after re-grounding; inspect the marked bowl, stage it above the basket, and route the unmarked bowl to the box; reopen after a failed grasp, retry, and confirm the lift before handoff. rich phases. This division reuses the same policy without fine-tuning. Reset and reward.Real-world resets and success judgments require a human in the loop. To reset the scene, an operator restores the initial object arrangement and confirms that a new attempt can begin. Objects are not reset within an evaluation attempt. Task success is recorded only after an operator inspects the current scene and confirms that the task goal has been achieved. The remaining execution and memory workflow follows Section 2. Qualitative comparisons.Figure 8 compares online Harness VLA with fullshot execution of the frozen desk-clearing policy. The top row shows the learned grasp–handoff–basket-placement routine. The remaining rows show Harness VLA redirecting bowls to a box, transferring plates in a specified order, assigning bowls to destinations based on a visible dirty marker, and recovering from a missed grasp. Figure 9 compares fullshot VLA execution with two Flash procedures. The fullshot baseline grasps a",
+        "metadata": {
+          "paper": "Paper 2: Harness VLA (Zhang et al., 2026)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.22358761833441446,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "rl-compendium-108p::p055::text::002",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 55,
+        "text": "[Paper 2: Harness VLA (Zhang et al., 2026) | Page 55] solution: the ordering of primitive calls, the choice of analytic versus VLA-backed actions, the number and placement of VLA invocations, and the transition points between perception, staging, contact-rich execution, transport, release, and verification. The trace is used as a structural prior rather than a trajectory to replay; all spatial arguments are re-grounded from the current observation before execution. The prompt gives the agent the following rule: Use the JSON audit to understand why the strategy worked and what to avoid. Use the JSONL trace to understand what was executed and in what order. Reuse the Task Specific Memory procedural structure, but never replay literal coordinates. Previous xyz, xy, quat, pixel locations, base poses, and fixture coordinates belong to the seed 0 scene. Re-localize every current object, destination, support surface, relation landmark, and fixture from the current images and world maps. This rule is the prompt-level implementation of Task Specific Memory in Section 2.2. It lets the planner transfer the structure of a successful solution while grounding all geometry in the current rollout. E.4 Global Memory Global Memory complements seed 0 Task Specific Memory. Task Specific Memory is task-specific procedural context: it records the JSON audit and JSONL command trace for one reference rollout. Global Memory 36",
+        "metadata": {
+          "paper": "Paper 2: Harness VLA (Zhang et al., 2026)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.22106886065687414,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "context_ids": [],
+    "context_chars": 0,
+    "elapsed_ms": 1.07,
+    "hit1": false,
+    "hit3": false,
+    "context_hit_any": false,
+    "context_hit_all_gold": false
+  },
+  {
+    "query_id": "adv_dev_fig03",
+    "primary_group": "figure_diagram",
+    "question": "In AMP Fig. 7 (page 72), what are the two non-humanoid characters and their exact degrees of freedom (DoF), and what three locomotion skills are depicted in subfigures (a), (b), and (c)?",
+    "top_k": 3,
+    "budget_chars": 1200,
+    "results": [
+      {
+        "id": "rl-compendium-108p::p009::text::000",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 9,
+        "text": "[Paper 1: AWR (Peng et al., 2019) | Page 9] Figure 4: Left: Learning curves comparing AWR with various components removed. Each component appears to contribute to improvements in performance, with the best performance achieved when all components are combined. Right: Learning curves comparing AWR with different capacity replay buffers. AWR remains stable with large replay buffers containing primarily off-policy data from previous iterations of the algorithm. (a) Humanoid: Cartwheel (b) Humanoid: Spinkick (c) Dog: Trot (d) Dog: Turn Figure 5: Snapshots of 34 DoF humanoid and 82 DoF dog trained with AWR to imitate reference motion recorded from real world subjects. AWR is able to learn sophisticated skills with characters with large numbers of degrees of freedom. available in Figure 5. Table 2 compares the performance of AWR to RWR and the highly-tuned PPO implementation from Peng et al. (2018). Learning curves for the different algorithms are shown in Figure 6. AWR performs well across the set of challenging skills, consistently achieving comparable or better performance than PPO. RWR struggles with controlling the humanoid, but exhibits stronger performance on the dog. This performance difference may be due to the more dynamic and acrobatic skills of the humanoid, compared to the more standard locomotion skills of the dog. 5.4 O FF-POLICY LEARNING WITH STATIC DATASETS Since AWR is an off-policy RL algorithm, it has the advantage of being able to leverage data from other sources. This not only accelerates the learning process on standard tasks, as discussed above, but also allows us to apply AWR in a fully off-policy setting, where the algorithm",
+        "metadata": {
+          "paper": "Paper 1: AWR (Peng et al., 2019)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.20873253607094086,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "rl-compendium-108p::p069::text::000",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 69,
+        "text": "[Paper 3: AMP (Peng et al., 2021) | Page 69] 1:8 • Xue Bin Peng†, Ze Ma†, Pieter Abbeel, Sergey Levine, and Angjoo Kanazawa (a) Humanoid: Target Location (Locomotion) (b) Humanoid: Target Location (Zombie) (c) Humanoid: Target Heading (Locomotion + Getup) (d) Humanoid: Dribble (Locomotion) (e) Humanoid: Strike (Walk + Punch) (f) Humanoid: Obstacles (Run + Leap + Roll) (g) Humanoid: Stepping Stones (Cartwheel) (h) Humanoid: Stepping Stones (Jump) Fig. 3. The motion prior can be trained with large datasets of diverse motions, enabling simulated characters to perform complex tasks by composing a wider range of skills. Each environment is denoted by \"Character: Task (Dataset)\". [CMU [n.d.]; SFU [n.d.]; Zhang et al. 2018]. Depending on the task and character, each policy is trained with 100-300 million samples, requiring approximately 30-140 hours on 16 CPU cores. Code for our system will be released upon publication of this paper. 8.2 Tasks In this section, we demonstrate AMP’s effectiveness for controlling the style of a character’s motions as it performs other high-level tasks. The weights for the task-reward and style-reward are set to 𝑤𝐺 = 0.5 and𝑤𝑆 = 0.5 for all tasks. The character can be trained to perform tasks in a variety of distinct styles by providing the motion prior with different datasets. Figure 3 illustrates behaviors learned by the Humanoid on various tasks. Table 1 records the performance of the policies with respect to the normalized task return, and summary statistics of the different datasets used to train the motion priors are available in Table 2. AMP can accommodate large unstructured datasets, with the largest dataset containing 56",
+        "metadata": {
+          "paper": "Paper 3: AMP (Peng et al., 2021)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.20313808932110008,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "rl-compendium-108p::p072::text::000",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 72,
+        "text": "[Paper 3: AMP (Peng et al., 2021) | Page 72] AMP: Adversarial Motion Priors for Stylized Physics-Based Character Control • 1:11 (a) T-Rex (Walk) (b) Dog (Trot) (c) Dog (Canter) Fig. 7. AMP can be used to train complex non-humanoid characters, such as a 59 DoF T-Rex and a 64 DoF dog. By providing the motion prior with different reference motion clips, the characters can be trained to perform various locomotion gaits, such as trotting and cantering. policy is trained solely to maximize the style-reward𝑟𝑆𝑡 from the motion prior. Unlike previous motion tracking methods, our approach does not require a manually designed tracking objective or a phase-based synchronization of the reference motion and the policy Peng et al. [2018a]. Table 3 summarizes the performance of policies trained using AMP to imitate a diverse corpus of motions. Figure 6 and 7 illustrate examples of motions learned by the characters. Performance is evaluated using the average pose error, where the pose error𝑒pose𝑡 at each time step 𝑡 is computed between the pose of the simulated character and the reference motion using the relative positions of each joint with respect to the root (in units of meters), 𝑒pose𝑡 = 1𝑁 joint ∑︁𝑗∈joints (x𝑗𝑡− xroot𝑡 )−( ^ x𝑗𝑡− ^ xroot𝑡 ) 2. (10) x𝑗𝑡 and ^ x𝑗𝑡 denote the 3D Cartesian position of joint 𝑗 from the simulated character and the reference motion, and𝑁 joint is the total number of joints in the character’s body. This method of evaluating motion similarity has previously been reported to better conform to human perception of motion similarity [Harada et al. 2004; Tang et al. 2008]. Since AMP does not use a phase variable to synchronize",
+        "metadata": {
+          "paper": "Paper 3: AMP (Peng et al., 2021)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.197161745001037,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "context_ids": [],
+    "context_chars": 0,
+    "elapsed_ms": 1.1,
+    "hit1": false,
+    "hit3": false,
+    "context_hit_any": false,
+    "context_hit_all_gold": false
+  },
+  {
+    "query_id": "adv_dev_cht01",
+    "primary_group": "chart",
+    "question": "In the left chart of AWR Figure 4 ('Ablation: HalfCheetah-v2', page 9), what are the X-axis and Y-axis labels, and what is the ranking of the 5 curves from highest to lowest return at 2.0 x 10^7 samples?",
+    "top_k": 3,
+    "budget_chars": 1200,
+    "results": [
+      {
+        "id": "rl-compendium-108p::p007::text::000",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 7,
+        "text": "[Paper 1: AWR (Peng et al., 2019) | Page 7] (a) HalfCheetah-v2 (b) Hopper-v2 (c) LunarLander-v2 (d) Walker2d-v2 Figure 2: Snapshots of AWR policies trained on OpenAI Gym tasks. Our simple algorithm learns effective policies for a diverse set of discrete and continuous control tasks. demo policies. Behaviors learned by the policies are best seen in the supplementary video 1. Code for our implementation of AWR is available at xbpeng.github.io/projects/AWR/. At each iteration, the agent collects a batch of approximately 2000 samples, which are stored in the replay buffer D along with samples from previous iterations. The replay buffer stores 50k of the most recent samples. Updates to the value function and policy are performed by uniformly sampling minibatches of 256 samples fromD. The value function is updated with 200 gradient steps per iteration, and the policy is updated with 1000 steps. Detailed hyperparameter settings are provided in Appendix C. 5.1 B ENCHMARKS We compare AWR to a number of state-of-the-art RL algorithms, including on-policy algorithms, such as TRPO (Schulman et al., 2015) and PPO (Schulman et al., 2017), off-policy algorithms, such as DDPG (Lillicrap et al., 2016), TD3 (Fujimoto et al., 2018), and SAC (Haarnoja et al., 2018a), as well as RWR (Peters & Schaal, 2007), which we include for comparison due to its similarity to AWR.2 TRPO and PPO use the implementations from OpenAI baselines (Dhariwal et al., 2017). DDPG, TD3, and SAC uses the implementations from RLkit (Pong, 2019). RWR is a custom implementation following the algorithm described by Peters & Schaal (2007).",
+        "metadata": {
+          "paper": "Paper 1: AWR (Peng et al., 2019)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.2614328740656845,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "rl-compendium-108p::p067::text::000",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 67,
+        "text": "[Paper 3: AMP (Peng et al., 2021) | Page 67] 1:6 • Xue Bin Peng†, Ze Ma†, Pieter Abbeel, Sergey Levine, and Angjoo Kanazawa • 3D positions of the end-effectors (e.g. hands and feet), represented in the character’s local coordinate frame. The root is designated to be the character’s pelvis. The character’s local coordinate frame is defined with the origin located at the root, the x-axis oriented along the root link’s facing direction, and the y-axis aligned with the global up vector. The 3D rotation of each spherical joint is encoded using two 3D vectors corresponding to the normal and tangent in the coordinate frame. This rotation encoding provides a smooth and unique representation of a given rotation. This set of observation features for the discriminator is selected to provide a compact representation of the motion across a single state transition. The observations also do not include any task-specific features, thus enabling the motion prior to be trained without requiring task-specific annotation of the reference motions, and allowing motion priors trained with the same dataset to be used for different tasks. 5.4 Gradient Penalty The interplay between the discriminator and generator in a GAN often results in unstable training dynamics. One source of instability is due to function approximation errors in the discriminator, where the discriminator may assign nonzero gradients on the manifold of real data samples [Mescheder et al. 2018]. These nonzero gradients can cause the generator toovershoot and move off the data manifold, instead of converging to the manifold, leading to oscillations and instability during training. To mitigate this phenomenon, a gradient",
+        "metadata": {
+          "paper": "Paper 3: AMP (Peng et al., 2021)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.23481496167829208,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "rl-compendium-108p::p008::text::000",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 8,
+        "text": "[Paper 1: AWR (Peng et al., 2019) | Page 8] Figure 3: Learning curves of the various algorithms when applied to OpenAI Gym tasks. Results are averaged across 5 random seeds. AWR is generally competitive with the best current methods. Task TRPO PPO DDPG TD3 SAC RWR A WR (Ours) Ant-v2 2901± 85 1161± 389 72± 1550 4285± 671 5909 ± 371 181± 19 5067± 256 HalfCheetah-v2 3302± 428 4920± 429 10563 ± 382 4309± 1238 9297± 1206 1400± 370 9136± 184 Hopper-v2 1880± 337 1391± 304 855± 282 935± 489 2769± 552 605± 114 3405 ± 121 Humanoid-v2 552± 9 695± 59 4382± 423 81± 17 8048 ± 700 509± 18 4996± 697 LunarLander-v2 104± 94 121± 49 − − − 185± 23 229 ± 2 Walker2d-v2 2765± 168 2617± 362 401± 470 4212± 427 5805 ± 587 406± 64 5813 ± 483 Table 1: Final returns for different algorithms on the OpenAI Gym tasks, with ± corresponding to one standard deviation of the average return across 5 random seeds. In terms of ﬁnal performance, AWR generally performs comparably or better than prior methods. also compare with a version of AWR without the baseline V (s) (No Baseline), which corresponds to using the standard RWR weightsωs,a = exp( 1βRs,a), and another version that uses Monte Carlo return estimates instead of TD(λ) (No TD(λ)). The effects of these components are illustrated in Figure 4. Overall, these design decisions appear to be vital for an effective algorithm, with the most crucial components being the use of experience replay and a baseline. Updates using only on-policy data can lead to instabilities and result in noticeable degradation in performance, which may be due to overﬁtting on a smaller dataset. This issue might be mitigated by collecting a larger batch of",
+        "metadata": {
+          "paper": "Paper 1: AWR (Peng et al., 2019)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.21442356768268056,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "context_ids": [],
+    "context_chars": 0,
+    "elapsed_ms": 1.22,
+    "hit1": false,
+    "hit3": false,
+    "context_hit_any": false,
+    "context_hit_all_gold": false
+  },
+  {
+    "query_id": "adv_dev_cht02",
+    "primary_group": "chart",
+    "question": "In Harness VLA Figure 4 panel (c) (ROBOTWIN C2R, page 30), what are the cumulative task success rates (%) at k = 1, 2, 3, and 4 VLA primitive invocations, and at what k does Harness VLA first surpass the 'VLA full-shot (50%)' baseline?",
+    "top_k": 3,
+    "budget_chars": 1200,
+    "results": [
+      {
+        "id": "rl-compendium-108p::p030::text::002",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 30,
+        "text": "[Paper 2: Harness VLA (Zhang et al., 2026) | Page 30] semantic and scene-level reasoning is handled by the planner, while the frozen VLA remains responsible only for executing the contact-rich operation under the planner-provided binding. Key Finding 2: Planner-staged VLA invocation improves frozen-policy reliability.In Harness VLA, the planner does not call the VLA as a one-shot black box. Although the VLA is invoked sparsely rather than as a continuous controller, each call is a planner-chosen local contact-rich attempt whose staging can determine whether the frozen policy succeeds. The plannerΠtherefore treatsVLA ACTas a local contactrich primitive whose invocation can be re-staged and retried. Given a desired contact target (the object, fixture, or local interaction region to be acted on), the planner uses analytic primitives to place the robot in a feasible pre-contact configuration, invokes the VLA, observes the resulting contact state, and decides whether the next step should continue the task or reframe the local attempt. (a) LIBERO-PRO (b) ROBOCASA365 (c) ROBOTWINC2R Figure 4:Adaptive VLA invocation improves success across benchmarks.Each panel plots cumulative task success as a function of the maximum number of VLA primitive invocations allowed per episode. The blue dashed line marks the corresponding frozen-policy baseline, while the gray dashed line marks full Harness VLA performance with all planner-selected invocations. Across LIBERO-Pro, RoboCasa365, and RoboTwin C2R, success rises rapidly after the first few VLA calls and then saturates toward the full harness result, indicating that repeated planner-staged invocation is useful but remains sparse. 11",
+        "metadata": {
+          "paper": "Paper 2: Harness VLA (Zhang et al., 2026)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.3329491608146145,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "rl-compendium-108p::p029::text::001",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 29,
+        "text": "[Paper 2: Harness VLA (Zhang et al., 2026) | Page 29] frozen backend to58.0%with Codex and58.4%with CC. The table also reports external VLA baselines for context. Table 6: RoboTwin C2R success rates (%). LingBot-VLA is our post-trained RoboTwin VLA checkpoint evaluated directly without agent-level decomposition, and is also the frozenVLA ACTbackend used by Harness VLA. Other VLA rows are representative external baselines. Harness VLA is evaluated on50tasks with5randomized seeds per task. Bold marks the best method. Benchmark GR00T-N1.7 [29]π 0.5 [4] StarVLA [30] LingBot-VLA [25]Harness VLA (Codex) Harness VLA (CC) RoboTwin C2R20.7 47.9 10.6 50.4 58.058.4 3.3 Experiment Analysis Obj Std Obj-Tπ RLinf Obj-T Ours Goal Std Goal-Sπ RLinf Goal-S Ours Figure 3: Terminal-state frames for two LIBERO-Pro cells. The first triplet comparesπRLinf on the standard OBJECTtask,π RLinf on the task-perturbed OBJECT-PROvariant, and Harness VLA on the same perturbed task; when the task description redirects the target while the visual scene remains similar,π RLinf repeats the standard behavior instead of following the new instruction. The second triplet shows the analogous comparison for a swap-perturbed GOAL-PROtask;π RLinf blindly moves the object toward the training-time region after the layout changes, whereas Harness VLA re-grounds the target through the agentic plannerΠ, uses analytic primitives for staging, and invokesVLA ACTfor the local contact-rich operation. We analyze the mechanisms behind these results through three distinct findings. Key Finding 1 focuses on semantic and scene re-grounding by the planner; Key Finding 2 studies planner-staged invocation and",
+        "metadata": {
+          "paper": "Paper 2: Harness VLA (Zhang et al., 2026)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.2668355347331892,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "rl-compendium-108p::p026::text::002",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 26,
+        "text": "[Paper 2: Harness VLA (Zhang et al., 2026) | Page 26] 3.1 Experimental Setup We evaluate Harness VLA on four benchmark families. The tabletop suites are LIBERO [19] and LIBEROPro [20]; the household and bimanual suites are RoboCasa365 [21] and RoboTwin C2R [22], respectively. We defer benchmark-specific task splits and seed protocols to Appendix C, and focus here on the main empirical outcomes. Across all evaluations, the planner operates over the same frozen primitive vocabulary P(Section 2.3) and is not allowed to introduce new primitives at deployment time. The VLA primitive is instantiated with benchmark-specific frozen policies while preserving a unifiedVLA ACTinterface: the RLinf-releasedpi05 libero130 fullshotπ 0.5-SFT checkpoint, denotedπ RLinf [23], for LIBERO and LIBERO-Pro, the frozen RLDX-1 RoboCasa checkpoint [24] for RoboCasa365, and our post-trained LingBot-VLA checkpoint [25] for RoboTwin C2R. In the tables below,Harness VLA (Codex)andHarness VLA (CC)denote the same harness instantiated with Codex and Claude Code planners, respectively; CCabbreviates Claude Code. Theπ RLinf, RLDX-1, and LingBot-VLA rows serve as direct frozen-VLA baselines for their corresponding benchmarks. Appendix D details the VLA instantiations. 3.2 Overall Benchmark Performance Few-shot evaluation with Task Specific Memory.We first evaluate Harness VLA after task-level bootstrapping has populated Task Specific Memory. This setting tests whether the harness can reuse the primitive organization discovered on a reference seed while grounding all spatial arguments from the current",
+        "metadata": {
+          "paper": "Paper 2: Harness VLA (Zhang et al., 2026)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.26666476480980267,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "context_ids": [],
+    "context_chars": 0,
+    "elapsed_ms": 1.19,
+    "hit1": false,
+    "hit3": false,
+    "context_hit_any": false,
+    "context_hit_all_gold": false
+  },
+  {
+    "query_id": "adv_dev_cht03",
+    "primary_group": "chart",
+    "question": "In FBRL Figure 3 (page 87), what are the fixed step horizons for n = 2 and n = 3 discs in Towers of Hanoi, and what happens to the FBRL curve after ~27,000 training steps for n = 3 discs?",
+    "top_k": 3,
+    "budget_chars": 1200,
+    "results": [
+      {
+        "id": "rl-compendium-108p::p086::text::001",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 86,
+        "text": "[Paper 4: Forward-Backward RL (Edwards et al., 2018) | Page 86] the environment in Figure 1 has a representation of [1, 0, 0, 1, 0, 0] since the small disc is on the ﬁrst pillar and the large disc is on the third pillar. The backward model predicts a distribution for each bit over possible ∆ values: P (∆ =−1),P (∆ = 0),P (∆ = 1) . The model architecture is a fully-connected network with 100 outputs followed by RELU, followed by another fully-connected network with 9n outputs, representing the distribution over each bit. For FBRL, we used 5 steps of imagination with 3 asynchronous streams. Figure 3 shows the results for running Towers of Hanoi with a different number of discs. We again see an advantage for using FBRL as the goal gets further away. When we increase the number of discs, FBRL outperforms DDQN. We did ﬁnd though that the performance of FBRL degraded for3 discs, which may be due to overﬁtting. 5",
+        "metadata": {
+          "paper": "Paper 4: Forward-Backward RL (Edwards et al., 2018)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.3238442119935385,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "rl-compendium-108p::p086::text::000",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 86,
+        "text": "[Paper 4: Forward-Backward RL (Edwards et al., 2018) | Page 86] Figure 2: Results for Gridworld wheren = 5, 10, 15, 20. We use a ﬁxed horizon of50, 100, 150, 200 steps, respectively. The results are averaged over 10 trials. the size gets larger. This suggests the approach is better suited for longer horizon sparse reward environments–but still does not degrade performance for short horizon tasks. 5.2 Towers of Hanoi The next environment we evaluate in is n-disc Towers of Hanoi. In this problem, the agent needs to moven discs from the ﬁrst to the third pillar, but it is only able to place a disc on top of another one if it is smaller than it. The actions are to move each disc to the ﬁrst, second, or third pillar. It receives a reward of1 when all discs are in the third pillar and a step cost of−.01 per time-step. The inputs to the backward model are bit-strings indicating which pillars each disc is on. For example, the environment in Figure 1 has a representation of [1, 0, 0, 1, 0, 0] since the small disc is on the ﬁrst pillar and the large disc is on the third pillar. The backward model predicts a distribution for each bit over possible ∆ values: P (∆ =−1),P (∆ = 0),P (∆ = 1) . The model architecture is a fully-connected network with 100 outputs followed by RELU, followed by another fully-connected network with 9n outputs, representing the distribution over each bit. For FBRL, we used 5 steps of imagination with 3 asynchronous streams. Figure 3 shows the results for running Towers of Hanoi with a different number of discs. We again see an advantage for using FBRL as the goal gets further away. When we increase the number of",
+        "metadata": {
+          "paper": "Paper 4: Forward-Backward RL (Edwards et al., 2018)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.27339499130807976,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "rl-compendium-108p::p087::text::000",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 87,
+        "text": "[Paper 4: Forward-Backward RL (Edwards et al., 2018) | Page 87] Figure 3: Results for Towers of Hanoi where n = 2, 3. We use a ﬁxed horizon of 50, 100 steps, respectively. The results are averaged over 10 trials. 6 Conclusion In this paper, we have introduced an approach for speeding up learning in problems with sparse rewards. We introduced FBRL, which takes imagined steps in reverse from the goal. We demonstrated that this approach can perform better than DDQN in Gridworld and Towers of Hanoi. There are many directions for extending this work. We were interested in evaluating a backward planner, but we could also train using both forward and backward imagination. Another improvement would be to improve the planning policy. We used a exploratory and greedy approach, but did not evaluate how to balance the two. We could also use prioritized sweeping (Moore & Atkeson, 1993), which chooses actions that lead to states with high TD-error. 7 Acknowledgements We thank Anoop Korattikara, Himanshu Sahni, Sergio Guadarrama, and Shixiang Gu for useful discussions and feedback about this work. References Agrawal, Pulkit, Nair, Ashvin V , Abbeel, Pieter, Malik, Jitendra, and Levine, Sergey. Learning to poke by poking: Experiential learning of intuitive physics. In Advances in Neural Information Processing Systems, pp. 5074–5082, 2016. Baldassarre, Gianluca. Forward and bidirectional planning based on reinforcement learning and neural networks in a simulated robot. In Anticipatory behavior in adaptive learning systems , pp. 179–200. Springer, 2003.",
+        "metadata": {
+          "paper": "Paper 4: Forward-Backward RL (Edwards et al., 2018)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.19078106192755792,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "context_ids": [
+      "rl-compendium-108p::p086::text::001"
+    ],
+    "context_chars": 976,
+    "elapsed_ms": 1.02,
+    "hit1": false,
+    "hit3": false,
+    "context_hit_any": false,
+    "context_hit_all_gold": false
+  },
+  {
+    "query_id": "adv_dev_mhp01",
+    "primary_group": "multi_hop",
+    "question": "Compare the simulated dog character used in the AWR paper (page 9, Section 5.3 / Figure 5) with the simulated dog character used in the AMP paper (page 72, Fig. 7): how many degrees of freedom (DoF) does the dog have in each paper, and what is the difference in DoF?",
+    "top_k": 3,
+    "budget_chars": 1200,
+    "results": [
+      {
+        "id": "rl-compendium-108p::p009::text::000",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 9,
+        "text": "[Paper 1: AWR (Peng et al., 2019) | Page 9] Figure 4: Left: Learning curves comparing AWR with various components removed. Each component appears to contribute to improvements in performance, with the best performance achieved when all components are combined. Right: Learning curves comparing AWR with different capacity replay buffers. AWR remains stable with large replay buffers containing primarily off-policy data from previous iterations of the algorithm. (a) Humanoid: Cartwheel (b) Humanoid: Spinkick (c) Dog: Trot (d) Dog: Turn Figure 5: Snapshots of 34 DoF humanoid and 82 DoF dog trained with AWR to imitate reference motion recorded from real world subjects. AWR is able to learn sophisticated skills with characters with large numbers of degrees of freedom. available in Figure 5. Table 2 compares the performance of AWR to RWR and the highly-tuned PPO implementation from Peng et al. (2018). Learning curves for the different algorithms are shown in Figure 6. AWR performs well across the set of challenging skills, consistently achieving comparable or better performance than PPO. RWR struggles with controlling the humanoid, but exhibits stronger performance on the dog. This performance difference may be due to the more dynamic and acrobatic skills of the humanoid, compared to the more standard locomotion skills of the dog. 5.4 O FF-POLICY LEARNING WITH STATIC DATASETS Since AWR is an off-policy RL algorithm, it has the advantage of being able to leverage data from other sources. This not only accelerates the learning process on standard tasks, as discussed above, but also allows us to apply AWR in a fully off-policy setting, where the algorithm",
+        "metadata": {
+          "paper": "Paper 1: AWR (Peng et al., 2019)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.38558231157472805,
+        "strategy": "tfidf",
+        "hit": true
+      },
+      {
+        "id": "rl-compendium-108p::p072::text::000",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 72,
+        "text": "[Paper 3: AMP (Peng et al., 2021) | Page 72] AMP: Adversarial Motion Priors for Stylized Physics-Based Character Control • 1:11 (a) T-Rex (Walk) (b) Dog (Trot) (c) Dog (Canter) Fig. 7. AMP can be used to train complex non-humanoid characters, such as a 59 DoF T-Rex and a 64 DoF dog. By providing the motion prior with different reference motion clips, the characters can be trained to perform various locomotion gaits, such as trotting and cantering. policy is trained solely to maximize the style-reward𝑟𝑆𝑡 from the motion prior. Unlike previous motion tracking methods, our approach does not require a manually designed tracking objective or a phase-based synchronization of the reference motion and the policy Peng et al. [2018a]. Table 3 summarizes the performance of policies trained using AMP to imitate a diverse corpus of motions. Figure 6 and 7 illustrate examples of motions learned by the characters. Performance is evaluated using the average pose error, where the pose error𝑒pose𝑡 at each time step 𝑡 is computed between the pose of the simulated character and the reference motion using the relative positions of each joint with respect to the root (in units of meters), 𝑒pose𝑡 = 1𝑁 joint ∑︁𝑗∈joints (x𝑗𝑡− xroot𝑡 )−( ^ x𝑗𝑡− ^ xroot𝑡 ) 2. (10) x𝑗𝑡 and ^ x𝑗𝑡 denote the 3D Cartesian position of joint 𝑗 from the simulated character and the reference motion, and𝑁 joint is the total number of joints in the character’s body. This method of evaluating motion similarity has previously been reported to better conform to human perception of motion similarity [Harada et al. 2004; Tang et al. 2008]. Since AMP does not use a phase variable to synchronize",
+        "metadata": {
+          "paper": "Paper 3: AMP (Peng et al., 2021)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.3351099831907228,
+        "strategy": "tfidf",
+        "hit": true
+      },
+      {
+        "id": "rl-compendium-108p::p068::text::001",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 68,
+        "text": "[Paper 3: AMP (Peng et al., 2021) | Page 68] initializing the character to states sampled randomly from all motion clips in the dataset. Early termination is triggered on most tasks when any part of the character’s body, with exception of the feet, makes contact with the ground. This termination criteria is disabled for more contact-rich tasks, such as rolling or getting up after a fall. Once a batch of data has been collected with the policy, the recorded trajectories are used to update the policy and value function. The value function is updated with target values computed using TD(𝜆) [Sutton and Barto 1998]. The policy is updated using advantages computed using GAE(𝜆) [Schulman et al. 2015]. Each trajectory recorded from the policy is also stored in a replay buffer B, containing trajectories from past training iterations. The discriminator is updated according to Equation 8 using minibatches of transitions(s, s′) sampled from the reference motion data setM and transitions from the replay bufferB. The replay buffer helps to stabilize training by preventing the discriminator from overfitting to the most recent batch of trajectories from the policy. 7 TASKS To evaluate AMP’s effectiveness for controlling the style of a character’s motions, we apply our framework to train complex 3D simulated characters to perform various motion control tasks using different motion styles. The characters include a 34 DoF humanoid, a 59 DoF T-Rex, and a 64 DoF dog. A summary of each task is provided below. Please refer to Appendix A for a more in-depth description of each task and their respective reward functions. Target Heading: In this task, the character’s objective is to move",
+        "metadata": {
+          "paper": "Paper 3: AMP (Peng et al., 2021)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.282552748013357,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "context_ids": [],
+    "context_chars": 0,
+    "elapsed_ms": 1.31,
+    "hit1": true,
+    "hit3": true,
+    "context_hit_any": false,
+    "context_hit_all_gold": false
+  },
+  {
+    "query_id": "adv_dev_mhp02",
+    "primary_group": "multi_hop",
+    "question": "Combining Harness VLA Table 3 (page 27) and Table 5 (page 29), how much does Harness VLA (CC) success rate drop on LIBERO-Pro GOAL under instruction-redirection (Goal-T) versus position-swap (Goal-S) when Task Specific Memory is removed in the zero-shot setting?",
+    "top_k": 3,
+    "budget_chars": 1200,
+    "results": [
+      {
+        "id": "rl-compendium-108p::p028::text::002",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 28,
+        "text": "[Paper 2: Harness VLA (Zhang et al., 2026) | Page 28] rollouts. Bold marks the best method in each split. Method Atomic-Seen Composite-Seen Composite-UnseenOverall RLDX-1 [24]60.0 21.3 5.0 30.0 WorldDreamer [28]66.3 26.7 9.0 35.3 π0.5 [4]39.6 7.1 1.2 16.9 π0 [3]34.6 6.1 1.1 14.8 Harness VLA (Codex)92.2 61.313.857.2 Harness VLA (CC)80.0 47.515.048.8 Zero-shot evaluation without bootstrapped harness memory. LIBERO-Pro Goal.To separate online planner reasoning from bootstrapped harness memory, we evaluate LIBERO-PROGOALin a strict zeroshot setting where the agent does not retrieve the target-setting Task Specific Memory or the corresponding Global Memory. Table 5 shows that zero-shot Harness VLA (CC) outperforms Cap-X across both perturbation regimes, reaching31.0%on position-swap (Pos-S) and79.0%on instruction-redirection (Task-T), compared with Cap-X’s25.6%and16.8%. The comparison with the few-shot GOALcells in Table 3 clarifies what bootstrapped harness memory contributes. Without this memory, the planner retains much of its semantic re-binding ability under instruction redirection (79.0%zero-shot versus87.0%few-shot on Goal-T), but drops substantially under position swaps (31.0%zero-shot versus87.0%few-shot on Goal-S). This gap indicates that spatially perturbed manipulation benefits strongly from the task-specific primitive organization discovered during exploration: analytic primitives supply localization, staging, transport, and release around the contact-rich phase, whileVLA ACTis invoked at the learned interaction points and can be re-staged after failures. RoboTwin C2R.RoboTwin C2R evaluates zero-shot clean-to-randomized transfer: the agent obtains a",
+        "metadata": {
+          "paper": "Paper 2: Harness VLA (Zhang et al., 2026)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.39315425469240095,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "rl-compendium-108p::p028::text::003",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 28,
+        "text": "[Paper 2: Harness VLA (Zhang et al., 2026) | Page 28] compared with Cap-X’s25.6%and16.8%. The comparison with the few-shot GOALcells in Table 3 clarifies what bootstrapped harness memory contributes. Without this memory, the planner retains much of its semantic re-binding ability under instruction redirection (79.0%zero-shot versus87.0%few-shot on Goal-T), but drops substantially under position swaps (31.0%zero-shot versus87.0%few-shot on Goal-S). This gap indicates that spatially perturbed manipulation benefits strongly from the task-specific primitive organization discovered during exploration: analytic primitives supply localization, staging, transport, and release around the contact-rich phase, whileVLA ACTis invoked at the learned interaction points and can be re-staged after failures. RoboTwin C2R.RoboTwin C2R evaluates zero-shot clean-to-randomized transfer: the agent obtains a Task Specific Memory trace from the clean setting and transfers it directly to randomized task instances, with 9",
+        "metadata": {
+          "paper": "Paper 2: Harness VLA (Zhang et al., 2026)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.31748247196106766,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "rl-compendium-108p::p026::text::004",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 26,
+        "text": "[Paper 2: Harness VLA (Zhang et al., 2026) | Page 26] 3.2 Overall Benchmark Performance Few-shot evaluation with Task Specific Memory.We first evaluate Harness VLA after task-level bootstrapping has populated Task Specific Memory. This setting tests whether the harness can reuse the primitive organization discovered on a reference seed while grounding all spatial arguments from the current observations. We evaluate whether this memory-backed execution preserves strong in-distribution manipulation performance on standard LIBERO, remains robust under LIBERO-Pro instruction-redirection (T) and position-swap (S) perturbations, and extends the same primitive interface to household kitchen manipulation in RoboCasa365. Standard LIBERO.Table 2 reports results on the four standard LIBERO suites. Harness VLA (CC) achieves an aggregate success rate of96.0%(384/400), including100.0%on OBJECTand93.0%on LIBERO-10. Compared with the frozenπ RLinf checkpoint used insideVLA ACT, which obtains95.3% overall, Harness VLA preserves competitive standard-suite performance while exposing the same policy through a controllable primitive interface for the perturbed evaluations below. 7",
+        "metadata": {
+          "paper": "Paper 2: Harness VLA (Zhang et al., 2026)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.3063222838138984,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "context_ids": [
+      "rl-compendium-108p::p028::text::003"
+    ],
+    "context_chars": 1067,
+    "elapsed_ms": 1.48,
+    "hit1": false,
+    "hit3": false,
+    "context_hit_any": false,
+    "context_hit_all_gold": false
+  },
+  {
+    "query_id": "adv_dev_mhp03",
+    "primary_group": "multi_hop",
+    "question": "Combining AMP Table 1 and Table 2 (page 70), for the Humanoid Target Heading task, how many times larger in duration (seconds) is the 'Locomotion' dataset than the 'Zombie' dataset, and which of the two achieves a higher normalized Task Return?",
+    "top_k": 3,
+    "budget_chars": 1200,
+    "results": [
+      {
+        "id": "rl-compendium-108p::p069::text::000",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 69,
+        "text": "[Paper 3: AMP (Peng et al., 2021) | Page 69] 1:8 • Xue Bin Peng†, Ze Ma†, Pieter Abbeel, Sergey Levine, and Angjoo Kanazawa (a) Humanoid: Target Location (Locomotion) (b) Humanoid: Target Location (Zombie) (c) Humanoid: Target Heading (Locomotion + Getup) (d) Humanoid: Dribble (Locomotion) (e) Humanoid: Strike (Walk + Punch) (f) Humanoid: Obstacles (Run + Leap + Roll) (g) Humanoid: Stepping Stones (Cartwheel) (h) Humanoid: Stepping Stones (Jump) Fig. 3. The motion prior can be trained with large datasets of diverse motions, enabling simulated characters to perform complex tasks by composing a wider range of skills. Each environment is denoted by \"Character: Task (Dataset)\". [CMU [n.d.]; SFU [n.d.]; Zhang et al. 2018]. Depending on the task and character, each policy is trained with 100-300 million samples, requiring approximately 30-140 hours on 16 CPU cores. Code for our system will be released upon publication of this paper. 8.2 Tasks In this section, we demonstrate AMP’s effectiveness for controlling the style of a character’s motions as it performs other high-level tasks. The weights for the task-reward and style-reward are set to 𝑤𝐺 = 0.5 and𝑤𝑆 = 0.5 for all tasks. The character can be trained to perform tasks in a variety of distinct styles by providing the motion prior with different datasets. Figure 3 illustrates behaviors learned by the Humanoid on various tasks. Table 1 records the performance of the policies with respect to the normalized task return, and summary statistics of the different datasets used to train the motion priors are available in Table 2. AMP can accommodate large unstructured datasets, with the largest dataset containing 56",
+        "metadata": {
+          "paper": "Paper 3: AMP (Peng et al., 2021)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.32531039818793434,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "rl-compendium-108p::p070::text::002",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 70,
+        "text": "[Paper 3: AMP (Peng et al., 2021) | Page 70] optimal policies that are able to achieve a wider range of target speeds. This indicates that the diversity of behaviors exhibited by our policies can in large part be attributed to the motion prior, and is not solely a result of the task objective. To further illustrate AMP’s ability to compose disparate skills, we introduce additional reference motions into the dataset for getting up from the ground in various configurations. These additional motion clips then enable our character to recover from a fall and continue to perform a given task (Figure 3(c)). The policy also discovers novel recovery behaviors that are not present in the dataset. When the character falls forward, it tucks its body into a roll during the fall in order to more quickly transition into a getup behavior. While this particular behavior is not present in the motion clips, the policy is able to generalize behaviors observed in the dataset to produce novel and naturalistic strategies for new scenarios. Table 2. Summary statistics of the different datasets used to train the motion priors. We record the total length of motion clips in each dataset, along with the number of clips, and the number of subjects (e.g. human actors) that the clips were recorded from. Character Dataset Size (s) Clips Subjects Humanoid Cartwheel 13.6 3 1 Jump 28.6 10 4 Locomotion 434.1 56 8 Run 204.4 47 3 Run + Leap + Roll 22.1 10 7 Stealthy 136.5 3 1 Walk 229.6 9 5 Walk + Punch 247.8 15 9 Zombie 18.3 1 1 T-Rex Locomotion 10.5 5 1 Fig. 4. Performance of Target Heading policies trained with different datasets. Left: Learning curves comparing the normalized task returns",
+        "metadata": {
+          "paper": "Paper 3: AMP (Peng et al., 2021)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.2843151230355375,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "rl-compendium-108p::p070::text::003",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 70,
+        "text": "[Paper 3: AMP (Peng et al., 2021) | Page 70] Run + Leap + Roll 22.1 10 7 Stealthy 136.5 3 1 Walk 229.6 9 5 Walk + Punch 247.8 15 9 Zombie 18.3 1 1 T-Rex Locomotion 10.5 5 1 Fig. 4. Performance of Target Heading policies trained with different datasets. Left: Learning curves comparing the normalized task returns of policies trained with a large dataset of diverse locomotion clips to policies trained with only walking or running reference motions. Three models are trained using each dataset. Right: Comparison of the target speed with the average speed achieved by the different policies. Policies trained using the larger Locomotion dataset is able to more closely follow the various target speeds by imitating different gaits. For the Strike task (Figure 1), the motion prior is trained using a collection of walking motion clips and punching motion clips. The resulting policy learns to walk to the target when it is far away, and then transition to a punching motion once it is within range to hit the target. Note that the motion clips in the dataset contain strictly walking-only motions or punching-only motion, and none of the clips show an actor walking to and punching a target. Instead, the policy learns to temporally sequence these different behaviors in order to fulfill the high-level task objectives. Again, this composition of different skills emerges automatically from the motion prior, without requiring a motion planner or other mechanisms for motion selection. Finally, our system can also train visuomotor policies for traversing obstacle-filled environments. By providing the motion prior with a collection of locomotion clips and rolling clips, the character learns",
+        "metadata": {
+          "paper": "Paper 3: AMP (Peng et al., 2021)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.2730606694803457,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "context_ids": [],
+    "context_chars": 0,
+    "elapsed_ms": 1.79,
+    "hit1": false,
+    "hit3": false,
+    "context_hit_any": false,
+    "context_hit_all_gold": false
+  },
+  {
+    "query_id": "adv_dev_txt01",
+    "primary_group": "text",
+    "question": "According to Section 3.1 of the AWR paper (page 3), how does the optimization objective of AWR differ from that of RWR and REPS, and what exponentiated weight is assigned to each state-action pair in Algorithm 1?",
+    "top_k": 3,
+    "budget_chars": 1200,
+    "results": [
+      {
+        "id": "rl-compendium-108p::p006::text::002",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 6,
+        "text": "[Paper 1: AWR (Peng et al., 2019) | Page 6] problem. RWR has a number appealing properties: it has a very simple update rule, and since each iteration corresponds to supervised learning, it can be more stable and easier to implement than many of the previously mentioned RL methods. Despite these advantages, RWR has not been shown to be an effective RL algorithm when combined with neural network function approximators, as demonstrated in prior work and our own experiments (Schulman et al., 2015; Duan et al., 2016). In this work, we propose a number of modiﬁcations to the formulation of RWR to produce an effective off-policy deep RL algorithm, while still retaining much of the simplicity of previous methods. The most closely related prior works to our method are REPS (Peters et al., 2010) and MPO (Abdolmaleki et al., 2018), both of which are based on a constrained policy search formulation, and perform policy updates using supervised regression. The optimization problem being solved in REPS is similar to AWR, but REPS optimizes the expected return instead of the expected improvement. The weights in REPS also contains a Bellman error term that superﬁcially resembles advantages, but are computed using a linear value function derived from a feature matching constraint. Learning the REPS value function requires minimization of a dual function, which is a complex function of the Bellman error, while the value function in AWR can be learned with simple supervised regression. REPS can in principle leverage off-policy data, but the policy iteration procedure proposed for REPS models the sampling policy using only the latest policy, and does not incorporate experience replay",
+        "metadata": {
+          "paper": "Paper 1: AWR (Peng et al., 2019)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.2918846701043295,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "rl-compendium-108p::p006::text::003",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 6,
+        "text": "[Paper 1: AWR (Peng et al., 2019) | Page 6] The most closely related prior works to our method are REPS (Peters et al., 2010) and MPO (Abdolmaleki et al., 2018), both of which are based on a constrained policy search formulation, and perform policy updates using supervised regression. The optimization problem being solved in REPS is similar to AWR, but REPS optimizes the expected return instead of the expected improvement. The weights in REPS also contains a Bellman error term that superﬁcially resembles advantages, but are computed using a linear value function derived from a feature matching constraint. Learning the REPS value function requires minimization of a dual function, which is a complex function of the Bellman error, while the value function in AWR can be learned with simple supervised regression. REPS can in principle leverage off-policy data, but the policy iteration procedure proposed for REPS models the sampling policy using only the latest policy, and does not incorporate experience replay with data from previous iterations. More recently, Abdolmaleki et al. (2018) proposed MPO, a deep RL variant of REPS, which applies a partial EM algorithm for policy optimization. The method ﬁrst ﬁts a Q-function of the current policy via bootstrapping, and then performs a policy improvement step with respect to this Q-function under a trust region constraint that penalizes large policy changes. MPO uses off-policy data for training a Q-function critic via bootstrapping and employs Retrace(λ) for off-policy correction (Munos et al., 2016). In contrast, AWR is substantially simpler,",
+        "metadata": {
+          "paper": "Paper 1: AWR (Peng et al., 2019)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.25705974300657397,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "rl-compendium-108p::p007::text::002",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 7,
+        "text": "[Paper 1: AWR (Peng et al., 2019) | Page 7] DDPG, TD3, and SAC uses the implementations from RLkit (Pong, 2019). RWR is a custom implementation following the algorithm described by Peters & Schaal (2007). Snapshots of the AWR policies are shown in Figure 2. Learning curves comparing the different algorithms on the OpenAI Gym benchmarks are shown in Figure 3, and Table 1 summarizes the average returns of the ﬁnal policies across 5 training runs initialized with different random seeds. Overall, AWR shows competitive performance with the state-of-the-art deep RL algorithms. It signiﬁcantly outperforms on-policy methods such as PPO and TRPO in both sample efﬁciency and asymptotic performance. While it is not yet as sample efﬁcient as current state-of-the-art off-policy methods, such SAC and TD3, it is generally able to achieve a similar asymptotic performance, despite using only simple supervised regression for both policy and value function updates. The complex Humanoid-V2 task proved to be the most challenging case for AWR, and its performance still lags well behind SAC. Note that RWR generally does not perform well on any of these tasks. This suggests that, although AWR is simple and easy to implement, the particular modiﬁcations it makes compared to standard RWR are critical for effective performance. To illustrate AWR’s generality on tasks with discrete actions, we compare AWR to TRPO, PPO, and RWR on LunarLander-v2. DDPG, TD3, and SAC are not easily applicable to discrete action spaces due to their need to backpropagate from the Q-function to the policy. On this discrete control task, AWR also shows strong performance compared to the other algorithms.",
+        "metadata": {
+          "paper": "Paper 1: AWR (Peng et al., 2019)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.24172932325525087,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "context_ids": [],
+    "context_chars": 0,
+    "elapsed_ms": 1.42,
+    "hit1": false,
+    "hit3": false,
+    "context_hit_any": false,
+    "context_hit_all_gold": false
+  },
+  {
+    "query_id": "adv_dev_txt02",
+    "primary_group": "text",
+    "question": "According to Appendix G of Harness VLA (page 60), under what horizontal distance condition is a MOVE_TO or MOVE_POSE waypoint stored relative to an anchor in Flash Mode, and what is the maximum number of grasp attempts allowed during execution?",
+    "top_k": 3,
+    "budget_chars": 1200,
+    "results": [
+      {
+        "id": "rl-compendium-108p::p060::text::001",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 60,
+        "text": "[Paper 2: Harness VLA (Zhang et al., 2026) | Page 60] and articulated-object interactions, and retains the primitive sequence, policy prompts, and non-spatial arguments. Saved segmentation observations supply reference anchors; missing anchors are reconstructed from the task relations and manipulation transactions. Each candidate consists of an action plan and an anchor specification. Compilation processes one trajectory; candidate evaluation is a separate stage. Spatial binding and replay.In the LIBERO backend, aMOVE TOorMOVE POSEwaypoint within0.20m of an anchor in the horizontal plane can be stored relative to that anchor. For reference waypointx refi ∈R 2 and anchora refj(i), replay uses ∆xi =x refi −a refj(i),x runi = baj(i) + ∆xi,(1) where baj(i) is obtained by identifying the anchor in an RGB image with a VLM and back-projecting its image location using depth and camera calibration. Recorded height and non-spatial arguments are preserved; unanchored waypoints retain their coordinates. Localization can be refined from a wrist image, with a held-object offset correction when available. Execution allows at most three grasp attempts, skips dependent transport after an unconfirmed grasp, and stops if a required anchor cannot be localized. No scene reset occurs within the rollout. These binding and retry rules describe the LIBERO implementation; hardware procedures use the corresponding robot interfaces. Applicable tasks.Flash Mode assumes a fixed subgoal order, objects and destinations that can be localized directly, and failures recoverable by the predefined checks and retries. Sequence length alone does not",
+        "metadata": {
+          "paper": "Paper 2: Harness VLA (Zhang et al., 2026)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.23803236626810237,
+        "strategy": "tfidf",
+        "hit": true
+      },
+      {
+        "id": "rl-compendium-108p::p033::text::001",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 33,
+        "text": "[Paper 2: Harness VLA (Zhang et al., 2026) | Page 33] 4.1 Flash Mode Flash Mode reuses a successful primitive sequence through a task card that records the action order, VLA prompts, and non-spatial arguments. Spatial waypoints are stored relative to task-relevant objects or destinations. At deployment, a VLM identifies these targets in RGB images; the system uses the corresponding depth and camera calibration to back-project their image locations into 3D coordinates. It then updates the waypoints and invokes the recorded primitives in order, without online agent planning. Grasp checks and a limited number of retries are predefined in the procedure. For each task, we compile all available successful agent runs into candidate cards by extracting their primitive sequences and identifying the objects and destinations used by each action. We replay the candidates and retain the card with the highest observed success rate, denoted Flash Mode (max), using one card across all seeds of the task. Flash Mode currently targets simple tasks with a fixed subgoal order and directly localizable objects. It can replay a longer fixed routine, but new subgoals, reordered actions, or unforeseen recovery require online planning. Appendix G details card generation and selection on the same seeds used for reporting. Success and execution time.Table 7 compares Flash Mode with Codex under high reasoning and no reasoning on LIBERO-Pro. Flash reaches72.63%success (581/800), between the two Codex settings. Its timing statistic measures tool execution in the selected source trajectories, while Codex timing measures planner duration; these values do not establish an end-to-end speedup.",
+        "metadata": {
+          "paper": "Paper 2: Harness VLA (Zhang et al., 2026)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.21787938421171302,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "rl-compendium-108p::p060::text::000",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 60,
+        "text": "[Paper 2: Harness VLA (Zhang et al., 2026) | Page 60] Table 20: Primitive usage grouped by class. Analytic primitives include both composite goal-reaching controllers and atomic set-point commands. Primitive class LIBERO RoboTwin C2R RoboCasa365 Analytic primitives8536(84.2%)881(52.6%)5026(64.7%) VLA primitive,VLA ACT1598(15.8%)794(47.4%)2746(35.3%) G Flash Mode: Generation and Selection Candidate generation.For each task, we compile one card from every available successful agent trajectory. The compiler verifies the benchmark success flag and matches the audit and command trace by suite, task, and seed. It parses the instruction into object relations, aligns them with ordered acquisition, release, and articulated-object interactions, and retains the primitive sequence, policy prompts, and non-spatial arguments. Saved segmentation observations supply reference anchors; missing anchors are reconstructed from the task relations and manipulation transactions. Each candidate consists of an action plan and an anchor specification. Compilation processes one trajectory; candidate evaluation is a separate stage. Spatial binding and replay.In the LIBERO backend, aMOVE TOorMOVE POSEwaypoint within0.20m of an anchor in the horizontal plane can be stored relative to that anchor. For reference waypointx refi ∈R 2 and anchora refj(i), replay uses ∆xi =x refi −a refj(i),x runi = baj(i) + ∆xi,(1) where baj(i) is obtained by identifying the anchor in an RGB image with a VLM and back-projecting its",
+        "metadata": {
+          "paper": "Paper 2: Harness VLA (Zhang et al., 2026)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.20126255487570532,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "context_ids": [],
+    "context_chars": 0,
+    "elapsed_ms": 1.44,
+    "hit1": true,
+    "hit3": true,
+    "context_hit_any": false,
+    "context_hit_all_gold": false
+  },
+  {
+    "query_id": "adv_dev_txt03",
+    "primary_group": "text",
+    "question": "According to Section 8.4 and Section 8.5 of the AMP paper (pages 72–73), why does AMP converge to shuffling forward instead of flipping on the 'Front-Flip' motion, and what happens on the 'Roll' motion if velocity features are removed from the discriminator?",
+    "top_k": 3,
+    "budget_chars": 1200,
+    "results": [
+      {
+        "id": "rl-compendium-108p::p072::text::002",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 72,
+        "text": "[Paper 3: AMP (Peng et al., 2021) | Page 72] AMP is able to closely imitate a large variety of highly dynamic skills, while also avoiding many of the visual artifacts exhibited by prior adversarial motion imitation systems [Merel et al . 2017; Wang et al. 2017]. We compare the performance of our system to results produced by the motion tracking approach from Peng et al. [2018a], which uses a manually designed reward function and requires synchronization of the policy with a reference motion via a phase variable. Figure 8 compares the learning curves of the different methods. Since the tracking-based policies are synchronized with their respective reference motions, they are generally able to learn faster and achieve lower errors than policies trained with AMP. Nonetheless, our method is able to produce results of comparable quality without the need to manually design or tune reward functions for different motions. However, for some motions, such as the Front-Flip, AMP is prone to converging to locally optimal behaviors, where instead of performing a flip, the character learns to simply shuffle forwards in order to avoid falling. Tracking-based methods can mitigate these local optima by terminating an episode early if the character’s pose deviates too far from the reference motion [Peng et al. 2018a; Won et al. 2020]. However, this strategy is not directly applicable to AMP, since the policy is not synchronized with the reference motion. But as shown in the previous sections, this lack of synchronization is precisely what allows AMP to easily leverage large datasets of diverse motion clips to solve more complex tasks. 8.5 Ablations",
+        "metadata": {
+          "paper": "Paper 3: AMP (Peng et al., 2021)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.2753461212033786,
+        "strategy": "tfidf",
+        "hit": true
+      },
+      {
+        "id": "rl-compendium-108p::p073::text::003",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 73,
+        "text": "[Paper 3: AMP (Peng et al., 2021) | Page 73] et al. [2018a] (Motion Tracking), as well a version of AMP without velocity features for the discriminator (AMP - No Vel), and AMP without the gradient penalty regularizer (AMP - No GP). A comprehensive collection of learning curves for all skills are available in the Appendix. AMP produces results of comparable quality when compared to prior tracking-based methods, without requiring a manually designed reward function or synchronization between the policy and reference motion. Velocity features and gradient penalty are vital for effective and consistent results on challenging skills. However, like many other GAN-based techniques, AMP is susceptible to mode collapse. When provided with a large dataset of diverse motion clips, the policy is prone to imitating only a small subset of the example behaviors, ignoring other behaviors that may ultimately be more optimal for a given task. The motion priors in our experiments are also trained from scratch for each policy. But since the motion prior is largely task-agnostic, it should in principle be possible to transfer and reuse motion priors for different policies and tasks. Exploring techniques for developing general and transferable motion priors may lead to modular objective functions that can be conveniently incorporated into downstream tasks, without requiring retraining for each new task. While the motion prior does not require direct access to task-specific information, the data used to train the motion prior is generated by policies trained to perform a particular task. This may introduce some task dependencies into",
+        "metadata": {
+          "paper": "Paper 3: AMP (Peng et al., 2021)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.2437065933948348,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "rl-compendium-108p::p073::text::002",
+        "source_id": "rl-compendium-108p",
+        "source": "RL.pdf",
+        "page": 73,
+        "text": "[Paper 3: AMP (Peng et al., 2021) | Page 73] motion planners or other mechanisms for clip selection. Our system allows users to specify high-level task objectives for controlling a character’s behaviors, while the more granular low-level style of a character’s motions can be controlled using a learned motion prior. Composition of disparate skills in furtherance of a task objective emerges automatically from the motion prior. The motion prior also enables our characters to closely imitate a rich repertoire of highly dynamic skills, and produces results that are on par with trackingbased techniques, without requiring manual reward engineering or synchronization between the controller and the reference motions. Our system demonstrates that adversarial imitation learning techniques can indeed produce high fidelity motions for complex skills. Fig. 8. Learning curves of various methods on the single-clip imitation tasks. We compare AMP to the motion tracking approach proposed by Peng et al. [2018a] (Motion Tracking), as well a version of AMP without velocity features for the discriminator (AMP - No Vel), and AMP without the gradient penalty regularizer (AMP - No GP). A comprehensive collection of learning curves for all skills are available in the Appendix. AMP produces results of comparable quality when compared to prior tracking-based methods, without requiring a manually designed reward function or synchronization between the policy and reference motion. Velocity features and gradient penalty are vital for effective and consistent results on challenging skills.",
+        "metadata": {
+          "paper": "Paper 3: AMP (Peng et al., 2021)",
+          "modality": "text",
+          "is_reference_page": false
+        },
+        "score": 0.242967525857556,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "context_ids": [],
+    "context_chars": 0,
+    "elapsed_ms": 1.35,
+    "hit1": true,
+    "hit3": true,
+    "context_hit_any": false,
+    "context_hit_all_gold": false
+  }
+]

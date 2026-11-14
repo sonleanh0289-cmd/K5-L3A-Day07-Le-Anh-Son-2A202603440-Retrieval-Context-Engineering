@@ -1,0 +1,16 @@
+{
+  "strategy": "1_dev_baseline_tfidf_text_only_b1200",
+  "split": "dev",
+  "top_k": 3,
+  "budget_chars": 1200,
+  "n_answerable": 16,
+  "hit1": 3,
+  "hit1_rate": 0.1875,
+  "hit3": 3,
+  "hit3_rate": 0.1875,
+  "context_hit_any": 0,
+  "context_hit_all_gold": 0,
+  "context_hit_all_gold_rate": 0.0,
+  "avg_context_chars": 127.7,
+  "median_ms": 1.33
+}

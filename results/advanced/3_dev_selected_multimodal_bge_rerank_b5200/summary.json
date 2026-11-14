@@ -1,0 +1,16 @@
+{
+  "strategy": "3_dev_selected_multimodal_bge_rerank_b5200",
+  "split": "dev",
+  "top_k": 5,
+  "budget_chars": 5200,
+  "n_answerable": 16,
+  "hit1": 15,
+  "hit1_rate": 0.9375,
+  "hit3": 16,
+  "hit3_rate": 1.0,
+  "context_hit_any": 16,
+  "context_hit_all_gold": 16,
+  "context_hit_all_gold_rate": 1.0,
+  "avg_context_chars": 4493.8,
+  "median_ms": 273.95
+}

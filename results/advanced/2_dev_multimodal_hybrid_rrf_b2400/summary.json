@@ -1,0 +1,16 @@
+{
+  "strategy": "2_dev_multimodal_hybrid_rrf_b2400",
+  "split": "dev",
+  "top_k": 4,
+  "budget_chars": 2400,
+  "n_answerable": 16,
+  "hit1": 12,
+  "hit1_rate": 0.75,
+  "hit3": 14,
+  "hit3_rate": 0.875,
+  "context_hit_any": 12,
+  "context_hit_all_gold": 10,
+  "context_hit_all_gold_rate": 0.625,
+  "avg_context_chars": 1616.1,
+  "median_ms": 136.17
+}

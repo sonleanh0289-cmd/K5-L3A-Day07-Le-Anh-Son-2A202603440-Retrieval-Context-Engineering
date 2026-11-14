@@ -1,0 +1,140 @@
+[
+  {
+    "query_id": "q01",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "notes": "Trả lời đúng nội dung điều luật và trích dẫn đúng chunk chứa bằng chứng gold."
+  },
+  {
+    "query_id": "q02",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "notes": "Trả lời đúng nội dung điều luật và trích dẫn đúng chunk chứa bằng chứng gold."
+  },
+  {
+    "query_id": "q03",
+    "answer_grade": 1,
+    "citation_support": [
+      false
+    ],
+    "notes": "Trích dẫn cùng trang nhưng thiếu đoạn bằng chứng chính."
+  },
+  {
+    "query_id": "q04",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "notes": "Trả lời đúng nội dung điều luật và trích dẫn đúng chunk chứa bằng chứng gold."
+  },
+  {
+    "query_id": "q05",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "notes": "Trả lời đúng nội dung điều luật và trích dẫn đúng chunk chứa bằng chứng gold."
+  },
+  {
+    "query_id": "q06",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "notes": "Trả lời đúng nội dung điều luật và trích dẫn đúng chunk chứa bằng chứng gold."
+  },
+  {
+    "query_id": "q07",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "notes": "Trả lời đúng nội dung điều luật và trích dẫn đúng chunk chứa bằng chứng gold."
+  },
+  {
+    "query_id": "q08",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "notes": "Trả lời đúng nội dung điều luật và trích dẫn đúng chunk chứa bằng chứng gold."
+  },
+  {
+    "query_id": "q09",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "notes": "Trả lời đúng nội dung điều luật và trích dẫn đúng chunk chứa bằng chứng gold."
+  },
+  {
+    "query_id": "q10",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "notes": "Trả lời đúng nội dung điều luật và trích dẫn đúng chunk chứa bằng chứng gold."
+  },
+  {
+    "query_id": "q11",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "notes": "Trả lời đúng nội dung điều luật và trích dẫn đúng chunk chứa bằng chứng gold."
+  },
+  {
+    "query_id": "q12",
+    "answer_grade": 1,
+    "citation_support": [
+      false
+    ],
+    "notes": "Trích dẫn cùng trang nhưng thiếu đoạn bằng chứng chính."
+  },
+  {
+    "query_id": "q13",
+    "answer_grade": 1,
+    "citation_support": [
+      false
+    ],
+    "notes": "Trích dẫn cùng trang nhưng thiếu đoạn bằng chứng chính."
+  },
+  {
+    "query_id": "q14",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "notes": "Trả lời đúng nội dung điều luật và trích dẫn đúng chunk chứa bằng chứng gold."
+  },
+  {
+    "query_id": "q15",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "notes": "Trả lời đúng nội dung điều luật và trích dẫn đúng chunk chứa bằng chứng gold."
+  },
+  {
+    "query_id": "q16",
+    "answer_grade": 0,
+    "citation_support": [],
+    "notes": "Từ chối nhầm câu có đáp án trong tài liệu."
+  },
+  {
+    "query_id": "u01",
+    "citation_support": [],
+    "abstention_correct": true,
+    "notes": "Câu hỏi ngoài phạm vi Luật 36/2024/QH15; từ chối đúng."
+  },
+  {
+    "query_id": "u02",
+    "citation_support": [],
+    "abstention_correct": true,
+    "notes": "Câu hỏi ngoài phạm vi Luật 36/2024/QH15; từ chối đúng."
+  }
+]

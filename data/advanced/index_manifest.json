@@ -1,0 +1,189 @@
+{
+  "document": {
+    "source_id": "rl-compendium-108p",
+    "file_name": "RL.pdf",
+    "total_pages": 108,
+    "unique_indexed_pages": 88,
+    "duplicate_pages_skipped": 20,
+    "license": "CC-BY 4.0 (arXiv / ACM Open Access)",
+    "papers_included": [
+      {
+        "paper_id": "P1_AWR",
+        "title": "Advantage-Weighted Regression: Simple and Scalable Off-Policy Reinforcement Learning",
+        "authors": "Xue Bin Peng, Aviral Kumar, Grace Zhang, Sergey Levine",
+        "pages": "1-19",
+        "source_url": "https://arxiv.org/abs/1910.00177"
+      },
+      {
+        "paper_id": "P2_HarnessVLA",
+        "title": "Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agents",
+        "authors": "Yixian Zhang, Huanming Zhang, et al.",
+        "pages": "20-61",
+        "source_url": "https://arxiv.org/abs/2607.08448v5"
+      },
+      {
+        "paper_id": "P3_AMP",
+        "title": "AMP: Adversarial Motion Priors for Stylized Physics-Based Character Control",
+        "authors": "Xue Bin Peng, Ze Ma, Pieter Abbeel, Sergey Levine, Angjoo Kanazawa",
+        "pages": "62-81",
+        "source_url": "https://doi.org/10.1145/3450626.3459670"
+      },
+      {
+        "paper_id": "P4_FBRL",
+        "title": "Forward-Backward Reinforcement Learning",
+        "authors": "Ashley D. Edwards, Laura Downs, James C. Davidson",
+        "pages": "82-88",
+        "source_url": "https://arxiv.org/abs/1803.10227v1"
+      }
+    ]
+  },
+  "index_statistics": {
+    "total_chunks": 350,
+    "by_modality": {
+      "text": 317,
+      "table": 17,
+      "figure_diagram": 8,
+      "chart": 8
+    },
+    "extracted_image_crops": 174,
+    "crop_directory": "data/advanced/crops/"
+  },
+  "unprocessed_or_special_pages": {
+    "duplicate_pages_89_to_108": {
+      "pages": "89-108",
+      "reason": "Pages 89-108 are an exact byte/text duplicate of Paper 3 (AMP, pages 62-81) concatenated at the end of RL.pdf.",
+      "handling_and_impact": "Detected via SHA-256 normalized text hashing during ingestion and deduplicated so identical chunks from pp. 89-108 do not pollute top-k retrieval rankings or waste context budget.",
+      "details": [
+        {
+          "page": 89,
+          "duplicate_of_page": 62,
+          "reason": "Exact duplicate attachment of Paper 3 (AMP: Adversarial Motion Priors, pp. 62-81)."
+        },
+        {
+          "page": 90,
+          "duplicate_of_page": 63,
+          "reason": "Exact duplicate attachment of Paper 3 (AMP: Adversarial Motion Priors, pp. 62-81)."
+        },
+        {
+          "page": 91,
+          "duplicate_of_page": 64,
+          "reason": "Exact duplicate attachment of Paper 3 (AMP: Adversarial Motion Priors, pp. 62-81)."
+        },
+        {
+          "page": 92,
+          "duplicate_of_page": 65,
+          "reason": "Exact duplicate attachment of Paper 3 (AMP: Adversarial Motion Priors, pp. 62-81)."
+        },
+        {
+          "page": 93,
+          "duplicate_of_page": 66,
+          "reason": "Exact duplicate attachment of Paper 3 (AMP: Adversarial Motion Priors, pp. 62-81)."
+        },
+        {
+          "page": 94,
+          "duplicate_of_page": 67,
+          "reason": "Exact duplicate attachment of Paper 3 (AMP: Adversarial Motion Priors, pp. 62-81)."
+        },
+        {
+          "page": 95,
+          "duplicate_of_page": 68,
+          "reason": "Exact duplicate attachment of Paper 3 (AMP: Adversarial Motion Priors, pp. 62-81)."
+        },
+        {
+          "page": 96,
+          "duplicate_of_page": 69,
+          "reason": "Exact duplicate attachment of Paper 3 (AMP: Adversarial Motion Priors, pp. 62-81)."
+        },
+        {
+          "page": 97,
+          "duplicate_of_page": 70,
+          "reason": "Exact duplicate attachment of Paper 3 (AMP: Adversarial Motion Priors, pp. 62-81)."
+        },
+        {
+          "page": 98,
+          "duplicate_of_page": 71,
+          "reason": "Exact duplicate attachment of Paper 3 (AMP: Adversarial Motion Priors, pp. 62-81)."
+        },
+        {
+          "page": 99,
+          "duplicate_of_page": 72,
+          "reason": "Exact duplicate attachment of Paper 3 (AMP: Adversarial Motion Priors, pp. 62-81)."
+        },
+        {
+          "page": 100,
+          "duplicate_of_page": 73,
+          "reason": "Exact duplicate attachment of Paper 3 (AMP: Adversarial Motion Priors, pp. 62-81)."
+        },
+        {
+          "page": 101,
+          "duplicate_of_page": 74,
+          "reason": "Exact duplicate attachment of Paper 3 (AMP: Adversarial Motion Priors, pp. 62-81)."
+        },
+        {
+          "page": 102,
+          "duplicate_of_page": 75,
+          "reason": "Exact duplicate attachment of Paper 3 (AMP: Adversarial Motion Priors, pp. 62-81)."
+        },
+        {
+          "page": 103,
+          "duplicate_of_page": 76,
+          "reason": "Exact duplicate attachment of Paper 3 (AMP: Adversarial Motion Priors, pp. 62-81)."
+        },
+        {
+          "page": 104,
+          "duplicate_of_page": 77,
+          "reason": "Exact duplicate attachment of Paper 3 (AMP: Adversarial Motion Priors, pp. 62-81)."
+        },
+        {
+          "page": 105,
+          "duplicate_of_page": 78,
+          "reason": "Exact duplicate attachment of Paper 3 (AMP: Adversarial Motion Priors, pp. 62-81)."
+        },
+        {
+          "page": 106,
+          "duplicate_of_page": 79,
+          "reason": "Exact duplicate attachment of Paper 3 (AMP: Adversarial Motion Priors, pp. 62-81)."
+        },
+        {
+          "page": 107,
+          "duplicate_of_page": 80,
+          "reason": "Exact duplicate attachment of Paper 3 (AMP: Adversarial Motion Priors, pp. 62-81)."
+        },
+        {
+          "page": 108,
+          "duplicate_of_page": 81,
+          "reason": "Exact duplicate attachment of Paper 3 (AMP: Adversarial Motion Priors, pp. 62-81)."
+        }
+      ]
+    },
+    "bibliography_pages": {
+      "pages": [
+        11,
+        12,
+        13,
+        14,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        74,
+        75,
+        76,
+        88
+      ],
+      "reason": "Pages containing bibliographic reference lists rather than experimental findings.",
+      "handling_and_impact": "Indexed with metadata flag is_reference_page=True so citation-Lookup remains possible while main experimental queries prioritize content/table/visual chunks."
+    },
+    "appendix_thumbnail_grids": {
+      "pages": [
+        19,
+        80,
+        81
+      ],
+      "reason": "Pages 19, 80, and 81 contain 12-21 small sub-chart thumbnails with minimal body text (<620 chars).",
+      "handling_and_impact": "All 45 sub-chart images on pages 19, 80, and 81 were extracted to data/advanced/crops/ and their captions indexed, while primary quantitative comparisons use the full-resolution main-text charts and tables."
+    }
+  }
+}

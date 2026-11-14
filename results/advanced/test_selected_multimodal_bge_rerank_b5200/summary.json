@@ -1,0 +1,16 @@
+{
+  "strategy": "test_selected_multimodal_bge_rerank_b5200",
+  "split": "test",
+  "top_k": 5,
+  "budget_chars": 5200,
+  "n_answerable": 24,
+  "hit1": 23,
+  "hit1_rate": 0.9583,
+  "hit3": 24,
+  "hit3_rate": 1.0,
+  "context_hit_any": 24,
+  "context_hit_all_gold": 23,
+  "context_hit_all_gold_rate": 0.9583,
+  "avg_context_chars": 4674.1,
+  "median_ms": 421.83
+}

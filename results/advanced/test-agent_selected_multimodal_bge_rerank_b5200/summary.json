@@ -1,0 +1,54 @@
+{
+  "suite": "adv_agent_selected_test",
+  "split": "test",
+  "model": "qwen2.5:7b",
+  "top_k": 5,
+  "budget_chars": 5200,
+  "passed": 27,
+  "total": 30,
+  "pass_rate": 0.9,
+  "pass_rate_pct": 90.0,
+  "meets_90pct_bonus_threshold": true,
+  "system_errors": 0,
+  "total_time_s": 199.46,
+  "median_time_ms": 5876.6,
+  "service_cost_usd": 0.0,
+  "by_group": {
+    "table": {
+      "passed": 5,
+      "total": 6,
+      "rate": 0.8333,
+      "rate_pct": 83.33
+    },
+    "figure_diagram": {
+      "passed": 4,
+      "total": 5,
+      "rate": 0.8,
+      "rate_pct": 80.0
+    },
+    "chart": {
+      "passed": 5,
+      "total": 5,
+      "rate": 1.0,
+      "rate_pct": 100.0
+    },
+    "multi_hop": {
+      "passed": 3,
+      "total": 4,
+      "rate": 0.75,
+      "rate_pct": 75.0
+    },
+    "text": {
+      "passed": 4,
+      "total": 4,
+      "rate": 1.0,
+      "rate_pct": 100.0
+    },
+    "unanswerable": {
+      "passed": 6,
+      "total": 6,
+      "rate": 1.0,
+      "rate_pct": 100.0
+    }
+  }
+}

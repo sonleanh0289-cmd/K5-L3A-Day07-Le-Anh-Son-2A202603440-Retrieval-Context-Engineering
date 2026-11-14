@@ -1,0 +1,936 @@
+[
+  {
+    "query_id": "q17",
+    "split": "test",
+    "question": "Luật Trật tự, an toàn giao thông đường bộ có bắt buộc thắt dây đai an toàn trên xe ô tô không?",
+    "answerable": true,
+    "strategy": "agent_baseline_tfidf_b800",
+    "model": "qwen2.5:7b",
+    "elapsed_ms": 2958.4,
+    "service_cost_usd": 0.0,
+    "status": "answered",
+    "answer": "Luật Trật tự, an toàn giao thông đường bộ bắt buộc người lái xe và người được chở trên xe ô tô phải thắt dây đai an toàn tại những chỗ có trang bị dây đai an toàn khi tham gia giao thông đường bộ. [luat-ttatgt-36-2024-qh15::p008::para::000]",
+    "citations": [
+      "luat-ttatgt-36-2024-qh15::p008::para::000"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "Luật Trật tự, an toàn giao thông đường bộ có bắt buộc thắt dây đai an toàn trên xe ô tô không?",
+        "filter": null,
+        "results": [
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p008::para::000",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 8,
+            "text": "QUY TẮC GIAO THÔNG ĐƯỜNG BỘ\n\nĐiều 10. Quy tắc chung 1. Người tham gia giao thông đường bộ phải đi bên phải theo chiều đi của mình, đi đúng làn đường, phần đường quy định, chấp hành báo hiệu đường bộ và các quy tắc giao thông đường bộ khác.\n\n2. Người lái xe và người được chở trên xe ô tô phải thắt dây đai an toàn tại những chỗ có trang bị dây đai an toàn khi tham gia giao thông đường bộ.",
+            "metadata": {
+              "chapter": "Chương II",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 2411,
+              "chunk_index": 0,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.48734404064620646,
+            "strategy": "tfidf"
+          },
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p058::para::003",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 58,
+            "text": "10. Xây dựng lực lượng trực tiếp bảo đảm trật tự, an toàn giao thông đường bộ; đào tạo, tập huấn, bồi dưỡng, huấn luyện về công tác bảo đảm trật tự, an toàn giao thông đường bộ.\n\n11. Thống kê, tổng hợp, xây dựng Cơ sở dữ liệu về trật tự, an toàn giao thông đường bộ.\n\n12. Kiểm tra, thanh tra, giải quyết khiếu nại, tố cáo về trật tự, an toàn giao thông đường bộ.\n\n13. Hợp tác quốc tế về trật tự, an toàn giao thông đường bộ.\n\nĐiều 87. Trách nhiệm quản lý nhà nước về trật tự, an toàn giao thông đường bộ 1. Chính phủ thống nhất quản lý nhà nước về trật tự, an toàn giao thông đường bộ.",
+            "metadata": {
+              "chapter": "Chương VIII",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 2307,
+              "chunk_index": 3,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.2666494645693527,
+            "strategy": "tfidf"
+          },
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p005::para::003",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 5,
+            "text": "2. Nội dung hợp tác quốc tế về trật tự, an toàn giao thông đường bộ bao gồm: a) Ký kết điều ước quốc tế, thỏa thuận quốc tế có liên quan đến trật tự, an toàn giao thông đường bộ; b) Trao đổi thông tin, chuyển giao công nghệ có liên quan đến trật tự, an toàn giao thông đường bộ; c) Đào tạo, tập huấn, nâng cao năng lực cho lực lượng bảo đảm trật tự, an toàn giao thông đường bộ; d) Tăng cường điều kiện vật chất để bảo đảm trật tự, an toàn giao thông đường bộ; đ) Giải quyết tai nạn giao thông đường bộ;",
+            "metadata": {
+              "chapter": "Chương I",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 2511,
+              "chunk_index": 3,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.2577135631299062,
+            "strategy": "tfidf"
+          }
+        ],
+        "context": "[luat-ttatgt-36-2024-qh15::p008::para::000 | 36_2024_QH15_444251.doc.pdf | page 8]\nQUY TẮC GIAO THÔNG ĐƯỜNG BỘ\n\nĐiều 10. Quy tắc chung 1. Người tham gia giao thông đường bộ phải đi bên phải theo chiều đi của mình, đi đúng làn đường, phần đường quy định, chấp hành báo hiệu đường bộ và các quy tắc giao thông đường bộ khác.\n\n2. Người lái xe và người được chở trên xe ô tô phải thắt dây đai an toàn tại những chỗ có trang bị dây đai an toàn khi tham gia giao thông đường bộ.",
+        "context_ids": [
+          "luat-ttatgt-36-2024-qh15::p008::para::000"
+        ]
+      },
+      {
+        "event": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": "q18",
+    "split": "test",
+    "question": "Khi gặp sự cố kỹ thuật buộc phải đỗ xe tại nơi không được phép đỗ, người lái xe phải báo hiệu như thế nào?",
+    "answerable": true,
+    "strategy": "agent_baseline_tfidf_b800",
+    "model": "qwen2.5:7b",
+    "elapsed_ms": 2190.7,
+    "service_cost_usd": 0.0,
+    "status": "answered",
+    "answer": "Khi gặp sự cố kỹ thuật buộc phải đỗ xe tại nơi không được phép đỗ, người lái xe phải có báo hiệu bằng đèn khẩn cấp và đặt biển hoặc đèn cảnh báo về phía sau xe khoảng cách bảo đảm an toàn. [luat-ttatgt-36-2024-qh15::p016::para::006]",
+    "citations": [
+      "luat-ttatgt-36-2024-qh15::p016::para::006"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "Khi gặp sự cố kỹ thuật buộc phải đỗ xe tại nơi không được phép đỗ, người lái xe phải báo hiệu như thế nào?",
+        "filter": null,
+        "results": [
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p016::para::006",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 16,
+            "text": "2. Không dừng xe, đỗ xe trong hầm đường bộ; trường hợp gặp sự cố kỹ thuật hoặc bất khả kháng khác buộc phải dừng xe, đỗ xe, người lái xe, người điều khiển xe máy chuyên dùng phải đưa xe vào vị trí dừng xe, đỗ xe khẩn cấp, nếu không di chuyển được, phải có báo hiệu bằng đèn khẩn cấp và đặt biển hoặc đèn cảnh báo về phía sau xe khoảng cách bảo đảm an toàn, nhanh chóng báo cho cơ quan Cảnh sát giao thông thực hiện nhiệm vụ bảo đảm trật tự, an toàn giao thông trên tuyến hoặc cơ quan quản lý hầm đường bộ;\n\n3. Các quy tắc giao thông đường bộ khác quy định tại Chương này.\n\nĐiều 27. Xe ưu tiên",
+            "metadata": {
+              "chapter": "Chương II",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 2877,
+              "chunk_index": 6,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.4295699705977709,
+            "strategy": "tfidf"
+          },
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p016::para::003",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 16,
+            "text": "2. Chỉ được dừng xe, đỗ xe ở nơi quy định; trường hợp gặp sự cố kỹ thuật hoặc bất khả kháng khác buộc phải dừng xe, đỗ xe thì được dừng xe, đỗ xe ở làn dừng khẩn cấp cùng chiều xe chạy và phải có báo hiệu bằng đèn khẩn cấp; trường hợp xe không thể di chuyển được vào làn dừng khẩn cấp, phải có báo hiệu bằng đèn khẩn cấp và đặt biển hoặc đèn cảnh báo về phía sau xe khoảng cách tối thiểu 150 mét, nhanh chóng báo cho cơ quan Cảnh sát giao thông thực hiện nhiệm vụ bảo đảm trật tự, an toàn giao thông trên tuyến hoặc cơ quan quản lý đường cao tốc.",
+            "metadata": {
+              "chapter": "Chương II",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 2877,
+              "chunk_index": 3,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.38127730195682574,
+            "strategy": "tfidf"
+          },
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p013::para::000",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 13,
+            "text": "phanh đỗ xe hoặc thực hiện biện pháp an toàn khác. Xe đỗ trên đoạn đường dốc phải đánh lái về phía lề đường, chèn bánh.\n\n3. Người điều khiển phương tiện tham gia giao thông đường bộ khi dừng xe, đỗ xe trên đường phải thực hiện các quy định sau đây: a) Có tín hiệu báo cho người điều khiển phương tiện tham gia giao thông đường bộ khác biết khi ra, vào vị trí dừng xe, đỗ xe; b) Không làm ảnh hưởng đến người đi bộ và các phương tiện tham gia giao thông đường bộ.",
+            "metadata": {
+              "chapter": "Chương II",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 2239,
+              "chunk_index": 0,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.34745745229161806,
+            "strategy": "tfidf"
+          }
+        ],
+        "context": "[luat-ttatgt-36-2024-qh15::p016::para::006 | 36_2024_QH15_444251.doc.pdf | page 16]\n2. Không dừng xe, đỗ xe trong hầm đường bộ; trường hợp gặp sự cố kỹ thuật hoặc bất khả kháng khác buộc phải dừng xe, đỗ xe, người lái xe, người điều khiển xe máy chuyên dùng phải đưa xe vào vị trí dừng xe, đỗ xe khẩn cấp, nếu không di chuyển được, phải có báo hiệu bằng đèn khẩn cấp và đặt biển hoặc đèn cảnh báo về phía sau xe khoảng cách bảo đảm an toàn, nhanh chóng báo cho cơ quan Cảnh sát giao thông thực hiện nhiệm vụ bảo đảm trật tự, an toàn giao thông trên tuyến hoặc cơ quan quản lý hầm đường bộ;\n\n3. Các quy tắc giao thông đường bộ khác quy định tại Chương này.\n\nĐiều 27. Xe ưu tiên",
+        "context_ids": [
+          "luat-ttatgt-36-2024-qh15::p016::para::006"
+        ]
+      },
+      {
+        "event": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": "q19",
+    "split": "test",
+    "question": "Người có giấy phép lái xe bị trừ hết điểm phải chờ ít nhất bao lâu mới được tham gia kiểm tra kiến thức pháp luật để phục hồi điểm?",
+    "answerable": true,
+    "strategy": "agent_baseline_tfidf_b800",
+    "model": "qwen2.5:7b",
+    "elapsed_ms": 2488.3,
+    "service_cost_usd": 0.0,
+    "status": "answered",
+    "answer": "Người có giấy phép lái xe bị trừ hết điểm phải chờ ít nhất 06 tháng mới được tham gia kiểm tra kiến thức pháp luật để phục hồi điểm. [luat-ttatgt-36-2024-qh15::p041::para::001]",
+    "citations": [
+      "luat-ttatgt-36-2024-qh15::p041::para::001"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "Người có giấy phép lái xe bị trừ hết điểm phải chờ ít nhất bao lâu mới được tham gia kiểm tra kiến thức pháp luật để phục hồi điểm?",
+        "filter": null,
+        "results": [
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p041::para::001",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 41,
+            "text": "3. Trường hợp giấy phép lái xe bị trừ hết điểm thì người có giấy phép lái xe không được điều khiển phương tiện tham gia giao thông đường bộ theo giấy phép lái xe đó. Sau thời hạn ít nhất là 06 tháng kể từ ngày bị trừ hết điểm, người có giấy phép lái xe được tham gia kiểm tra nội dung kiến thức pháp luật về trật tự, an toàn giao thông đường bộ theo quy định tại khoản 7 Điều 61 của Luật này do lực lượng Cảnh sát giao thông tổ chức, có kết quả đạt yêu cầu thì được phục hồi đủ 12 điểm.",
+            "metadata": {
+              "chapter": "Chương IV",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 2653,
+              "chunk_index": 1,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.6182658122953384,
+            "strategy": "tfidf"
+          },
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p041::para::000",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 41,
+            "text": "mức độ của hành vi vi phạm pháp luật về trật tự, an toàn giao thông đường bộ. Dữ liệu về điểm trừ giấy phép lái xe của người vi phạm sẽ được cập nhật vào hệ thống cơ sở dữ liệu ngay sau khi quyết định xử phạt có hiệu lực thi hành và thông báo cho người bị trừ điểm giấy phép lái xe biết.\n\n2. Giấy phép lái xe chưa bị trừ hết điểm và không bị trừ điểm trong thời hạn 12 tháng từ ngày bị trừ điểm gần nhất thì được phục hồi đủ 12 điểm.",
+            "metadata": {
+              "chapter": "Chương IV",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 2653,
+              "chunk_index": 0,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.4827900860193461,
+            "strategy": "tfidf"
+          },
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p040::para::006",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 40,
+            "text": "Điều 58. Điểm của giấy phép lái xe 1. Điểm của giấy phép lái xe được dùng để quản lý việc chấp hành pháp luật về trật tự, an toàn giao thông đường bộ của người lái xe trên hệ thống cơ sở dữ liệu về trật tự, an toàn giao thông đường bộ, bao gồm 12 điểm. Số điểm trừ mỗi lần vi phạm tùy thuộc tính chất,",
+            "metadata": {
+              "chapter": "Chương IV",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 2785,
+              "chunk_index": 6,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.36100572431756484,
+            "strategy": "tfidf"
+          }
+        ],
+        "context": "[luat-ttatgt-36-2024-qh15::p041::para::001 | 36_2024_QH15_444251.doc.pdf | page 41]\n3. Trường hợp giấy phép lái xe bị trừ hết điểm thì người có giấy phép lái xe không được điều khiển phương tiện tham gia giao thông đường bộ theo giấy phép lái xe đó. Sau thời hạn ít nhất là 06 tháng kể từ ngày bị trừ hết điểm, người có giấy phép lái xe được tham gia kiểm tra nội dung kiến thức pháp luật về trật tự, an toàn giao thông đường bộ theo quy định tại khoản 7 Điều 61 của Luật này do lực lượng Cảnh sát giao thông tổ chức, có kết quả đạt yêu cầu thì được phục hồi đủ 12 điểm.",
+        "context_ids": [
+          "luat-ttatgt-36-2024-qh15::p041::para::001"
+        ]
+      },
+      {
+        "event": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": "q20",
+    "split": "test",
+    "question": "Trường hợp tai nạn giao thông liên quan đến xe chở hàng hóa nguy hiểm, cơ quan Công an chủ trì giải quyết phải thực hiện ngay những việc gì?",
+    "answerable": true,
+    "strategy": "agent_baseline_tfidf_b800",
+    "model": "qwen2.5:7b",
+    "elapsed_ms": 1786.0,
+    "service_cost_usd": 0.0,
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "Trường hợp tai nạn giao thông liên quan đến xe chở hàng hóa nguy hiểm, cơ quan Công an chủ trì giải quyết phải thực hiện ngay những việc gì?",
+        "filter": null,
+        "results": [
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p056::para::000",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 56,
+            "text": "trách nhiệm tổ chức chôn cất sau khi cơ quan nhà nước có thẩm quyền điều tra, giải quyết vụ tai nạn giao thông đường bộ đồng ý cho chôn cất.\n\n5. Trường hợp tai nạn giao thông đường bộ liên quan đến phương tiện giao thông đường bộ chở hàng hóa nguy hiểm, cơ quan Công an chủ trì giải quyết vụ việc phải thông báo ngay cho đơn vị chức năng về giải quyết hóa chất độc hại, vật liệu cháy, nổ; phong tỏa hiện trường nơi xảy ra tai nạn giao thông đường bộ; tổ chức phân luồng giao thông, cấm người, phương tiện đi vào khu vực tai nạn.",
+            "metadata": {
+              "chapter": "Chương VII",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 2753,
+              "chunk_index": 0,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.5240333780469971,
+            "strategy": "tfidf"
+          },
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p054::para::003",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 54,
+            "text": "b) Ở lại hiện trường vụ tai nạn giao thông đường bộ cho đến khi người của cơ quan Công an đến, trừ trường hợp phải đi cấp cứu, đưa người bị nạn đi cấp cứu hoặc xét thấy bị đe dọa đến tính mạng, sức khỏe nhưng phải đến trình báo ngay cơ quan Công an, Ủy ban nhân dân nơi gần nhất; c) Cung cấp thông tin xác định danh tính về bản thân, người liên quan đến vụ tai nạn giao thông đường bộ và thông tin liên quan của vụ tai nạn giao thông đường bộ cho cơ quan có thẩm quyền.",
+            "metadata": {
+              "chapter": "Chương VII",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 2527,
+              "chunk_index": 3,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.3948916934669026,
+            "strategy": "tfidf"
+          },
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p055::para::001",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 55,
+            "text": "Điều 81. Phát hiện, tiếp nhận, xử lý tin báo tai nạn giao thông đường bộ 1. Cơ quan, tổ chức, cá nhân khi phát hiện vụ tai nạn giao thông đường bộ phải báo ngay cho cơ quan Công an, cơ sở khám bệnh, chữa bệnh hoặc Ủy ban nhân dân nơi gần nhất.\n\n2. Cơ quan Công an khi nhận được tin báo vụ tai nạn giao thông đường bộ phải tổ chức ngay lực lượng đến hiện trường thực hiện các biện pháp quy định tại khoản 3 Điều 76 của Luật này và các biện pháp khác để giải quyết vụ tai nạn giao thông đường bộ theo quy định của pháp luật.",
+            "metadata": {
+              "chapter": "Chương VII",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 2994,
+              "chunk_index": 1,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.38165068873811725,
+            "strategy": "tfidf"
+          }
+        ],
+        "context": "[luat-ttatgt-36-2024-qh15::p056::para::000 | 36_2024_QH15_444251.doc.pdf | page 56]\ntrách nhiệm tổ chức chôn cất sau khi cơ quan nhà nước có thẩm quyền điều tra, giải quyết vụ tai nạn giao thông đường bộ đồng ý cho chôn cất.\n\n5. Trường hợp tai nạn giao thông đường bộ liên quan đến phương tiện giao thông đường bộ chở hàng hóa nguy hiểm, cơ quan Công an chủ trì giải quyết vụ việc phải thông báo ngay cho đơn vị chức năng về giải quyết hóa chất độc hại, vật liệu cháy, nổ; phong tỏa hiện trường nơi xảy ra tai nạn giao thông đường bộ; tổ chức phân luồng giao thông, cấm người, phương tiện đi vào khu vực tai nạn.",
+        "context_ids": [
+          "luat-ttatgt-36-2024-qh15::p056::para::000"
+        ]
+      },
+      {
+        "event": "search",
+        "query": "cơ quan Công an chủ trì giải quyết vụ tai nạn giao thông liên quan đến xe chở hàng hóa nguy hiểm phải thực hiện ngay những việc gì?",
+        "filter": null,
+        "results": [
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p056::para::000",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 56,
+            "text": "trách nhiệm tổ chức chôn cất sau khi cơ quan nhà nước có thẩm quyền điều tra, giải quyết vụ tai nạn giao thông đường bộ đồng ý cho chôn cất.\n\n5. Trường hợp tai nạn giao thông đường bộ liên quan đến phương tiện giao thông đường bộ chở hàng hóa nguy hiểm, cơ quan Công an chủ trì giải quyết vụ việc phải thông báo ngay cho đơn vị chức năng về giải quyết hóa chất độc hại, vật liệu cháy, nổ; phong tỏa hiện trường nơi xảy ra tai nạn giao thông đường bộ; tổ chức phân luồng giao thông, cấm người, phương tiện đi vào khu vực tai nạn.",
+            "metadata": {
+              "chapter": "Chương VII",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 2753,
+              "chunk_index": 0,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.5239603473279666,
+            "strategy": "tfidf"
+          },
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p055::para::001",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 55,
+            "text": "Điều 81. Phát hiện, tiếp nhận, xử lý tin báo tai nạn giao thông đường bộ 1. Cơ quan, tổ chức, cá nhân khi phát hiện vụ tai nạn giao thông đường bộ phải báo ngay cho cơ quan Công an, cơ sở khám bệnh, chữa bệnh hoặc Ủy ban nhân dân nơi gần nhất.\n\n2. Cơ quan Công an khi nhận được tin báo vụ tai nạn giao thông đường bộ phải tổ chức ngay lực lượng đến hiện trường thực hiện các biện pháp quy định tại khoản 3 Điều 76 của Luật này và các biện pháp khác để giải quyết vụ tai nạn giao thông đường bộ theo quy định của pháp luật.",
+            "metadata": {
+              "chapter": "Chương VII",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 2994,
+              "chunk_index": 1,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.4026008047426716,
+            "strategy": "tfidf"
+          },
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p054::para::003",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 54,
+            "text": "b) Ở lại hiện trường vụ tai nạn giao thông đường bộ cho đến khi người của cơ quan Công an đến, trừ trường hợp phải đi cấp cứu, đưa người bị nạn đi cấp cứu hoặc xét thấy bị đe dọa đến tính mạng, sức khỏe nhưng phải đến trình báo ngay cơ quan Công an, Ủy ban nhân dân nơi gần nhất; c) Cung cấp thông tin xác định danh tính về bản thân, người liên quan đến vụ tai nạn giao thông đường bộ và thông tin liên quan của vụ tai nạn giao thông đường bộ cho cơ quan có thẩm quyền.",
+            "metadata": {
+              "chapter": "Chương VII",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 2527,
+              "chunk_index": 3,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.40197387197748274,
+            "strategy": "tfidf"
+          }
+        ],
+        "context": "[luat-ttatgt-36-2024-qh15::p056::para::000 | 36_2024_QH15_444251.doc.pdf | page 56]\ntrách nhiệm tổ chức chôn cất sau khi cơ quan nhà nước có thẩm quyền điều tra, giải quyết vụ tai nạn giao thông đường bộ đồng ý cho chôn cất.\n\n5. Trường hợp tai nạn giao thông đường bộ liên quan đến phương tiện giao thông đường bộ chở hàng hóa nguy hiểm, cơ quan Công an chủ trì giải quyết vụ việc phải thông báo ngay cho đơn vị chức năng về giải quyết hóa chất độc hại, vật liệu cháy, nổ; phong tỏa hiện trường nơi xảy ra tai nạn giao thông đường bộ; tổ chức phân luồng giao thông, cấm người, phương tiện đi vào khu vực tai nạn.",
+        "context_ids": [
+          "luat-ttatgt-36-2024-qh15::p056::para::000"
+        ]
+      },
+      {
+        "event": "invalid_or_missing_citations"
+      }
+    ]
+  },
+  {
+    "query_id": "q21",
+    "split": "test",
+    "question": "Khi sử dụng tạm thời lòng đường, vỉa hè cho sự kiện chính trị, văn hóa, thể thao thì cần đáp ứng điều kiện gì?",
+    "answerable": true,
+    "strategy": "agent_baseline_tfidf_b800",
+    "model": "qwen2.5:7b",
+    "elapsed_ms": 2649.3,
+    "service_cost_usd": 0.0,
+    "status": "answered",
+    "answer": "Khi sử dụng tạm thời lòng đường, vỉa hè cho sự kiện chính trị, văn hóa, thể thao, cơ quan, tổ chức, cá nhân có nhu cầu sử dụng tạm thời lòng đường, vỉa hè phải có phương án sử dụng tạm thời lòng đường, vỉa hè và được cơ quan có thẩm quyền cho phép. [luat-ttatgt-36-2024-qh15::p053::para::000]",
+    "citations": [
+      "luat-ttatgt-36-2024-qh15::p053::para::000"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "Khi sử dụng tạm thời lòng đường, vỉa hè cho sự kiện chính trị, văn hóa, thể thao thì cần đáp ứng điều kiện gì?",
+        "filter": null,
+        "results": [
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p053::para::000",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 53,
+            "text": "1. Lòng đường được sử dụng cho mục đích giao thông; vỉa hè được sử dụng cho người đi bộ. Trường hợp cần thiết sử dụng tạm thời lòng đường, vỉa hè phục vụ sự kiện chính trị, hoạt động văn hoá, thể thao và mục đích khác, cơ quan, tổ chức, cá nhân có nhu cầu sử dụng tạm thời lòng đường, vỉa hè phải có phương án sử dụng tạm thời lòng đường, vỉa hè và được cơ quan có thẩm quyền cho phép; cơ quan cho phép sử dụng tạm thời lòng đường, vỉa hè gửi thông báo ngay cho cơ quan Cảnh sát giao thông.",
+            "metadata": {
+              "chapter": "Chương VI",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 2805,
+              "chunk_index": 0,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.6325402338947282,
+            "strategy": "tfidf"
+          },
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p053::para::001",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 53,
+            "text": "2. Cơ quan, tổ chức, cá nhân sử dụng tạm thời lòng đường, vỉa hè chỉ được sử dụng đúng mục đích do cơ quan có thẩm quyền cho phép; chấp hành các yêu cầu của Cảnh sát giao thông; không làm mất trật tự, an toàn giao thông đường bộ; hoàn trả nguyên trạng lòng đường, vỉa hè sau khi kết thúc việc sử dụng.",
+            "metadata": {
+              "chapter": "Chương VI",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 2805,
+              "chunk_index": 1,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.3875759050088888,
+            "strategy": "tfidf"
+          },
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p053::para::002",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 53,
+            "text": "3. Cơ quan Cảnh sát giao thông có trách nhiệm sau đây: a) Xây dựng, tổ chức thực hiện phương án bảo đảm trật tự, an toàn giao thông đường bộ; b) Thông báo, thực hiện phương án phân luồng giao thông tạm thời; c) Giải quyết các tình huống gây mất an ninh, trật tự, an toàn giao thông đường bộ; trường hợp sử dụng tạm thời lòng đường, vỉa hè không bảo đảm yêu cầu về an ninh, trật tự, an toàn giao thông đường bộ thì tạm thời đình chỉ hoạt động, kiến nghị cơ quan có thẩm quyền điều chỉnh phương án sử dụng cho phù hợp.\n\n4. Chính phủ quy định chi tiết Điều này.",
+            "metadata": {
+              "chapter": "Chương VI",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 2805,
+              "chunk_index": 2,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.26261632111132244,
+            "strategy": "tfidf"
+          }
+        ],
+        "context": "[luat-ttatgt-36-2024-qh15::p053::para::000 | 36_2024_QH15_444251.doc.pdf | page 53]\n1. Lòng đường được sử dụng cho mục đích giao thông; vỉa hè được sử dụng cho người đi bộ. Trường hợp cần thiết sử dụng tạm thời lòng đường, vỉa hè phục vụ sự kiện chính trị, hoạt động văn hoá, thể thao và mục đích khác, cơ quan, tổ chức, cá nhân có nhu cầu sử dụng tạm thời lòng đường, vỉa hè phải có phương án sử dụng tạm thời lòng đường, vỉa hè và được cơ quan có thẩm quyền cho phép; cơ quan cho phép sử dụng tạm thời lòng đường, vỉa hè gửi thông báo ngay cho cơ quan Cảnh sát giao thông.",
+        "context_ids": [
+          "luat-ttatgt-36-2024-qh15::p053::para::000"
+        ]
+      },
+      {
+        "event": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": "q22",
+    "split": "test",
+    "question": "Giấy phép lái xe hạng A1 đã cấp trước ngày Luật có hiệu lực được tiếp tục điều khiển loại xe mô tô nào theo quy định chuyển tiếp?",
+    "answerable": true,
+    "strategy": "agent_baseline_tfidf_b800",
+    "model": "qwen2.5:7b",
+    "elapsed_ms": 1408.6,
+    "service_cost_usd": 0.0,
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "Giấy phép lái xe hạng A1 đã cấp trước ngày Luật có hiệu lực được tiếp tục điều khiển loại xe mô tô nào theo quy định chuyển tiếp?",
+        "filter": null,
+        "results": [
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p059::para::004",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 59,
+            "text": "Điều 89. Quy định chuyển tiếp 1. Giấy phép lái xe được cấp trước ngày Luật này có hiệu lực thi hành được tiếp tục sử dụng theo thời hạn ghi trên giấy phép lái xe.\n\n2. Giấy phép lái xe được cấp trước ngày Luật này có hiệu lực thi hành nếu chưa thực hiện đổi, cấp lại theo quy định của Luật này có hiệu lực sử dụng như sau:",
+            "metadata": {
+              "chapter": "Chương IX",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 2327,
+              "chunk_index": 4,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.5499297923853097,
+            "strategy": "tfidf"
+          },
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p060::para::000",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 60,
+            "text": "a) Giấy phép lái xe hạng A1 được tiếp tục điều khiển xe mô tô hai bánh có dung tích xi-lanh từ 50 cm 3 đến dưới 175 cm 3 hoặc có công suất động cơ điện từ 04 kW đến dưới 14 kW; b) Giấy phép lái xe hạng A2 được tiếp tục điều khiển xe mô tô hai bánh có dung tích xi-lanh từ 175 cm 3 trở lên hoặc có công suất động cơ điện từ 14 kW trở lên và các loại xe quy định cho giấy phép lái xe hạng A1 quy định tại điểm a khoản này; c) Giấy phép lái xe hạng A3 được tiếp tục điều khiển xe mô tô ba bánh, các loại xe quy định cho giấy phép lái xe hạng A1 quy định tại điểm a khoản này và các xe tương tự;",
+            "metadata": {
+              "chapter": "Chương IX",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 3009,
+              "chunk_index": 0,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.48236130030769064,
+            "strategy": "tfidf"
+          },
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p060::para::005",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 60,
+            "text": "3. Trường hợp người có giấy phép lái xe đã được cấp trước ngày Luật này có hiệu lực thi hành có nhu cầu đổi, cấp lại giấy phép lái xe thì thực hiện như sau: a) Giấy phép lái xe hạng A1 được đổi, cấp lại sang giấy phép lái xe hạng A với điều kiện hạn chế là chỉ được điều khiển xe mô tô hai bánh có dung tích xi-lanh đến dưới 175 cm 3 hoặc có công suất động cơ điện đến dưới 14 kW; b) Giấy phép lái xe hạng A2 được đổi, cấp lại sang giấy phép lái xe hạng A;",
+            "metadata": {
+              "chapter": "Chương IX",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 3009,
+              "chunk_index": 5,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.4263515809868347,
+            "strategy": "tfidf"
+          }
+        ],
+        "context": "[luat-ttatgt-36-2024-qh15::p059::para::004 | 36_2024_QH15_444251.doc.pdf | page 59]\nĐiều 89. Quy định chuyển tiếp 1. Giấy phép lái xe được cấp trước ngày Luật này có hiệu lực thi hành được tiếp tục sử dụng theo thời hạn ghi trên giấy phép lái xe.\n\n2. Giấy phép lái xe được cấp trước ngày Luật này có hiệu lực thi hành nếu chưa thực hiện đổi, cấp lại theo quy định của Luật này có hiệu lực sử dụng như sau:",
+        "context_ids": [
+          "luat-ttatgt-36-2024-qh15::p059::para::004"
+        ]
+      },
+      {
+        "event": "search",
+        "query": "Giấy phép lái xe hạng A1 quy định điều khiển loại xe mô tô theo chuyển tiếp",
+        "filter": null,
+        "results": [
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p060::para::000",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 60,
+            "text": "a) Giấy phép lái xe hạng A1 được tiếp tục điều khiển xe mô tô hai bánh có dung tích xi-lanh từ 50 cm 3 đến dưới 175 cm 3 hoặc có công suất động cơ điện từ 04 kW đến dưới 14 kW; b) Giấy phép lái xe hạng A2 được tiếp tục điều khiển xe mô tô hai bánh có dung tích xi-lanh từ 175 cm 3 trở lên hoặc có công suất động cơ điện từ 14 kW trở lên và các loại xe quy định cho giấy phép lái xe hạng A1 quy định tại điểm a khoản này; c) Giấy phép lái xe hạng A3 được tiếp tục điều khiển xe mô tô ba bánh, các loại xe quy định cho giấy phép lái xe hạng A1 quy định tại điểm a khoản này và các xe tương tự;",
+            "metadata": {
+              "chapter": "Chương IX",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 3009,
+              "chunk_index": 0,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.5769004555343077,
+            "strategy": "tfidf"
+          },
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p038::para::003",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 38,
+            "text": "Điều 57. Giấy phép lái xe 1. Giấy phép lái xe bao gồm các hạng sau đây: a) Hạng A1 cấp cho người lái xe mô tô hai bánh có dung tích xi-lanh đến 125 cm 3 hoặc có công suất động cơ điện đến 11 kW; b) Hạng A cấp cho người lái xe mô tô hai bánh có dung tích xi-lanh trên 125 cm 3 hoặc có công suất động cơ điện trên 11 kW và các loại xe quy định cho giấy phép lái xe hạng A1; c) Hạng B1 cấp cho người lái xe mô tô ba bánh và các loại xe quy định cho giấy phép lái xe hạng A1; d) Hạng B cấp cho người lái xe ô tô chở người đến 08 chỗ (không kể chỗ của người lái xe);",
+            "metadata": {
+              "chapter": "Chương IV",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 2718,
+              "chunk_index": 3,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.550875036547615,
+            "strategy": "tfidf"
+          },
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p060::para::004",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 60,
+            "text": "l) Giấy phép lái xe hạng FB2, FD được tiếp tục điều khiển các loại xe quy định cho giấy phép lái xe hạng B2, D quy định tại điểm g và điểm i khoản này khi kéo rơ moóc; giấy phép lái xe hạng FC được tiếp tục điều khiển các loại xe quy định cho giấy phép lái xe hạng C quy định tại điểm h khoản này khi kéo rơ moóc, đầu kéo kéo sơ mi rơ moóc; giấy phép lái xe hạng FE được tiếp tục điều khiển các loại xe quy định cho giấy phép lái xe hạng E quy định tại điểm k khoản này khi kéo rơ moóc hoặc xe ô tô chở khách nối toa.",
+            "metadata": {
+              "chapter": "Chương IX",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 3009,
+              "chunk_index": 4,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.4943426829517756,
+            "strategy": "tfidf"
+          }
+        ],
+        "context": "[luat-ttatgt-36-2024-qh15::p059::para::004 | 36_2024_QH15_444251.doc.pdf | page 59]\nĐiều 89. Quy định chuyển tiếp 1. Giấy phép lái xe được cấp trước ngày Luật này có hiệu lực thi hành được tiếp tục sử dụng theo thời hạn ghi trên giấy phép lái xe.\n\n2. Giấy phép lái xe được cấp trước ngày Luật này có hiệu lực thi hành nếu chưa thực hiện đổi, cấp lại theo quy định của Luật này có hiệu lực sử dụng như sau:",
+        "context_ids": [
+          "luat-ttatgt-36-2024-qh15::p059::para::004"
+        ]
+      },
+      {
+        "event": "invalid_or_missing_citations"
+      }
+    ]
+  },
+  {
+    "query_id": "u03",
+    "split": "test",
+    "question": "Mức thu lệ phí cấp mới giấy phép lái xe hạng B bằng thẻ PET là bao nhiêu tiền một lần theo quy định trong Luật số 36/2024/QH15?",
+    "answerable": false,
+    "strategy": "agent_baseline_tfidf_b800",
+    "model": "qwen2.5:7b",
+    "elapsed_ms": 1687.4,
+    "service_cost_usd": 0.0,
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "Mức thu lệ phí cấp mới giấy phép lái xe hạng B bằng thẻ PET là bao nhiêu tiền một lần theo quy định trong Luật số 36/2024/QH15?",
+        "filter": null,
+        "results": [
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p061::para::000",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 61,
+            "text": "c) Giấy phép lái xe hạng A3 được đổi, cấp lại sang giấy phép lái xe hạng B1; d) Giấy phép lái xe hạng A4 được đổi, cấp lại sang chứng chỉ điều khiển xe máy chuyên dùng cho người điều khiển máy kéo có trọng tải đến 1.000 kg và chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ cho người điều khiển xe máy chuyên dùng; đ) Giấy phép lái xe hạng B1 số tự động được đổi, cấp lại sang giấy phép lái xe hạng B với điều kiện hạn chế là chỉ được điều khiển xe ô tô số tự động;",
+            "metadata": {
+              "chapter": "Chương IX",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 2866,
+              "chunk_index": 0,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.21922550483260256,
+            "strategy": "tfidf"
+          },
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p039::para::005",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 39,
+            "text": "5. Thời hạn của giấy phép lái xe được quy định như sau: a) Giấy phép lái xe các hạng A1, A, B1 không thời hạn; b) Giấy phép lái xe hạng B và hạng C1 có thời hạn 10 năm kể từ ngày cấp; c) Giấy phép lái xe các hạng C, D1, D2, D, BE, C1E, CE, D1E, D2E và DE có thời hạn 05 năm kể từ ngày cấp.\n\n6. Giấy phép lái xe có giá trị sử dụng trong phạm vi lãnh thổ Việt Nam bao gồm:",
+            "metadata": {
+              "chapter": "Chương IV",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 2791,
+              "chunk_index": 5,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.21205457656816995,
+            "strategy": "tfidf"
+          },
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p044::para::001",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 44,
+            "text": "5. Giấy phép lái xe bị thu hồi khi thuộc một trong các trường hợp sau đây: a) Người được cấp giấy phép lái xe không đủ điều kiện sức khỏe theo kết luận của cơ sở khám bệnh, chữa bệnh đối với từng hạng giấy phép lái xe; b) Giấy phép lái xe được cấp sai quy định; c) Giấy phép lái xe đã quá thời hạn tạm giữ hoặc hết thời hiệu thi hành quyết định xử phạt vi phạm hành chính theo quy định của pháp luật về xử lý vi phạm hành chính nếu người vi phạm không đến nhận mà không có lý do chính đáng.",
+            "metadata": {
+              "chapter": "Chương IV",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 3042,
+              "chunk_index": 1,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.21119620440880957,
+            "strategy": "tfidf"
+          }
+        ],
+        "context": "[luat-ttatgt-36-2024-qh15::p061::para::000 | 36_2024_QH15_444251.doc.pdf | page 61]\nc) Giấy phép lái xe hạng A3 được đổi, cấp lại sang giấy phép lái xe hạng B1; d) Giấy phép lái xe hạng A4 được đổi, cấp lại sang chứng chỉ điều khiển xe máy chuyên dùng cho người điều khiển máy kéo có trọng tải đến 1.000 kg và chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ cho người điều khiển xe máy chuyên dùng; đ) Giấy phép lái xe hạng B1 số tự động được đổi, cấp lại sang giấy phép lái xe hạng B với điều kiện hạn chế là chỉ được điều khiển xe ô tô số tự động;",
+        "context_ids": [
+          "luat-ttatgt-36-2024-qh15::p061::para::000"
+        ]
+      },
+      {
+        "event": "search",
+        "query": "mức thu lệ phí cấp mới giấy phép lái xe hạng B bằng thẻ PET theo Luật số 36/2024/QH15",
+        "filter": null,
+        "results": [
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p061::para::000",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 61,
+            "text": "c) Giấy phép lái xe hạng A3 được đổi, cấp lại sang giấy phép lái xe hạng B1; d) Giấy phép lái xe hạng A4 được đổi, cấp lại sang chứng chỉ điều khiển xe máy chuyên dùng cho người điều khiển máy kéo có trọng tải đến 1.000 kg và chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ cho người điều khiển xe máy chuyên dùng; đ) Giấy phép lái xe hạng B1 số tự động được đổi, cấp lại sang giấy phép lái xe hạng B với điều kiện hạn chế là chỉ được điều khiển xe ô tô số tự động;",
+            "metadata": {
+              "chapter": "Chương IX",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 2866,
+              "chunk_index": 0,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.24072588572410802,
+            "strategy": "tfidf"
+          },
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p060::para::005",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 60,
+            "text": "3. Trường hợp người có giấy phép lái xe đã được cấp trước ngày Luật này có hiệu lực thi hành có nhu cầu đổi, cấp lại giấy phép lái xe thì thực hiện như sau: a) Giấy phép lái xe hạng A1 được đổi, cấp lại sang giấy phép lái xe hạng A với điều kiện hạn chế là chỉ được điều khiển xe mô tô hai bánh có dung tích xi-lanh đến dưới 175 cm 3 hoặc có công suất động cơ điện đến dưới 14 kW; b) Giấy phép lái xe hạng A2 được đổi, cấp lại sang giấy phép lái xe hạng A;",
+            "metadata": {
+              "chapter": "Chương IX",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 3009,
+              "chunk_index": 5,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.22941575126857947,
+            "strategy": "tfidf"
+          },
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p001::para::000",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 1,
+            "text": "QUỐC HỘI -------- CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc --------------- Luật số: 36/2024/QH15 Hà Nội, ngày 27 tháng 6 năm 2024 LUẬT TRẬT TỰ, AN TOÀN GIAO THÔNG ĐƯỜNG BỘ Căn cứ Hiến pháp nước Cộng hòa xã hội chủ nghĩa Việt Nam; Quốc hội ban hành Luật Trật tự, an toàn giao thông đường bộ.\n\nChương I NHỮNG QUY ĐỊNH CHUNG",
+            "metadata": {
+              "chapter": "Chương I",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 2154,
+              "chunk_index": 0,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.21697568656439242,
+            "strategy": "tfidf"
+          }
+        ],
+        "context": "[luat-ttatgt-36-2024-qh15::p061::para::000 | 36_2024_QH15_444251.doc.pdf | page 61]\nc) Giấy phép lái xe hạng A3 được đổi, cấp lại sang giấy phép lái xe hạng B1; d) Giấy phép lái xe hạng A4 được đổi, cấp lại sang chứng chỉ điều khiển xe máy chuyên dùng cho người điều khiển máy kéo có trọng tải đến 1.000 kg và chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ cho người điều khiển xe máy chuyên dùng; đ) Giấy phép lái xe hạng B1 số tự động được đổi, cấp lại sang giấy phép lái xe hạng B với điều kiện hạn chế là chỉ được điều khiển xe ô tô số tự động;",
+        "context_ids": [
+          "luat-ttatgt-36-2024-qh15::p061::para::000"
+        ]
+      },
+      {
+        "event": "invalid_or_missing_citations"
+      }
+    ]
+  },
+  {
+    "query_id": "u04",
+    "split": "test",
+    "question": "Người lái tàu hỏa chạy trên đường sắt quốc gia bị trừ mấy điểm chứng chỉ lái tàu khi chạy quá tốc độ theo Luật số 36/2024/QH15?",
+    "answerable": false,
+    "strategy": "agent_baseline_tfidf_b800",
+    "model": "qwen2.5:7b",
+    "elapsed_ms": 1390.5,
+    "service_cost_usd": 0.0,
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "Người lái tàu hỏa chạy trên đường sắt quốc gia bị trừ mấy điểm chứng chỉ lái tàu khi chạy quá tốc độ theo Luật số 36/2024/QH15?",
+        "filter": null,
+        "results": [
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p016::para::000",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 16,
+            "text": "vi an toàn đường sắt, người điều khiển phương tiện tham gia giao thông đường bộ và người có mặt phải ngay lập tức báo hiệu để dừng tàu, thực hiện các biện pháp bảo đảm an toàn.",
+            "metadata": {
+              "chapter": "Chương II",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 2877,
+              "chunk_index": 0,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.26286638649426897,
+            "strategy": "tfidf"
+          },
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p041::para::000",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 41,
+            "text": "mức độ của hành vi vi phạm pháp luật về trật tự, an toàn giao thông đường bộ. Dữ liệu về điểm trừ giấy phép lái xe của người vi phạm sẽ được cập nhật vào hệ thống cơ sở dữ liệu ngay sau khi quyết định xử phạt có hiệu lực thi hành và thông báo cho người bị trừ điểm giấy phép lái xe biết.\n\n2. Giấy phép lái xe chưa bị trừ hết điểm và không bị trừ điểm trong thời hạn 12 tháng từ ngày bị trừ điểm gần nhất thì được phục hồi đủ 12 điểm.",
+            "metadata": {
+              "chapter": "Chương IV",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 2653,
+              "chunk_index": 0,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.2080497594334357,
+            "strategy": "tfidf"
+          },
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p001::para::000",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 1,
+            "text": "QUỐC HỘI -------- CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc --------------- Luật số: 36/2024/QH15 Hà Nội, ngày 27 tháng 6 năm 2024 LUẬT TRẬT TỰ, AN TOÀN GIAO THÔNG ĐƯỜNG BỘ Căn cứ Hiến pháp nước Cộng hòa xã hội chủ nghĩa Việt Nam; Quốc hội ban hành Luật Trật tự, an toàn giao thông đường bộ.\n\nChương I NHỮNG QUY ĐỊNH CHUNG",
+            "metadata": {
+              "chapter": "Chương I",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 2154,
+              "chunk_index": 0,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.19434552775056957,
+            "strategy": "tfidf"
+          }
+        ],
+        "context": "[luat-ttatgt-36-2024-qh15::p016::para::000 | 36_2024_QH15_444251.doc.pdf | page 16]\nvi an toàn đường sắt, người điều khiển phương tiện tham gia giao thông đường bộ và người có mặt phải ngay lập tức báo hiệu để dừng tàu, thực hiện các biện pháp bảo đảm an toàn.\n\n[luat-ttatgt-36-2024-qh15::p041::para::000 | 36_2024_QH15_444251.doc.pdf | page 41]\nmức độ của hành vi vi phạm pháp luật về trật tự, an toàn giao thông đường bộ. Dữ liệu về điểm trừ giấy phép lái xe của người vi phạm sẽ được cập nhật vào hệ thống cơ sở dữ liệu ngay sau khi quyết định xử phạt có hiệu lực thi hành và thông báo cho người bị trừ điểm giấy phép lái xe biết.\n\n2. Giấy phép lái xe chưa bị trừ hết điểm và không bị trừ điểm trong thời hạn 12 tháng từ ngày bị trừ điểm gần nhất thì được phục hồi đủ 12 điểm.",
+        "context_ids": [
+          "luat-ttatgt-36-2024-qh15::p016::para::000",
+          "luat-ttatgt-36-2024-qh15::p041::para::000"
+        ]
+      },
+      {
+        "event": "search",
+        "query": "trừ điểm chứng chỉ lái tàu hỏa khi chạy quá tốc độ",
+        "filter": null,
+        "results": [
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p041::para::000",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 41,
+            "text": "mức độ của hành vi vi phạm pháp luật về trật tự, an toàn giao thông đường bộ. Dữ liệu về điểm trừ giấy phép lái xe của người vi phạm sẽ được cập nhật vào hệ thống cơ sở dữ liệu ngay sau khi quyết định xử phạt có hiệu lực thi hành và thông báo cho người bị trừ điểm giấy phép lái xe biết.\n\n2. Giấy phép lái xe chưa bị trừ hết điểm và không bị trừ điểm trong thời hạn 12 tháng từ ngày bị trừ điểm gần nhất thì được phục hồi đủ 12 điểm.",
+            "metadata": {
+              "chapter": "Chương IV",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 2653,
+              "chunk_index": 0,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.2625848233395618,
+            "strategy": "tfidf"
+          },
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p009::para::005",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 9,
+            "text": "Điều 12. Chấp hành quy định về tốc độ và khoảng cách giữa các xe 1. Người lái xe, người điều khiển xe máy chuyên dùng phải chấp hành quy định về tốc độ, khoảng cách an toàn tối thiểu với xe phía trước cùng làn đường hoặc phần đường.\n\n2. Người điều khiển phương tiện tham gia giao thông đường bộ phải bảo đảm tốc độ phù hợp điều kiện của cầu, đường, mật độ giao thông, địa hình, thời tiết và các yếu tố ảnh hưởng khác để bảo đảm an toàn.",
+            "metadata": {
+              "chapter": "Chương II",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 2542,
+              "chunk_index": 5,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.20508070032176964,
+            "strategy": "tfidf"
+          },
+          {
+            "id": "luat-ttatgt-36-2024-qh15::p040::para::006",
+            "source_id": "luat-ttatgt-36-2024-qh15",
+            "source": "36_2024_QH15_444251.doc.pdf",
+            "page": 40,
+            "text": "Điều 58. Điểm của giấy phép lái xe 1. Điểm của giấy phép lái xe được dùng để quản lý việc chấp hành pháp luật về trật tự, an toàn giao thông đường bộ của người lái xe trên hệ thống cơ sở dữ liệu về trật tự, an toàn giao thông đường bộ, bao gồm 12 điểm. Số điểm trừ mỗi lần vi phạm tùy thuộc tính chất,",
+            "metadata": {
+              "chapter": "Chương IV",
+              "document_type": "luat",
+              "year": 2024,
+              "language": "vi",
+              "char_count": 2785,
+              "chunk_index": 6,
+              "strategy_type": "by_paragraph"
+            },
+            "score": 0.1803375184459042,
+            "strategy": "tfidf"
+          }
+        ],
+        "context": "[luat-ttatgt-36-2024-qh15::p016::para::000 | 36_2024_QH15_444251.doc.pdf | page 16]\nvi an toàn đường sắt, người điều khiển phương tiện tham gia giao thông đường bộ và người có mặt phải ngay lập tức báo hiệu để dừng tàu, thực hiện các biện pháp bảo đảm an toàn.\n\n[luat-ttatgt-36-2024-qh15::p041::para::000 | 36_2024_QH15_444251.doc.pdf | page 41]\nmức độ của hành vi vi phạm pháp luật về trật tự, an toàn giao thông đường bộ. Dữ liệu về điểm trừ giấy phép lái xe của người vi phạm sẽ được cập nhật vào hệ thống cơ sở dữ liệu ngay sau khi quyết định xử phạt có hiệu lực thi hành và thông báo cho người bị trừ điểm giấy phép lái xe biết.\n\n2. Giấy phép lái xe chưa bị trừ hết điểm và không bị trừ điểm trong thời hạn 12 tháng từ ngày bị trừ điểm gần nhất thì được phục hồi đủ 12 điểm.",
+        "context_ids": [
+          "luat-ttatgt-36-2024-qh15::p016::para::000",
+          "luat-ttatgt-36-2024-qh15::p041::para::000"
+        ]
+      },
+      {
+        "event": "invalid_or_missing_citations"
+      }
+    ]
+  }
+]

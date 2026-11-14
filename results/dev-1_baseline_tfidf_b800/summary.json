@@ -1,0 +1,17 @@
+{
+  "strategy": "1_baseline_tfidf_b800",
+  "split": "dev",
+  "top_k": 3,
+  "budget_chars": 800,
+  "use_filter": false,
+  "n": 16,
+  "hit1": 11,
+  "hit1_rate": 0.6875,
+  "hit3": 13,
+  "hit3_rate": 0.8125,
+  "context_hit": 11,
+  "context_hit_rate": 0.6875,
+  "avg_context_chars": 568.7,
+  "median_ms": 1.48,
+  "service_cost_usd": 0.0
+}

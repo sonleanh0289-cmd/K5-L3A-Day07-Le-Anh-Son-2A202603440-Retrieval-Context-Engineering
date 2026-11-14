@@ -1,0 +1,303 @@
+[
+  {
+    "id": "q01",
+    "split": "dev",
+    "question": "Luật Trật tự, an toàn giao thông đường bộ quy định về những nội dung nào?",
+    "expected_answer": "Quy định về quy tắc, phương tiện, người tham gia giao thông đường bộ, chỉ huy, điều khiển, tuần tra, kiểm soát, giải quyết tai nạn giao thông đường bộ, trách nhiệm quản lý nhà nước và trách nhiệm của cơ quan, tổ chức, cá nhân có liên quan.",
+    "gold": [
+      {
+        "source_id": "luat-ttatgt-36-2024-qh15",
+        "page": 1,
+        "evidence": "Luật này quy định về quy tắc, phương tiện, người tham gia giao thông đường bộ, chỉ huy, điều khiển, tuần tra, kiểm soát, giải quyết tai nạn giao thông đường bộ, trách nhiệm quản lý nhà nước và trách nhiệm của cơ quan, tổ chức, cá nhân có liên quan đến trật tự, an toàn giao thông đường bộ."
+      }
+    ]
+  },
+  {
+    "id": "q02",
+    "split": "dev",
+    "question": "Ai được xem là người điều khiển giao thông đường bộ theo giải thích từ ngữ?",
+    "expected_answer": "Cảnh sát giao thông và người được giao nhiệm vụ hướng dẫn giao thông trên đường bộ.",
+    "gold": [
+      {
+        "source_id": "luat-ttatgt-36-2024-qh15",
+        "page": 2,
+        "evidence": "Người điều khiển giao thông đường bộ (sau đây gọi là người điều khiển giao thông) bao gồm: Cảnh sát giao thông và người được giao nhiệm vụ hướng dẫn giao thông trên đường bộ."
+      }
+    ]
+  },
+  {
+    "id": "q03",
+    "split": "dev",
+    "question": "Cơ quan nào chủ trì tổ chức tuyên truyền, phổ biến pháp luật về trật tự, an toàn giao thông đường bộ?",
+    "expected_answer": "Cơ quan quản lý nhà nước về trật tự, an toàn giao thông đường bộ chủ trì, phối hợp với các cơ quan, tổ chức, cá nhân có liên quan.",
+    "gold": [
+      {
+        "source_id": "luat-ttatgt-36-2024-qh15",
+        "page": 4,
+        "evidence": "Cơ quan quản lý nhà nước về trật tự, an toàn giao thông đường bộ chủ trì, phối hợp với các cơ quan, tổ chức, cá nhân có liên quan thực hiện tuyên truyền, phổ biến pháp luật về trật tự, an toàn giao thông đường bộ."
+      }
+    ],
+    "filter": {
+      "chapter": "Chương I"
+    }
+  },
+  {
+    "id": "q04",
+    "split": "dev",
+    "question": "Khi chở trẻ em dưới 10 tuổi và chiều cao dưới 1,35 mét trên xe ô tô thì có được ngồi cùng hàng ghế với người lái xe không, trừ trường hợp nào?",
+    "expected_answer": "Không được cho trẻ em ngồi cùng hàng ghế với người lái xe, trừ loại xe ô tô chỉ có một hàng ghế.",
+    "gold": [
+      {
+        "source_id": "luat-ttatgt-36-2024-qh15",
+        "page": 8,
+        "evidence": "Khi chở trẻ em dưới 10 tuổi và chiều cao dưới 1,35 mét trên xe ô tô không được cho trẻ em ngồi cùng hàng ghế với người lái xe, trừ loại xe ô tô chỉ có một hàng ghế; người lái xe phải sử dụng, hướng dẫn sử dụng thiết bị an toàn phù hợp cho trẻ em."
+      }
+    ]
+  },
+  {
+    "id": "q05",
+    "split": "dev",
+    "question": "Khi đèn tín hiệu giao thông chuyển sang màu vàng, người điều khiển phương tiện phải xử lý thế nào nếu đã đi qua vạch dừng?",
+    "expected_answer": "Nếu đang đi trên vạch dừng hoặc đã đi qua vạch dừng mà tín hiệu đèn màu vàng thì được đi tiếp.",
+    "gold": [
+      {
+        "source_id": "luat-ttatgt-36-2024-qh15",
+        "page": 9,
+        "evidence": "Tín hiệu đèn màu vàng phải dừng lại trước vạch dừng; trường hợp đang đi trên vạch dừng hoặc đã đi qua vạch dừng mà tín hiệu đèn màu vàng thì được đi tiếp;"
+      }
+    ]
+  },
+  {
+    "id": "q06",
+    "split": "dev",
+    "question": "Khi thấy người đi bộ hoặc xe lăn của người khuyết tật đang qua đường tại nơi có vạch kẻ đường dành cho người đi bộ, người lái xe phải làm gì?",
+    "expected_answer": "Phải quan sát, giảm tốc độ hoặc dừng lại để bảo đảm an toàn.",
+    "gold": [
+      {
+        "source_id": "luat-ttatgt-36-2024-qh15",
+        "page": 10,
+        "evidence": "Người điều khiển phương tiện tham gia giao thông đường bộ phải quan sát, giảm tốc độ hoặc dừng lại để bảo đảm an toàn trong các trường hợp sau đây: a) Tại nơi có vạch kẻ đường hoặc báo hiệu khác dành cho người đi bộ hoặc tại nơi mà người đi bộ, xe lăn của người khuyết tật đang qua đường;"
+      }
+    ]
+  },
+  {
+    "id": "q07",
+    "split": "dev",
+    "question": "Thông thường khi vượt xe phải vượt bên trái, nhưng trong những trường hợp nào được phép vượt bên phải?",
+    "expected_answer": "Khi xe phía trước có tín hiệu rẽ trái hoặc đang rẽ trái hoặc khi xe chuyên dùng đang làm việc trên đường mà không thể vượt bên trái.",
+    "gold": [
+      {
+        "source_id": "luat-ttatgt-36-2024-qh15",
+        "page": 11,
+        "evidence": "Khi vượt các xe phải vượt bên trái; trường hợp khi xe phía trước có tín hiệu rẽ trái hoặc đang rẽ trái hoặc khi xe chuyên dùng đang làm việc trên đường mà không thể vượt bên trái thì được vượt về bên phải."
+      }
+    ],
+    "filter": {
+      "chapter": "Chương II"
+    }
+  },
+  {
+    "id": "q08",
+    "split": "dev",
+    "question": "Khi mở cửa xe ô tô, người mở cửa phải tuân thủ những quy tắc an toàn nào?",
+    "expected_answer": "Chỉ được mở cửa xe khi xe đã dừng, đỗ; trước khi mở cửa phải quan sát phía trước, phía sau và bên phía mở cửa xe, khi thấy an toàn mới được mở cửa xe, ra khỏi xe; không để cửa xe mở nếu không bảo đảm an toàn.",
+    "gold": [
+      {
+        "source_id": "luat-ttatgt-36-2024-qh15",
+        "page": 14,
+        "evidence": "1. Chỉ được mở cửa xe khi xe đã dừng, đỗ.\n\n2. Trước khi mở cửa xe, người mở cửa phải quan sát phía trước, phía sau và bên phía mở cửa xe, khi thấy an toàn mới được mở cửa xe, ra khỏi xe; không để cửa xe mở nếu không bảo đảm an toàn."
+      }
+    ]
+  },
+  {
+    "id": "q09",
+    "split": "dev",
+    "question": "Xe ba bánh có khối lượng bản thân lớn hơn bao nhiêu kg thì được xếp vào loại xe ô tô thuộc nhóm xe cơ giới?",
+    "expected_answer": "Xe ba bánh có khối lượng bản thân lớn hơn 400 kg.",
+    "gold": [
+      {
+        "source_id": "luat-ttatgt-36-2024-qh15",
+        "page": 21,
+        "evidence": "xe ba bánh có khối lượng bản thân lớn hơn 400 kg; xe ô tô không bao gồm xe chở người bốn bánh có gắn động cơ và xe chở hàng bốn bánh có gắn động cơ;"
+      }
+    ]
+  },
+  {
+    "id": "q10",
+    "split": "dev",
+    "question": "Người trúng đấu giá biển số xe phải nộp đủ tiền trúng đấu giá trong thời hạn bao nhiêu ngày và nếu không nộp đủ thì bị hạn chế gì?",
+    "expected_answer": "Phải nộp đủ trong thời hạn 30 ngày kể từ ngày có thông báo kết quả trúng đấu giá; nếu không nộp đủ thì không được hoàn trả tiền đặt trước, tiền đã nộp và không được tham gia đấu giá biển số xe trong thời hạn 12 tháng.",
+    "gold": [
+      {
+        "source_id": "luat-ttatgt-36-2024-qh15",
+        "page": 25,
+        "evidence": "Nộp đủ số tiền trúng đấu giá trong thời hạn 30 ngày kể từ ngày có thông báo kết quả trúng đấu giá; tiền trúng đấu giá không bao gồm lệ phí đăng ký, cấp biển số xe."
+      }
+    ],
+    "filter": {
+      "chapter": "Chương III"
+    }
+  },
+  {
+    "id": "q11",
+    "split": "dev",
+    "question": "Nếu giấy tờ của người lái xe đã được tích hợp vào tài khoản định danh điện tử thì việc xuất trình, kiểm tra thực hiện như thế nào?",
+    "expected_answer": "Việc xuất trình, kiểm tra có thể thực hiện thông qua tài khoản định danh điện tử.",
+    "gold": [
+      {
+        "source_id": "luat-ttatgt-36-2024-qh15",
+        "page": 38,
+        "evidence": "Trường hợp giấy tờ quy định tại khoản 1 và khoản 2 Điều này đã được tích hợp vào tài khoản định danh điện tử thì việc xuất trình, kiểm tra có thể thực hiện thông qua tài khoản định danh điện tử."
+      }
+    ]
+  },
+  {
+    "id": "q12",
+    "split": "dev",
+    "question": "Giấy phép lái xe chưa bị trừ hết điểm thì sau bao lâu không bị trừ điểm sẽ được phục hồi đủ 12 điểm?",
+    "expected_answer": "Trong thời hạn 12 tháng từ ngày bị trừ điểm gần nhất nếu không bị trừ điểm thì được phục hồi đủ 12 điểm.",
+    "gold": [
+      {
+        "source_id": "luat-ttatgt-36-2024-qh15",
+        "page": 41,
+        "evidence": "Giấy phép lái xe chưa bị trừ hết điểm và không bị trừ điểm trong thời hạn 12 tháng từ ngày bị trừ điểm gần nhất thì được phục hồi đủ 12 điểm."
+      }
+    ]
+  },
+  {
+    "id": "q13",
+    "split": "dev",
+    "question": "Hoạt động sát hạch lái xe ô tô và sát hạch lái xe mô tô phải được thực hiện tại đâu?",
+    "expected_answer": "Sát hạch lái xe ô tô thực hiện tại trung tâm sát hạch lái xe; sát hạch lái xe mô tô thực hiện tại trung tâm sát hạch lái xe hoặc tại sân tập lái đáp ứng điều kiện, tiêu chuẩn về cơ sở vật chất, kỹ thuật.",
+    "gold": [
+      {
+        "source_id": "luat-ttatgt-36-2024-qh15",
+        "page": 43,
+        "evidence": "Hoạt động sát hạch lái xe ô tô phải thực hiện tại các trung tâm sát hạch lái xe; hoạt động sát hạch lái xe mô tô thực hiện tại các trung tâm sát hạch lái xe hoặc tại sân tập lái đáp ứng điều kiện, tiêu chuẩn về cơ sở vật chất, kỹ thuật."
+      }
+    ]
+  },
+  {
+    "id": "q14",
+    "split": "dev",
+    "question": "Khi đi qua nơi xảy ra vụ tai nạn giao thông đường bộ, người điều khiển phương tiện khác có trách nhiệm chở người bị thương đi cấp cứu không, trừ trường hợp nào?",
+    "expected_answer": "Có trách nhiệm chở người bị thương đi cấp cứu; trừ xe ưu tiên và xe chở người được hưởng quyền ưu đãi, miễn trừ ngoại giao không bắt buộc thực hiện.",
+    "gold": [
+      {
+        "source_id": "luat-ttatgt-36-2024-qh15",
+        "page": 55,
+        "evidence": "Người điều khiển phương tiện tham gia giao thông đường bộ khác khi đi qua nơi xảy ra vụ tai nạn giao thông đường bộ có trách nhiệm chở người bị thương đi cấp cứu. Xe ưu tiên, xe chở người được hưởng quyền ưu đãi, miễn trừ ngoại giao không bắt buộc thực hiện quy định tại khoản này."
+      }
+    ]
+  },
+  {
+    "id": "q15",
+    "split": "dev",
+    "question": "Khi phát hiện vụ tai nạn giao thông đường bộ thì cơ quan, tổ chức, cá nhân phải báo cho đơn vị nào?",
+    "expected_answer": "Phải báo ngay cho cơ quan Công an, cơ sở khám bệnh, chữa bệnh hoặc Ủy ban nhân dân nơi gần nhất.",
+    "gold": [
+      {
+        "source_id": "luat-ttatgt-36-2024-qh15",
+        "page": 55,
+        "evidence": "Cơ quan, tổ chức, cá nhân khi phát hiện vụ tai nạn giao thông đường bộ phải báo ngay cho cơ quan Công an, cơ sở khám bệnh, chữa bệnh hoặc Ủy ban nhân dân nơi gần nhất."
+      }
+    ]
+  },
+  {
+    "id": "q16",
+    "split": "dev",
+    "question": "Bộ Giao thông vận tải quản lý nhà nước những nội dung chính nào theo Luật này?",
+    "expected_answer": "Quản lý về đào tạo, sát hạch, cấp giấy phép lái xe; chất lượng an toàn kỹ thuật và bảo vệ môi trường của xe cơ giới, xe máy chuyên dùng, phụ tùng xe cơ giới và ban hành quy chuẩn kỹ thuật quốc gia về thiết bị an toàn cho trẻ em.",
+    "gold": [
+      {
+        "source_id": "luat-ttatgt-36-2024-qh15",
+        "page": 59,
+        "evidence": "Bộ Giao thông vận tải thực hiện quản lý nhà nước về đào tạo, sát hạch, cấp giấy phép lái xe; chất lượng an toàn kỹ thuật và bảo vệ môi trường của xe cơ giới, xe máy chuyên dùng, phụ tùng xe cơ giới và nhiệm vụ quản lý khác theo quy định của Luật này; ban hành quy chuẩn kỹ thuật quốc gia về thiết bị an toàn cho trẻ em quy định tại khoản 3 Điều 10 của Luật này."
+      }
+    ]
+  },
+  {
+    "id": "q17",
+    "split": "test",
+    "question": "Luật Trật tự, an toàn giao thông đường bộ có bắt buộc thắt dây đai an toàn trên xe ô tô không?",
+    "expected_answer": "Có, người lái xe và người được chở trên xe ô tô phải thắt dây đai an toàn tại những chỗ có trang bị dây đai an toàn khi tham gia giao thông đường bộ.",
+    "gold": [
+      {
+        "source_id": "luat-ttatgt-36-2024-qh15",
+        "page": 8,
+        "evidence": "Người lái xe và người được chở trên xe ô tô phải thắt dây đai an toàn tại những chỗ có trang bị dây đai an toàn khi tham gia giao thông đường bộ."
+      }
+    ]
+  },
+  {
+    "id": "q18",
+    "split": "test",
+    "question": "Khi gặp sự cố kỹ thuật buộc phải đỗ xe tại nơi không được phép đỗ, người lái xe phải báo hiệu như thế nào?",
+    "expected_answer": "Phải có báo hiệu bằng đèn khẩn cấp hoặc đặt biển cảnh báo về phía sau xe để người điều khiển phương tiện khác biết.",
+    "gold": [
+      {
+        "source_id": "luat-ttatgt-36-2024-qh15",
+        "page": 14,
+        "evidence": "Trong trường hợp gặp sự cố kỹ thuật hoặc bất khả kháng khác buộc phải đỗ xe, khi đỗ xe chiếm một phần đường xe chạy hoặc tại nơi không được phép đỗ, phải có báo hiệu bằng đèn khẩn cấp hoặc đặt biển cảnh báo về phía sau xe để người điều khiển phương tiện tham gia giao thông đường bộ khác biết."
+      }
+    ],
+    "filter": {
+      "chapter": "Chương II"
+    }
+  },
+  {
+    "id": "q19",
+    "split": "test",
+    "question": "Người có giấy phép lái xe bị trừ hết điểm phải chờ ít nhất bao lâu mới được tham gia kiểm tra kiến thức pháp luật để phục hồi điểm?",
+    "expected_answer": "Sau thời hạn ít nhất là 06 tháng kể từ ngày bị trừ hết điểm.",
+    "gold": [
+      {
+        "source_id": "luat-ttatgt-36-2024-qh15",
+        "page": 41,
+        "evidence": "Trường hợp giấy phép lái xe bị trừ hết điểm thì người có giấy phép lái xe không được điều khiển phương tiện tham gia giao thông đường bộ theo giấy phép lái xe đó. Sau thời hạn ít nhất là 06 tháng kể từ ngày bị trừ hết điểm, người có giấy phép lái xe được tham gia kiểm tra nội dung kiến thức pháp luật về trật tự, an toàn giao thông đường bộ"
+      }
+    ],
+    "filter": {
+      "chapter": "Chương IV"
+    }
+  },
+  {
+    "id": "q20",
+    "split": "test",
+    "question": "Trường hợp tai nạn giao thông liên quan đến xe chở hàng hóa nguy hiểm, cơ quan Công an chủ trì giải quyết phải thực hiện ngay những việc gì?",
+    "expected_answer": "Phải thông báo ngay cho đơn vị chức năng về giải quyết hóa chất độc hại, vật liệu cháy, nổ; phong tỏa hiện trường; tổ chức phân luồng giao thông, cấm người, phương tiện đi vào khu vực tai nạn.",
+    "gold": [
+      {
+        "source_id": "luat-ttatgt-36-2024-qh15",
+        "page": 56,
+        "evidence": "Trường hợp tai nạn giao thông đường bộ liên quan đến phương tiện giao thông đường bộ chở hàng hóa nguy hiểm, cơ quan Công an chủ trì giải quyết vụ việc phải thông báo ngay cho đơn vị chức năng về giải quyết hóa chất độc hại, vật liệu cháy, nổ; phong tỏa hiện trường nơi xảy ra tai nạn giao thông đường bộ; tổ chức phân luồng giao thông, cấm người, phương tiện đi vào khu vực tai nạn."
+      }
+    ]
+  },
+  {
+    "id": "q21",
+    "split": "test",
+    "question": "Khi sử dụng tạm thời lòng đường, vỉa hè cho sự kiện chính trị, văn hóa, thể thao thì cần đáp ứng điều kiện gì?",
+    "expected_answer": "Phải có phương án sử dụng tạm thời lòng đường, vỉa hè và được cơ quan có thẩm quyền cho phép; cơ quan cho phép gửi thông báo ngay cho cơ quan Cảnh sát giao thông.",
+    "gold": [
+      {
+        "source_id": "luat-ttatgt-36-2024-qh15",
+        "page": 53,
+        "evidence": "cơ quan, tổ chức, cá nhân có nhu cầu sử dụng tạm thời lòng đường, vỉa hè phải có phương án sử dụng tạm thời lòng đường, vỉa hè và được cơ quan có thẩm quyền cho phép; cơ quan cho phép sử dụng tạm thời lòng đường, vỉa hè gửi thông báo ngay cho cơ quan Cảnh sát giao thông."
+      }
+    ]
+  },
+  {
+    "id": "q22",
+    "split": "test",
+    "question": "Giấy phép lái xe hạng A1 đã cấp trước ngày Luật có hiệu lực được tiếp tục điều khiển loại xe mô tô nào theo quy định chuyển tiếp?",
+    "expected_answer": "Được tiếp tục điều khiển xe mô tô hai bánh có dung tích xi-lanh từ 50 cm3 đến dưới 175 cm3 hoặc có công suất động cơ điện từ 04 kW đến dưới 14 kW.",
+    "gold": [
+      {
+        "source_id": "luat-ttatgt-36-2024-qh15",
+        "page": 60,
+        "evidence": "Giấy phép lái xe hạng A1 được tiếp tục điều khiển xe mô tô hai bánh có dung tích xi-lanh từ 50 cm 3 đến dưới 175 cm 3 hoặc có công suất động cơ điện từ 04 kW đến dưới 14 kW;"
+      }
+    ]
+  }
+]

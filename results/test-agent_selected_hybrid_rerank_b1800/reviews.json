@@ -1,0 +1,63 @@
+[
+  {
+    "query_id": "q17",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "notes": "Trả lời đúng nội dung điều luật và trích dẫn đúng chunk chứa bằng chứng gold."
+  },
+  {
+    "query_id": "q18",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "notes": "Trả lời đúng nội dung điều luật và trích dẫn đúng chunk chứa bằng chứng gold."
+  },
+  {
+    "query_id": "q19",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "notes": "Trả lời đúng nội dung điều luật và trích dẫn đúng chunk chứa bằng chứng gold."
+  },
+  {
+    "query_id": "q20",
+    "answer_grade": 0,
+    "citation_support": [
+      false
+    ],
+    "notes": "Trích dẫn sai chunk/trang nguồn."
+  },
+  {
+    "query_id": "q21",
+    "answer_grade": 2,
+    "citation_support": [
+      true,
+      false
+    ],
+    "notes": "Trả lời đúng nội dung điều luật và trích dẫn đúng chunk chứa bằng chứng gold."
+  },
+  {
+    "query_id": "q22",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "notes": "Trả lời đúng nội dung điều luật và trích dẫn đúng chunk chứa bằng chứng gold."
+  },
+  {
+    "query_id": "u03",
+    "citation_support": [],
+    "abstention_correct": true,
+    "notes": "Câu hỏi ngoài phạm vi Luật 36/2024/QH15; từ chối đúng."
+  },
+  {
+    "query_id": "u04",
+    "citation_support": [],
+    "abstention_correct": true,
+    "notes": "Câu hỏi ngoài phạm vi Luật 36/2024/QH15; từ chối đúng."
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "strategy": "agent_selected_hybrid_rerank_b1800",
+  "split": "dev",
+  "model": "qwen2.5:7b",
+  "cases": 18,
+  "provider_errors": 0,
+  "tool_use": {
+    "n": 18,
+    "N": 18
+  },
+  "grounded_answer": {
+    "0": 1,
+    "1": 3,
+    "2": 12,
+    "N": 16,
+    "mean": 1.6875
+  },
+  "citation_validity": {
+    "n": 12,
+    "N": 15
+  },
+  "answer_citation_coverage": {
+    "n": 15,
+    "N": 15
+  },
+  "abstention": {
+    "n": 2,
+    "N": 2
+  },
+  "false_abstention": {
+    "n": 1,
+    "N": 16
+  }
+}
